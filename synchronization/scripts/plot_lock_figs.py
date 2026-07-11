@@ -89,8 +89,8 @@ plt.rcParams.update({
     "lines.linewidth": 1.6,
     "lines.markersize": 5.0,
     # Make hatch patterns lighter/thinner than bar borders.
-    "hatch.color": "0.6",
-    "hatch.linewidth": 0.7,
+    "hatch.color": "#B0B0B0",
+    "hatch.linewidth": 0.8,
 })
 
 def die(msg: str):
@@ -317,11 +317,19 @@ LOCKCOUNT_STYLE = {
 
 # Bar styles for 4 bars in one x-group (paper-friendly).
 # Intended order: lock_counts=[1,2,4,8] -> [white, gray, very-light blue, very-light yellow].
+# Same bar palette/hatching as gapbs_mh/scripts/plot_gapbs.py (Figure 7):
+# white / light-blue+backslash / light-orange+slash / light-green solid,
+# dark slate edges, light-gray hatch strokes.
+FIG7_EDGE_COLOR = "#2E3440"
+FIG7_LIGHT_BLUE = "#BFD4EA"
+FIG7_LIGHT_ORANGE = "#FCD6A5"
+FIG7_LIGHT_GREEN = "#C8E6C4"
+
 FOUR_BAR_STYLE = {
     1: {"facecolor": "white", "hatch": ""},
-    2: {"facecolor": GRAY_808080, "hatch": ""},       # gray
-    4: {"facecolor": "#BFD4EA", "hatch": "\\\\\\"},    # light blue + \\\
-    8: {"facecolor": "#FCD6A5", "hatch": "///"},      # lighter orange + ///
+    2: {"facecolor": FIG7_LIGHT_BLUE, "hatch": "\\\\"},
+    4: {"facecolor": FIG7_LIGHT_ORANGE, "hatch": "//"},
+    8: {"facecolor": FIG7_LIGHT_GREEN, "hatch": ""},
 }
 
 def sort_lock_order(keys):
@@ -510,17 +518,16 @@ def main():
                     width=width,
                     facecolor=bst["facecolor"],
                     hatch=bst["hatch"],
-                    edgecolor="0.2",
+                    edgecolor=FIG7_EDGE_COLOR,
                     linewidth=BAR_EDGE_LW,
-                    alpha=0.85,
                     label="_nolegend_",
                     zorder=2,
                 )
                 # p95 as stock-style whiskers above each p50 bar (no connecting line)
                 for cx, p50, p95 in zip(xpos, dd["lock_p50_ns"].to_numpy(), dd["lock_p95_ns"].to_numpy()):
-                    ax.vlines(cx, p50, p95, colors="0.2", linewidth=WHISKER_LW, zorder=6)
+                    ax.vlines(cx, p50, p95, colors=FIG7_EDGE_COLOR, linewidth=WHISKER_LW, zorder=6)
                     cap = width * 0.30
-                    ax.hlines(p95, cx - cap, cx + cap, colors="0.2", linewidth=CAP_LW, zorder=7)
+                    ax.hlines(p95, cx - cap, cx + cap, colors=FIG7_EDGE_COLOR, linewidth=CAP_LW, zorder=7)
 
         fig2_text_size = BASE_TEXT_SIZE * FIG2_TEXT_SCALE
         fig2_tick_size = TICK_TEXT_SIZE * FIG2_TEXT_SCALE
@@ -570,7 +577,7 @@ def main():
         handles = [
             Patch(
                 facecolor=FOUR_BAR_STYLE[lc]["facecolor"],
-                edgecolor="0.2",
+                edgecolor=FIG7_EDGE_COLOR,
                 linewidth=BAR_EDGE_LW,
                 hatch=FOUR_BAR_STYLE[lc]["hatch"],
                 label=f"locks={lc}",

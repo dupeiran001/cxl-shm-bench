@@ -25,11 +25,13 @@ LIGHT_BLUE = "#BFD4EA"
 LIGHT_ORANGE = "#FCD6A5"
 LIGHT_GREEN = "#C8E6C4"
 
+# Exactly the Figure 7 look (gapbs_mh/scripts/plot_gapbs.py): same hatch
+# density, and shared-4hosts solid green.
 CONFIG_BAR_STYLE = {
     "dram": {"facecolor": "white", "hatch": ""},
-    "remote_cxl": {"facecolor": LIGHT_BLUE, "hatch": "\\\\\\"},
-    "shared_2hosts": {"facecolor": LIGHT_ORANGE, "hatch": "///"},
-    "shared_4hosts": {"facecolor": LIGHT_GREEN, "hatch": "xxx"},
+    "remote_cxl": {"facecolor": LIGHT_BLUE, "hatch": "\\\\"},
+    "shared_2hosts": {"facecolor": LIGHT_ORANGE, "hatch": "//"},
+    "shared_4hosts": {"facecolor": LIGHT_GREEN, "hatch": ""},
 }
 
 MIX_ORDER = [100, 95, 50]
@@ -60,7 +62,8 @@ def plot(df: pd.DataFrame, threads: int, out_dir: Path) -> Path:
             "ytick.major.width": 1.4,
             "xtick.major.size": 5.0,
             "ytick.major.size": 5.0,
-            "hatch.linewidth": 1.2,
+            "hatch.linewidth": 0.8,
+            "hatch.color": "#B0B0B0",
         }
     )
 
