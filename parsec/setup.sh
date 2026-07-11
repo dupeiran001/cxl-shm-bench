@@ -56,9 +56,12 @@ fetch_and_extract() {
     cp "$preplaced" "$tarball"
   else
     log "downloading $tarball from $url"
-    curl -L --fail --progress-bar -o "$tarball.part" "$url" \
+    # progress bar only on a tty (avoids log spam); unique .part suffix so a
+    # stale/concurrent invocation can never rename our partial file away.
+    local progress="-sS"; [ -t 2 ] && progress="--progress-bar"
+    curl -L --fail $progress -o "$tarball.part.$$" "$url" \
       || die "download failed: $url  (set PARSEC_*_URL to a working mirror, or pre-place the tarball at $preplaced)"
-    mv "$tarball.part" "$tarball"
+    mv -f "$tarball.part.$$" "$tarball"
   fi
   if [ "$tarball" = "parsec-3.0-input-sim.tar.gz" ]; then
     log "verifying sha256 of $tarball"

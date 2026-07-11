@@ -34,6 +34,11 @@ gssh() { ssh -4 -o BatchMode=yes -o StrictHostKeyChecking=no -o ConnectTimeout=8
 
 gssh true || die "$HOST unreachable"
 
+# A previous interrupted run can leave setup/build processes alive on the
+# host; they would race this run's download/extract/build. Kill them first
+# ([x] bracket trick keeps pkill from matching its own command line).
+gssh "pkill -f '[.]/setup[.]sh' 2>/dev/null; pkill -f 'parsecmgm[t]' 2>/dev/null; pkill -f 'run_all_simlarg[e]' 2>/dev/null; sleep 1; true" || true
+
 log "deploying parsec tree to $HOST (first time is large)"
 rsync -az -e "ssh -4 -o BatchMode=yes" --exclude=results \
   "$REPO_ROOT/parsec/" "root@$HOST.dc:$REMOTE_ROOT/parsec/" || die "rsync failed"
@@ -43,7 +48,7 @@ rsync -az -e "ssh -4 -o BatchMode=yes" --exclude=results \
 # a boot; pre-place it in parsec/input-archive/ before running to skip the
 # download (offline runs).
 
-log "setup + gcc-hooks build (skipped if already built this boot; ~30 min cold)"
+log "setup + gcc-hooks build (skipped if already built this boot; ~10 min cold incl. input download)"
 # "Already built" must mean: inputs unpacked AND the fussiest binaries exist
 # (a partial build can leave early packages present while later ones failed).
 gssh "cd $REMOTE_ROOT/parsec && [ -x pkgs/kernels/dedup/inst/*/bin/dedup ] && [ -x pkgs/kernels/canneal/inst/*/bin/canneal ] && [ -d pkgs/kernels/canneal/inputs ] && ls pkgs/kernels/canneal/inputs/*.tar >/dev/null 2>&1 && echo 'already built'" \
