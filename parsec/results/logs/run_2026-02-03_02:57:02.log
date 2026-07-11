@@ -1,0 +1,192 @@
+[PARSEC] [========== PARSEC 3.0-beta-20120904 RUN LOGFILE ==========]
+
+[PARSEC] Run with amd64-linux.gcc-hooks binaries and input simlarge started on Tue Feb 3 02:57:02 UTC 2026.
+[PARSEC] Benchmarks to run:  splash2x.radiosity
+
+[PARSEC] [========== Running benchmark splash2x.radiosity [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'simlarge' available, skipping input setup.
+[PARSEC] Running 'time /root/cxl_profiler/parsec/ext/splash2x/apps/radiosity/inst/amd64-linux.gcc-hooks/bin/run.sh 16 simlarge':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /root/cxl_profiler/parsec/ext/splash2x/apps/radiosity/inst/amd64-linux.gcc-hooks/bin/radiosity -bf 1.5e-3 -batch -room -p 16:
+[HOOKS] PARSEC Hooks Version 1.2
+[HOOKS] Entering ROI
+[HOOKS] Leaving ROI
+TIMING STATISTICS MEASURED BY MAIN PROCESS:
+	Overall start time	    1770087423195113
+	Overall end time	    1770087426431879
+	Total time with initialization	             3236766
+	Total time without initialization	             3236402
+Rasiosity Statistics
+
+    Histogram of interactions/elem
+	 Interactions  Occurrence
+	 -------------------------------
+	 (Over 100)      3353 (18899.556641)
+	    100          39 (4458.350586)
+	    99          68 (6395.147949)
+	    98          67 (4951.504395)
+	    97          69 (9812.533203)
+	    96          77 (7535.763184)
+	    95          57 (6788.760742)
+	    94          67 (5135.581055)
+	    93          77 (4649.758301)
+	    92          63 (5792.114258)
+	    91          73 (5148.606934)
+	    90          73 (6492.837402)
+	    89          69 (4598.158691)
+	    88          67 (5514.060547)
+	    87          74 (3180.416992)
+	    86          85 (4129.676270)
+	    85          67 (5807.842285)
+	    84          90 (3255.451416)
+	    83          90 (4508.657715)
+	    82          99 (4116.392090)
+	    81          86 (3497.360352)
+	    80          89 (7410.997070)
+	    79          90 (3438.329834)
+	    78          95 (4206.981445)
+	    77          93 (4655.813965)
+	    76          98 (3602.730225)
+	    75          74 (8543.678711)
+	    74          89 (4593.978027)
+	    73          87 (4654.832031)
+	    72          104 (3674.901367)
+	    71          78 (4071.979980)
+	    70          98 (3403.354492)
+	    69          79 (12242.339844)
+	    68          104 (3245.674316)
+	    67          118 (3346.672852)
+	    66          118 (6674.654785)
+	    65          109 (3866.199463)
+	    64          134 (6121.396973)
+	    63          119 (3201.405029)
+	    62          113 (3304.553955)
+	    61          152 (5493.929688)
+	    60          114 (9201.199219)
+	    59          117 (3908.932861)
+	    58          145 (5558.340820)
+	    57          146 (3241.710938)
+	    56          139 (3260.125000)
+	    55          136 (3291.255859)
+	    54          143 (4987.911621)
+	    53          155 (2909.045166)
+	    52          170 (2398.783447)
+	    51          177 (4185.043945)
+	    50          138 (2772.612305)
+	    49          129 (3088.801270)
+	    48          177 (2705.252441)
+	    47          187 (2678.918457)
+	    46          180 (4218.732910)
+	    45          197 (2113.338135)
+	    44          150 (2264.477051)
+	    43          210 (1972.288696)
+	    42          252 (4697.504395)
+	    41          176 (2654.517334)
+	    40          168 (2222.201660)
+	    39          188 (2275.487305)
+	    38          234 (4142.395996)
+	    37          213 (3214.812012)
+	    36          198 (3787.123779)
+	    35          245 (3141.419678)
+	    34          248 (1823.213745)
+	    33          190 (9063.154297)
+	    32          247 (5986.498535)
+	    31          273 (3059.558838)
+	    30          223 (1880.635376)
+	    29          207 (1921.139526)
+	    28          295 (4487.056641)
+	    27          163 (1890.572510)
+	    26          374 (3481.332275)
+	    25          266 (4471.508789)
+	    24          338 (1724.281860)
+	    23          430 (1658.853638)
+	    22          2971 (1240.356567)
+	    21          369 (1600.446533)
+	    20          1787 (1382.717651)
+	    19          371 (4206.726562)
+	    18          790 (1736.850830)
+	    17          227 (2982.512451)
+	    16          572 (2574.914062)
+	    15          165 (6001.314453)
+	    14          319 (1499.768066)
+	    13          195 (5162.031250)
+	    12          224 (3401.589355)
+	    11          152 (6441.481934)
+	    10          285 (3072.360596)
+	    9          181 (1514.166382)
+	    8          374 (1131.041138)
+	    7          153 (1435.629761)
+	    6          179 (1694.913940)
+	    5          126 (1386.930664)
+	    4          204 (1193.546997)
+	    3          193 (1594.822998)
+	    2          268 (1518.847534)
+	    1          158 (1765.513428)
+	    0          296 (3030.560059)
+    Configurations
+	Patch assignment: Static equal number
+	Always inserting at top of list for visibility testing (not sorted)
+	Recursive pruning enabled for BSP tree traversal
+	Patch cache:      Enabled
+	Always check all other queues when task stealing (not neighbor scheme)
+    Parameters
+	Number of processors:    16
+	Number of task queues:   16
+	Number of tasks / queue: 200
+	Area epsilon:            2000.000000
+	#inter parallel refine:  5
+	#visibility comp / task: 4
+	BF epsilon:              0.001500
+	Energy convergence:      0.000050
+    Iterations to converge:   12 times
+    Resource Usage
+	Number of patches:            364
+	Total number of elements:     25148
+	Total number of interactions: 1359086
+	          completely visible: 823972
+	        completely invisible: 156374
+	           partially visible: 378740
+	Interaction coherence (root interaction not counted)
+	       Common for 4 siblings: 770328
+	       Common for 3 siblings: 257382
+	       Common for 2 siblings: 101086
+	       Common for no sibling: 98950
+	Avg. elements per patch:      69.1
+	Avg. interactions per patch:  3733.8
+	Avg. interactions per element:54.0
+	Number of elements in equivalent uniform mesh: 19750
+	Elem(hierarchical)/Elem(uniform): 127.33%
+[HOOKS] Total time spent in ROI: 3.237s
+[HOOKS] Lockstats: ROI duration 3.236716s
+[HOOKS] Lockstats: lock-based sync in ROI: yes (acquisitions=6891745, threads=16)
+[HOOKS] Lockstats: critical-section time sum 14.338736s, avg 2.081us, max 528.334us
+[HOOKS] Lockstats: critical-section ratio (sum/(ROI*threads)) 27.69%
+[HOOKS] Lockstats: thread 15 tid=0x538bc locks=441709 total=0.969096s avg=2.194us max=45.646us ratio=29.94%
+[HOOKS] Lockstats: thread 14 tid=0x538ad locks=335169 total=0.748572s avg=2.233us max=46.502us ratio=23.13%
+[HOOKS] Lockstats: thread 13 tid=0x538b7 locks=395256 total=0.865524s avg=2.190us max=58.470us ratio=26.74%
+[HOOKS] Lockstats: thread 12 tid=0x538ba locks=298247 total=0.672665s avg=2.255us max=51.101us ratio=20.78%
+[HOOKS] Lockstats: thread 11 tid=0x538b9 locks=366618 total=0.801713s avg=2.187us max=45.016us ratio=24.77%
+[HOOKS] Lockstats: thread 10 tid=0x538b8 locks=342797 total=0.707921s avg=2.065us max=42.060us ratio=21.87%
+[HOOKS] Lockstats: thread 9 tid=0x538bb locks=418704 total=0.996872s avg=2.381us max=321.230us ratio=30.80%
+[HOOKS] Lockstats: thread 8 tid=0x538b6 locks=442655 total=0.966599s avg=2.184us max=522.100us ratio=29.86%
+[HOOKS] Lockstats: thread 7 tid=0x538b3 locks=413250 total=0.971743s avg=2.351us max=45.128us ratio=30.02%
+[HOOKS] Lockstats: thread 6 tid=0x538b4 locks=413015 total=0.958126s avg=2.320us max=519.092us ratio=29.60%
+[HOOKS] Lockstats: thread 5 tid=0x538b5 locks=486514 total=0.951293s avg=1.955us max=90.282us ratio=29.39%
+[HOOKS] Lockstats: thread 4 tid=0x538b2 locks=417668 total=1.003962s avg=2.404us max=528.334us ratio=31.02%
+[HOOKS] Lockstats: thread 3 tid=0x538b1 locks=518627 total=0.978100s avg=1.886us max=521.271us ratio=30.22%
+[HOOKS] Lockstats: thread 2 tid=0x538b0 locks=557200 total=0.946811s avg=1.699us max=43.993us ratio=29.25%
+[HOOKS] Lockstats: thread 1 tid=0x538af locks=542959 total=0.915415s avg=1.686us max=51.571us ratio=28.28%
+[HOOKS] Lockstats: thread 0 tid=0x538ae locks=501357 total=0.884324s avg=1.764us max=50.133us ratio=27.32%
+[HOOKS] Barrierstats: ROI duration 3.236716s
+[HOOKS] Barrierstats: barrier waits in ROI: no (count=0)
+[HOOKS] Atomic ops in ROI: total=0, threads=0
+[HOOKS] Terminating
+
+real	0m4.531s
+user	0m18.269s
+sys	0m30.661s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC] Done.

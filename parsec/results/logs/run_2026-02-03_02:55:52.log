@@ -1,0 +1,615 @@
+[PARSEC] [========== PARSEC 3.0-beta-20120904 RUN LOGFILE ==========]
+
+[PARSEC] Run with amd64-linux.gcc-hooks binaries and input simlarge started on Tue Feb 3 02:55:52 UTC 2026.
+[PARSEC] Benchmarks to run:  parsec.ferret
+
+[PARSEC] [========== Running benchmark parsec.ferret [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] Unpacking benchmark input 'simlarge'.
+corel/
+corel/__cass.env
+corel/corel.raw
+corel/lsh.lsh
+corel/map_corel.map
+queries/
+queries/acorn.jpg
+queries/air-fighter.jpg
+queries/airplane-2.jpg
+queries/airplane-takeoff-3.jpg
+queries/alcatraz-island-prison.jpg
+queries/american-flag-3.jpg
+queries/apartment.jpg
+queries/apollo-2.jpg
+queries/apollo-earth.jpg
+queries/apple-11.jpg
+queries/apple-14.jpg
+queries/apple-16.jpg
+queries/apple-7.jpg
+queries/aquarium-fish-25.jpg
+queries/arches-9.jpg
+queries/arches.jpg
+queries/archipelago-2.jpg
+queries/archipelago.jpg
+queries/balboa-park.jpg
+queries/balloons-14.jpg
+queries/banana-1.jpg
+queries/bay.jpg
+queries/beach-2.jpg
+queries/bee.jpg
+queries/bird-2.jpg
+queries/black-currant-4.jpg
+queries/black-headed-sheep.jpg
+queries/boat-race.jpg
+queries/bookshelf.jpg
+queries/branch-2.jpg
+queries/buttercup-2.jpg
+queries/cable-2.jpg
+queries/cabrillo-national-monument.jpg
+queries/cactus-115.jpg
+queries/cactus-71.jpg
+queries/caesars-palace-2.jpg
+queries/canyon.jpg
+queries/cheese-plate.jpg
+queries/church-tower-with-mountain-in-background.jpg
+queries/civic-si-2.jpg
+queries/clip-3.jpg
+queries/clock-2.jpg
+queries/clock.jpg
+queries/clouds-2.jpg
+queries/coast.jpg
+queries/coffee-beans-2.jpg
+queries/columbia-start.jpg
+queries/concrete-cross.jpg
+queries/crawfish-3.jpg
+queries/death-valley-sand-dunes.jpg
+queries/duck-4.jpg
+queries/duck-5.jpg
+queries/egret-2.jpg
+queries/ellen-browning-scripps-park.jpg
+queries/face-10.jpg
+queries/face-11.jpg
+queries/face-12.jpg
+queries/face-13.jpg
+queries/face-14.jpg
+queries/face-15.jpg
+queries/face-16.jpg
+queries/face-17.jpg
+queries/face-18.jpg
+queries/face-19.jpg
+queries/face-2.jpg
+queries/face-20.jpg
+queries/face-21.jpg
+queries/face-22.jpg
+queries/face-23.jpg
+queries/face-24.jpg
+queries/face-25.jpg
+queries/face-26.jpg
+queries/face-27.jpg
+queries/face-28.jpg
+queries/face-29.jpg
+queries/face-3.jpg
+queries/face-30.jpg
+queries/face-31.jpg
+queries/face-32.jpg
+queries/face-33.jpg
+queries/face-34.jpg
+queries/face-35.jpg
+queries/face-36.jpg
+queries/face-4.jpg
+queries/face-5.jpg
+queries/face-6.jpg
+queries/face-7.jpg
+queries/face-8.jpg
+queries/face-9.jpg
+queries/face.jpg
+queries/fajitas.jpg
+queries/fake-berries.jpg
+queries/fallbrook-avocado-festival.jpg
+queries/fallen-branshy-tree.jpg
+queries/falls-2.jpg
+queries/falls-in-glacier.jpg
+queries/falls.jpg
+queries/farm-2.jpg
+queries/farm.jpg
+queries/farmers-market-2.jpg
+queries/farmers-market.jpg
+queries/field-20.jpg
+queries/figs.jpg
+queries/fireworks-11.jpg
+queries/fly.jpg
+queries/food-18.jpg
+queries/forest-16.jpg
+queries/forest-3.jpg
+queries/forest-38.jpg
+queries/forest-54.jpg
+queries/forest-65.jpg
+queries/la-jolla-cliffs-2.jpg
+queries/la-jolla-cliffs.jpg
+queries/la-jolla-cove-10.jpg
+queries/la-jolla-cove-11.jpg
+queries/la-jolla-cove-12.jpg
+queries/la-jolla-cove-13.jpg
+queries/la-jolla-cove-14.jpg
+queries/la-jolla-cove-2.jpg
+queries/la-jolla-cove-3.jpg
+queries/la-jolla-cove-4.jpg
+queries/la-jolla-cove-5.jpg
+queries/la-jolla-cove-6.jpg
+queries/la-jolla-cove-7.jpg
+queries/la-jolla-cove-8.jpg
+queries/la-jolla-cove-9.jpg
+queries/la-jolla-cove.jpg
+queries/la-jolla-seal-beach.jpg
+queries/la-jolla-shores.jpg
+queries/la-jolla-squirrels.jpg
+queries/lady-bug.jpg
+queries/ladybug-closeup.jpg
+queries/ladybugs.jpg
+queries/lake-2.jpg
+queries/lake-20.jpg
+queries/lake-21.jpg
+queries/lake-22.jpg
+queries/lake-23.jpg
+queries/lake-24.jpg
+queries/lake-25.jpg
+queries/lake-26.jpg
+queries/lake-27.jpg
+queries/lake-28.jpg
+queries/lake-29.jpg
+queries/lake-3.jpg
+queries/lake-30.jpg
+queries/lake-31.jpg
+queries/lake-32.jpg
+queries/lake-33.jpg
+queries/lake-34.jpg
+queries/lake-35.jpg
+queries/lake-36.jpg
+queries/lake-37.jpg
+queries/lake-38.jpg
+queries/lake-52.jpg
+queries/lake-53.jpg
+queries/lake-54.jpg
+queries/lake-55.jpg
+queries/lake-56.jpg
+queries/lake-57.jpg
+queries/lake-58.jpg
+queries/lake-59.jpg
+queries/lake-6.jpg
+queries/lake-60.jpg
+queries/lake-61.jpg
+queries/lake-62.jpg
+queries/lake-63.jpg
+queries/lake-64.jpg
+queries/lake-65.jpg
+queries/lake-66.jpg
+queries/lake-67.jpg
+queries/lake-68.jpg
+queries/lake-69.jpg
+queries/lake-7.jpg
+queries/lake-8.jpg
+queries/lake-9.jpg
+queries/lake-mcdonald-in-glacier.jpg
+queries/lake-mcdonald.jpg
+queries/lake-miramar.jpg
+queries/lake-people.jpg
+queries/lake-rock-in-morning-mist-2.jpg
+queries/lake-rock-in-morning-mist-3.jpg
+queries/lake-rock-in-morning-mist.jpg
+queries/lake-rocks-in-morning-mist-2.jpg
+queries/lake-rocks-in-morning-mist.jpg
+queries/lake-side.jpg
+queries/lake-water.jpg
+queries/lake.jpg
+queries/lamar-valley.jpg
+queries/lamp-flowers.jpg
+queries/lancashire-cheese.jpg
+queries/landing-lights.jpg
+queries/lantern.jpg
+queries/laptop.jpg
+queries/lapwing-in-snow.jpg
+queries/lapwings-in-snowy-field.jpg
+queries/las-vegas-strip.jpg
+queries/lasagna.jpg
+queries/lava-2.jpg
+queries/lava-3.jpg
+queries/lava-4.jpg
+queries/lava.jpg
+queries/leaf-2.jpg
+queries/leaf-3.jpg
+queries/leaf-4.jpg
+queries/leaf-5.jpg
+queries/leaf.jpg
+queries/leaves-in-a-stream.jpg
+queries/leaves-in-sun-2.jpg
+queries/leaves-in-sun-3.jpg
+queries/leaves-in-sun.jpg
+queries/leaves-water-drops-2.jpg
+queries/leaves-water-drops-3.jpg
+queries/leaves-water-drops.jpg
+queries/leaves.jpg
+queries/lemor.jpg
+queries/lemurs-eating.jpg
+queries/lens.jpg
+queries/liberty-cap.jpg
+queries/library.jpg
+queries/lichens-2.jpg
+queries/lichens.jpg
+queries/lighter.jpg
+queries/lighthouse.jpg
+queries/lights-2.jpg
+queries/lights-3.jpg
+queries/lights.jpg
+queries/limberger-cheese.jpg
+queries/lime-and-kiwi.jpg
+queries/lime-spider.jpg
+queries/limestone-quarry-2.jpg
+queries/limestone-quarry.jpg
+queries/lincolnshire-poacher-cheese.jpg
+queries/lion.jpg
+queries/little-bird.jpg
+queries/little-italy-sign.jpg
+queries/little-piggies.jpg
+queries/logan-pass-trail.jpg
+queries/logan-pass.jpg
+queries/lombard-street.jpg
+queries/london-bridge.jpg
+queries/long-beach-2.jpg
+queries/long-beach.jpg
+queries/long-horned-cattle-2.jpg
+queries/long-horned-cattle.jpg
+queries/lots-of-pots.jpg
+queries/lotus.jpg
+queries/lough-erne.jpg
+queries/lough-gill-2.jpg
+queries/lough-gill.jpg
+queries/lough-gur.jpg
+queries/lumbering-bear.jpg
+queries/lunar-eclipse.jpg
+queries/lynx-on-tree-log.jpg
+queries/lynx-sitting.jpg
+queries/queen-mary-2.jpg
+[PARSEC] Running 'time /root/cxl_profiler/parsec/pkgs/apps/ferret/inst/amd64-linux.gcc-hooks/bin/ferret corel lsh queries 10 20 16 output.txt':
+[PARSEC] [---------- Beginning of output ----------]
+PARSEC Benchmark Suite Version 3.0-beta-20120904
+[HOOKS] PARSEC Hooks Version 1.2
+[HOOKS] Entering ROI
+(10,1)
+(14,2)
+(15,3)
+(16,4)
+(18,5)
+(20,6)
+(21,7)
+(22,8)
+(23,9)
+(25,10)
+(26,11)
+(31,12)
+(32,13)
+(32,14)
+(32,15)
+(34,16)
+(35,17)
+(36,18)
+(37,19)
+(37,20)
+(40,21)
+(40,22)
+(43,23)
+(45,24)
+(46,25)
+(48,26)
+(49,27)
+(50,28)
+(50,29)
+(51,30)
+(51,31)
+(51,32)
+(53,33)
+(53,34)
+(54,35)
+(55,36)
+(55,37)
+(55,38)
+(57,39)
+(58,40)
+(59,41)
+(59,42)
+(60,43)
+(60,44)
+(61,45)
+(63,46)
+(64,47)
+(65,48)
+(66,49)
+(67,50)
+(67,51)
+(69,52)
+(69,53)
+(70,54)
+(72,55)
+(74,56)
+(75,57)
+(75,58)
+(78,59)
+(79,60)
+(80,61)
+(80,62)
+(81,63)
+(82,64)
+(82,65)
+(83,66)
+(84,67)
+(85,68)
+(86,69)
+(89,70)
+(90,71)
+(93,72)
+(93,73)
+(93,74)
+(93,75)
+(94,76)
+(94,77)
+(94,78)
+(95,79)
+(96,80)
+(96,81)
+(96,82)
+(97,83)
+(99,84)
+(99,85)
+(99,86)
+(101,87)
+(104,88)
+(105,89)
+(105,90)
+(106,91)
+(107,92)
+(107,93)
+(107,94)
+(108,95)
+(108,96)
+(110,97)
+(111,98)
+(114,99)
+(114,100)
+(114,101)
+(114,102)
+(115,103)
+(115,104)
+(116,105)
+(117,106)
+(120,107)
+(121,108)
+(123,109)
+(124,110)
+(125,111)
+(125,112)
+(126,113)
+(128,114)
+(130,115)
+(130,116)
+(131,117)
+(131,118)
+(131,119)
+(131,120)
+(131,121)
+(133,122)
+(134,123)
+(134,124)
+(139,125)
+(141,126)
+(147,127)
+(147,128)
+(150,129)
+(151,130)
+(154,131)
+(154,132)
+(155,133)
+(156,134)
+(156,135)
+(157,136)
+(158,137)
+(158,138)
+(159,139)
+(159,140)
+(160,141)
+(160,142)
+(160,143)
+(161,144)
+(162,145)
+(163,146)
+(163,147)
+(165,148)
+(166,149)
+(167,150)
+(169,151)
+(169,152)
+(170,153)
+(170,154)
+(173,155)
+(180,156)
+(181,157)
+(182,158)
+(184,159)
+(187,160)
+(190,161)
+(190,162)
+(192,163)
+(193,164)
+(195,165)
+(199,166)
+(201,167)
+(201,168)
+(202,169)
+(202,170)
+(202,171)
+(202,172)
+(202,173)
+(203,174)
+(206,175)
+(207,176)
+(208,177)
+(209,178)
+(210,179)
+(212,180)
+(213,181)
+(217,182)
+(217,183)
+(217,184)
+(217,185)
+(219,186)
+(220,187)
+(220,188)
+(221,189)
+(222,190)
+(223,191)
+(223,192)
+(224,193)
+(226,194)
+(226,195)
+(226,196)
+(227,197)
+(228,198)
+(228,199)
+(229,200)
+(229,201)
+(229,202)
+(231,203)
+(231,204)
+(232,205)
+(232,206)
+(233,207)
+(233,208)
+(233,209)
+(234,210)
+(234,211)
+(234,212)
+(234,213)
+(235,214)
+(235,215)
+(235,216)
+(236,217)
+(236,218)
+(237,219)
+(239,220)
+(239,221)
+(240,222)
+(241,223)
+(242,224)
+(242,225)
+(243,226)
+(244,227)
+(245,228)
+(245,229)
+(246,230)
+(246,231)
+(248,232)
+(248,233)
+(249,234)
+(251,235)
+(252,236)
+(253,237)
+(255,238)
+(256,239)
+(256,240)
+(256,241)
+(256,242)
+(256,243)
+(256,244)
+(256,245)
+(256,246)
+(256,247)
+(256,248)
+(256,249)
+(256,250)
+(256,251)
+(256,252)
+(256,253)
+(256,254)
+(256,255)
+(256,256)
+[HOOKS] Leaving ROI
+QUERY TIME: 0.428 seconds
+[HOOKS] Total time spent in ROI: 0.428s
+[HOOKS] Lockstats: ROI duration 0.427908s
+[HOOKS] Lockstats: lock-based sync in ROI: yes (acquisitions=4142, threads=66)
+[HOOKS] Lockstats: critical-section time sum 0.008141s, avg 1.966us, max 65.961us
+[HOOKS] Lockstats: critical-section ratio (sum/(ROI*threads)) 0.03%
+[HOOKS] Lockstats: thread 65 tid=0x50db9 locks=46 total=0.000121s avg=2.624us max=18.987us ratio=0.03%
+[HOOKS] Lockstats: thread 64 tid=0x50dba locks=512 total=0.000279s avg=0.545us max=2.661us ratio=0.07%
+[HOOKS] Lockstats: thread 63 tid=0x50db8 locks=58 total=0.000108s avg=1.867us max=5.635us ratio=0.03%
+[HOOKS] Lockstats: thread 62 tid=0x50db7 locks=57 total=0.000119s avg=2.086us max=10.143us ratio=0.03%
+[HOOKS] Lockstats: thread 61 tid=0x50db6 locks=38 total=0.000082s avg=2.149us max=5.687us ratio=0.02%
+[HOOKS] Lockstats: thread 60 tid=0x50db5 locks=56 total=0.000108s avg=1.930us max=6.061us ratio=0.03%
+[HOOKS] Lockstats: thread 59 tid=0x50db4 locks=44 total=0.000088s avg=2.001us max=5.535us ratio=0.02%
+[HOOKS] Lockstats: thread 58 tid=0x50db3 locks=57 total=0.000129s avg=2.264us max=31.625us ratio=0.03%
+[HOOKS] Lockstats: thread 57 tid=0x50db2 locks=46 total=0.000076s avg=1.653us max=5.895us ratio=0.02%
+[HOOKS] Lockstats: thread 56 tid=0x50db1 locks=59 total=0.000104s avg=1.755us max=5.343us ratio=0.02%
+[HOOKS] Lockstats: thread 55 tid=0x50db0 locks=25 total=0.000052s avg=2.096us max=6.015us ratio=0.01%
+[HOOKS] Lockstats: thread 54 tid=0x50daf locks=56 total=0.000102s avg=1.829us max=5.414us ratio=0.02%
+[HOOKS] Lockstats: thread 53 tid=0x50dae locks=56 total=0.000116s avg=2.066us max=5.640us ratio=0.03%
+[HOOKS] Lockstats: thread 52 tid=0x50dac locks=49 total=0.000114s avg=2.323us max=11.612us ratio=0.03%
+[HOOKS] Lockstats: thread 51 tid=0x50da9 locks=49 total=0.000101s avg=2.065us max=20.880us ratio=0.02%
+[HOOKS] Lockstats: thread 50 tid=0x50da8 locks=55 total=0.000098s avg=1.791us max=8.118us ratio=0.02%
+[HOOKS] Lockstats: thread 49 tid=0x50dad locks=39 total=0.000087s avg=2.232us max=13.274us ratio=0.02%
+[HOOKS] Lockstats: thread 48 tid=0x50dab locks=51 total=0.000100s avg=1.961us max=15.397us ratio=0.02%
+[HOOKS] Lockstats: thread 47 tid=0x50da7 locks=53 total=0.000118s avg=2.230us max=10.754us ratio=0.03%
+[HOOKS] Lockstats: thread 46 tid=0x50daa locks=52 total=0.000108s avg=2.084us max=5.944us ratio=0.03%
+[HOOKS] Lockstats: thread 45 tid=0x50da6 locks=57 total=0.000175s avg=3.068us max=38.886us ratio=0.04%
+[HOOKS] Lockstats: thread 44 tid=0x50da2 locks=53 total=0.000124s avg=2.342us max=14.968us ratio=0.03%
+[HOOKS] Lockstats: thread 43 tid=0x50da1 locks=47 total=0.000105s avg=2.227us max=16.994us ratio=0.02%
+[HOOKS] Lockstats: thread 42 tid=0x50da3 locks=52 total=0.000094s avg=1.813us max=8.186us ratio=0.02%
+[HOOKS] Lockstats: thread 41 tid=0x50da5 locks=54 total=0.000111s avg=2.060us max=12.798us ratio=0.03%
+[HOOKS] Lockstats: thread 40 tid=0x50da4 locks=56 total=0.000114s avg=2.029us max=14.789us ratio=0.03%
+[HOOKS] Lockstats: thread 39 tid=0x50da0 locks=53 total=0.000117s avg=2.200us max=8.376us ratio=0.03%
+[HOOKS] Lockstats: thread 38 tid=0x50d9f locks=53 total=0.000116s avg=2.184us max=13.542us ratio=0.03%
+[HOOKS] Lockstats: thread 37 tid=0x50d9e locks=50 total=0.000134s avg=2.684us max=42.688us ratio=0.03%
+[HOOKS] Lockstats: thread 36 tid=0x50d9d locks=58 total=0.000112s avg=1.939us max=9.383us ratio=0.03%
+[HOOKS] Lockstats: thread 35 tid=0x50d99 locks=53 total=0.000095s avg=1.793us max=17.558us ratio=0.02%
+[HOOKS] Lockstats: thread 34 tid=0x50d98 locks=50 total=0.000096s avg=1.925us max=17.675us ratio=0.02%
+[HOOKS] Lockstats: thread 33 tid=0x50d9c locks=58 total=0.000112s avg=1.925us max=10.812us ratio=0.03%
+[HOOKS] Lockstats: thread 32 tid=0x50d97 locks=58 total=0.000096s avg=1.657us max=14.565us ratio=0.02%
+[HOOKS] Lockstats: thread 31 tid=0x50d9b locks=58 total=0.000102s avg=1.760us max=14.251us ratio=0.02%
+[HOOKS] Lockstats: thread 30 tid=0x50d9a locks=53 total=0.000137s avg=2.576us max=38.399us ratio=0.03%
+[HOOKS] Lockstats: thread 29 tid=0x50d96 locks=60 total=0.000109s avg=1.815us max=17.060us ratio=0.03%
+[HOOKS] Lockstats: thread 28 tid=0x50d95 locks=58 total=0.000088s avg=1.519us max=15.202us ratio=0.02%
+[HOOKS] Lockstats: thread 27 tid=0x50d94 locks=54 total=0.000076s avg=1.412us max=8.446us ratio=0.02%
+[HOOKS] Lockstats: thread 26 tid=0x50d93 locks=59 total=0.000120s avg=2.030us max=14.525us ratio=0.03%
+[HOOKS] Lockstats: thread 25 tid=0x50d92 locks=53 total=0.000129s avg=2.427us max=23.754us ratio=0.03%
+[HOOKS] Lockstats: thread 24 tid=0x50d91 locks=64 total=0.000120s avg=1.876us max=32.369us ratio=0.03%
+[HOOKS] Lockstats: thread 23 tid=0x50d90 locks=62 total=0.000113s avg=1.822us max=15.976us ratio=0.03%
+[HOOKS] Lockstats: thread 22 tid=0x50d8f locks=57 total=0.000116s avg=2.038us max=15.915us ratio=0.03%
+[HOOKS] Lockstats: thread 21 tid=0x50d8e locks=61 total=0.000091s avg=1.489us max=14.046us ratio=0.02%
+[HOOKS] Lockstats: thread 20 tid=0x50d8d locks=51 total=0.000111s avg=2.183us max=17.012us ratio=0.03%
+[HOOKS] Lockstats: thread 19 tid=0x50d8c locks=58 total=0.000122s avg=2.097us max=23.831us ratio=0.03%
+[HOOKS] Lockstats: thread 18 tid=0x50d79 locks=257 total=0.000875s avg=3.403us max=44.651us ratio=0.20%
+[HOOKS] Lockstats: thread 17 tid=0x50d89 locks=48 total=0.000113s avg=2.363us max=14.569us ratio=0.03%
+[HOOKS] Lockstats: thread 16 tid=0x50d8b locks=54 total=0.000082s avg=1.526us max=13.236us ratio=0.02%
+[HOOKS] Lockstats: thread 15 tid=0x50d88 locks=50 total=0.000118s avg=2.356us max=27.494us ratio=0.03%
+[HOOKS] Lockstats: thread 14 tid=0x50d8a locks=60 total=0.000111s avg=1.843us max=27.108us ratio=0.03%
+[HOOKS] Lockstats: thread 13 tid=0x50d87 locks=50 total=0.000089s avg=1.778us max=6.937us ratio=0.02%
+[HOOKS] Lockstats: thread 12 tid=0x50d86 locks=51 total=0.000103s avg=2.024us max=17.532us ratio=0.02%
+[HOOKS] Lockstats: thread 11 tid=0x50d85 locks=51 total=0.000108s avg=2.119us max=16.279us ratio=0.03%
+[HOOKS] Lockstats: thread 10 tid=0x50d84 locks=51 total=0.000154s avg=3.013us max=65.961us ratio=0.04%
+[HOOKS] Lockstats: thread 9 tid=0x50d83 locks=51 total=0.000098s avg=1.920us max=13.894us ratio=0.02%
+[HOOKS] Lockstats: thread 8 tid=0x50d82 locks=51 total=0.000109s avg=2.138us max=22.579us ratio=0.03%
+[HOOKS] Lockstats: thread 7 tid=0x50d81 locks=49 total=0.000116s avg=2.360us max=21.137us ratio=0.03%
+[HOOKS] Lockstats: thread 6 tid=0x50d7f locks=51 total=0.000117s avg=2.287us max=19.601us ratio=0.03%
+[HOOKS] Lockstats: thread 5 tid=0x50d80 locks=53 total=0.000135s avg=2.546us max=25.325us ratio=0.03%
+[HOOKS] Lockstats: thread 4 tid=0x50d7e locks=51 total=0.000118s avg=2.314us max=13.059us ratio=0.03%
+[HOOKS] Lockstats: thread 3 tid=0x50d7d locks=51 total=0.000097s avg=1.896us max=5.373us ratio=0.02%
+[HOOKS] Lockstats: thread 2 tid=0x50d7c locks=51 total=0.000101s avg=1.972us max=7.890us ratio=0.02%
+[HOOKS] Lockstats: thread 1 tid=0x50d7b locks=51 total=0.000124s avg=2.424us max=23.433us ratio=0.03%
+[HOOKS] Lockstats: thread 0 tid=0x50d7a locks=53 total=0.000130s avg=2.460us max=27.525us ratio=0.03%
+[HOOKS] Barrierstats: ROI duration 0.427908s
+[HOOKS] Barrierstats: barrier waits in ROI: no (count=0)
+[HOOKS] Atomic ops in ROI: total=0, threads=0
+[HOOKS] Terminating
+
+real	0m0.550s
+user	0m6.525s
+sys	0m0.243s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC] Done.

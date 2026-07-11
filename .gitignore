@@ -1,0 +1,40 @@
+# Repo-wide ignore rules only. Each artifact directory owns the rules for
+# its build outputs in its own .gitignore (global_allocator/, benchmark/,
+# benchmark/rtt/, synchronization/, gapbs_mh/, hashtable_mh/,
+# interleave_dax/, parsec/, and upstream gapbs/).
+
+# LaTeX build artifacts (root-level only — anchored so they can never
+# swallow artifact files like gapbs/test/reference/*.out or parsec run logs)
+/*.aux
+/*.log
+/*.out
+/*.toc
+/*.fdb_latexmk
+/*.fls
+/*.synctex.gz
+/*.bbl
+/*.blg
+/*.pdf
+
+# Paper + AD/AE sources (separate nested repo, not shipped with the artifact)
+/doc
+
+# Vendored PXE linux kernel
+/linux-pxe
+
+# Editor / IDE noise
+*~
+*.swp
+*.swo
+.DS_Store
+.vscode/
+.idea/
+
+# Embedded git repos inside vendored third-party sources (e.g. parsec/.git
+# from the original PARSEC checkout). The top-level repo is the only Git
+# history we ship.
+**/.git
+
+# Python cache
+__pycache__/
+*.pyc

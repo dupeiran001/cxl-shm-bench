@@ -1,0 +1,5 @@
+Mapped /dev/interleave_dax at 0x7f65c6e9d000 (len=67108864000)
+[Host 3] Ready, waiting at initial barrier...
+[Host 3] All hosts synchronized, starting BFS
+[Host 3] Trial 1 complete
+SYNC_STATS tag=bfs publish_lines=857250857 observe_lines=317433 lock_acquires=39 lock_retries=14 barrier_waits=29 atomic_rmw=0

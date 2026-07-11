@@ -1,0 +1,9 @@
+/build/
+/bw_mem/bw_mem
+/tool_memory_latency/tool_memory_latency
+*.o
+*.a
+*.d
+
+# Abseil is fetched on first build by `make`/`make deps`; never tracked.
+/third_party/

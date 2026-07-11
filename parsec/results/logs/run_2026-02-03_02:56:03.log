@@ -1,0 +1,78 @@
+[PARSEC] [========== PARSEC 3.0-beta-20120904 RUN LOGFILE ==========]
+
+[PARSEC] Run with amd64-linux.gcc-hooks binaries and input simlarge started on Tue Feb 3 02:56:03 UTC 2026.
+[PARSEC] Benchmarks to run:  parsec.raytrace
+
+[PARSEC] [========== Running benchmark parsec.raytrace [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] Unpacking benchmark input 'simlarge'.
+happy_buddha.obj
+[PARSEC] Running 'time /root/cxl_profiler/parsec/pkgs/apps/raytrace/inst/amd64-linux.gcc-hooks/bin/rtview happy_buddha.obj -automove -nthreads 16 -frames 3 -res 1920 1080':
+[PARSEC] [---------- Beginning of output ----------]
+this =0x5565e94febe0
+PARSEC Benchmark Suite Version 3.0-beta-20120904
+[HOOKS] PARSEC Hooks Version 1.2
+initializing LRT ray tracer ...
+default BVH builder : binnedalldimssavespace
+
+
+Options:  automove = ;
+    files = happy_buddha.obj;
+   frames = 3;
+ nthreads = 16;
+      res = [1920, 1080];
+
+Using memory framebuffer...
+Adding obj file: happy_buddha.obj
+Using auto camera...
+num nodes in scene graph 1
+adding 543522 vertices
+adding 1087425 triangles
+finalizing geometry
+vertices            543522 (6369.4 KB)
+triangles           1087425 (12743.3 KB)
+texture coordinates 0 (0 KB)
+No materials -> create dummy material
+building index
+using BVH builder default
+build time 0.804818
+done
+sceneAABB =[[[-0.04615,0.049738,-0.047301,0] ],[[0.035226,0.24777,0.034077,0] ]]
+Rendering 3 frames... 
+[HOOKS] Entering ROI
+-> starting 16 threads...done
+[HOOKS] Leaving ROI
+[HOOKS] Total time spent in ROI: 0.058s
+[HOOKS] Lockstats: ROI duration 0.058368s
+[HOOKS] Lockstats: lock-based sync in ROI: yes (acquisitions=234, threads=17)
+[HOOKS] Lockstats: critical-section time sum 0.003879s, avg 16.576us, max 1857.462us
+[HOOKS] Lockstats: critical-section ratio (sum/(ROI*threads)) 0.39%
+[HOOKS] Lockstats: thread 16 tid=0x5120c locks=11 total=0.000077s avg=6.974us max=21.011us ratio=0.13%
+[HOOKS] Lockstats: thread 15 tid=0x5120b locks=11 total=0.000088s avg=7.965us max=25.093us ratio=0.15%
+[HOOKS] Lockstats: thread 14 tid=0x5120a locks=11 total=0.000049s avg=4.488us max=11.988us ratio=0.08%
+[HOOKS] Lockstats: thread 13 tid=0x51209 locks=11 total=0.000169s avg=15.352us max=52.916us ratio=0.29%
+[HOOKS] Lockstats: thread 12 tid=0x51208 locks=11 total=0.000106s avg=9.629us max=47.022us ratio=0.18%
+[HOOKS] Lockstats: thread 11 tid=0x51207 locks=11 total=0.000155s avg=14.125us max=52.938us ratio=0.27%
+[HOOKS] Lockstats: thread 10 tid=0x51206 locks=11 total=0.000122s avg=11.088us max=52.615us ratio=0.21%
+[HOOKS] Lockstats: thread 9 tid=0x51205 locks=11 total=0.000096s avg=8.738us max=25.912us ratio=0.16%
+[HOOKS] Lockstats: thread 8 tid=0x51204 locks=11 total=0.000124s avg=11.260us max=47.216us ratio=0.21%
+[HOOKS] Lockstats: thread 7 tid=0x51203 locks=11 total=0.000082s avg=7.476us max=21.120us ratio=0.14%
+[HOOKS] Lockstats: thread 6 tid=0x51202 locks=11 total=0.000077s avg=7.007us max=15.335us ratio=0.13%
+[HOOKS] Lockstats: thread 5 tid=0x51201 locks=11 total=0.000065s avg=5.937us max=24.607us ratio=0.11%
+[HOOKS] Lockstats: thread 4 tid=0x51200 locks=11 total=0.000058s avg=5.249us max=11.844us ratio=0.10%
+[HOOKS] Lockstats: thread 3 tid=0x511ff locks=11 total=0.000133s avg=12.130us max=47.742us ratio=0.23%
+[HOOKS] Lockstats: thread 2 tid=0x511fe locks=11 total=0.000139s avg=12.640us max=45.321us ratio=0.24%
+[HOOKS] Lockstats: thread 1 tid=0x511fd locks=11 total=0.000191s avg=17.397us max=51.645us ratio=0.33%
+[HOOKS] Lockstats: thread 0 tid=0x511fc locks=58 total=0.002147s avg=37.014us max=1857.462us ratio=3.68%
+[HOOKS] Barrierstats: ROI duration 0.058368s
+[HOOKS] Barrierstats: barrier waits in ROI: no (count=0)
+[HOOKS] Atomic ops in ROI: total=97248, threads=16
+[HOOKS] Terminating
+Done
+
+real	0m4.406s
+user	0m4.978s
+sys	0m0.271s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC] Done.

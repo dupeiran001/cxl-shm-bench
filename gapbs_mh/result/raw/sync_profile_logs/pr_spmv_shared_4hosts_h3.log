@@ -1,0 +1,5 @@
+Mapped /dev/interleave_dax at 0x7f5b029c0000 (len=67108864000)
+[Host 3] Ready, waiting at initial barrier...
+[Host 3] All hosts synchronized, starting PR
+[Host 3] Trial 1 complete
+SYNC_STATS tag=pr_spmv publish_lines=231605462 observe_lines=86001 lock_acquires=38 lock_retries=17 barrier_waits=32 atomic_rmw=0

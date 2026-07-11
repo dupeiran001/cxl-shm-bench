@@ -1,0 +1,89 @@
+[PARSEC] [========== PARSEC 3.0-beta-20120904 RUN LOGFILE ==========]
+
+[PARSEC] Run with amd64-linux.gcc-hooks binaries and input simlarge started on Tue Feb 3 02:56:30 UTC 2026.
+[PARSEC] Benchmarks to run:  splash2.ocean_ncp
+
+[PARSEC] [========== Running benchmark splash2.ocean_ncp [1] ==========]
+[PARSEC] NOTE: SPLASH-2 only supports "test" input sets.
+[PARSEC]       Please use SPLASH-2x for multiple input sets.
+[PARSEC] NOTE: SPLASH-2 only supports "test" input sets.
+[PARSEC]       Please use SPLASH-2x for multiple input sets.
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'test' available, skipping input setup.
+[PARSEC] Running 'time /root/cxl_profiler/parsec/ext/splash2/apps/ocean_ncp/inst/amd64-linux.gcc-hooks/bin/run.sh 16 test':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /root/cxl_profiler/parsec/ext/splash2/apps/ocean_ncp/inst/amd64-linux.gcc-hooks/bin/ocean_ncp -n258 -p16 -e1e-07 -r20000 -t28800:
+[HOOKS] Entering ROI
+
+Ocean simulation with W-cycle multigrid solver
+    Processors                         : 16
+    Grid size                          : 258 x 258
+    Grid resolution (meters)           : 20000.00
+    Time between relaxations (seconds) : 28800
+    Error tolerance                    : 1e-07
+
+
+                       PROCESS STATISTICS
+                  Total          Multigrid         Multigrid
+ Proc             Time             Time            Fraction
+    0             25462              19112             0.751
+
+                       TIMING INFORMATION
+Start time                        : 1770087390397810
+Initialization finish time        : 1770087390453846
+Overall finish time               : 1770087390479681
+Total time with initialization    :            81871
+Total time without initialization :            25835
+    (excludes first timestep)
+
+[HOOKS] Total time spent in ROI: -1770087390.398s
+[HOOKS] Lockstats: ROI duration 0.081778s
+[HOOKS] Lockstats: lock-based sync in ROI: yes (acquisitions=30298, threads=16)
+[HOOKS] Lockstats: critical-section time sum 0.082268s, avg 2.715us, max 53.146us
+[HOOKS] Lockstats: critical-section ratio (sum/(ROI*threads)) 6.29%
+[HOOKS] Lockstats: thread 15 tid=0x522f8 locks=1899 total=0.004946s avg=2.604us max=29.580us ratio=6.05%
+[HOOKS] Lockstats: thread 14 tid=0x522e9 locks=1903 total=0.004737s avg=2.489us max=30.261us ratio=5.79%
+[HOOKS] Lockstats: thread 13 tid=0x522f7 locks=1907 total=0.004772s avg=2.502us max=30.374us ratio=5.84%
+[HOOKS] Lockstats: thread 12 tid=0x522f6 locks=1901 total=0.004891s avg=2.573us max=40.039us ratio=5.98%
+[HOOKS] Lockstats: thread 11 tid=0x522f5 locks=1903 total=0.004685s avg=2.462us max=29.451us ratio=5.73%
+[HOOKS] Lockstats: thread 10 tid=0x522f4 locks=1902 total=0.004798s avg=2.523us max=29.927us ratio=5.87%
+[HOOKS] Lockstats: thread 9 tid=0x522f3 locks=1895 total=0.004799s avg=2.533us max=29.320us ratio=5.87%
+[HOOKS] Lockstats: thread 8 tid=0x522f2 locks=1910 total=0.004591s avg=2.404us max=29.884us ratio=5.61%
+[HOOKS] Lockstats: thread 7 tid=0x522f1 locks=1898 total=0.005025s avg=2.647us max=31.584us ratio=6.14%
+[HOOKS] Lockstats: thread 6 tid=0x522f0 locks=1897 total=0.004967s avg=2.618us max=44.583us ratio=6.07%
+[HOOKS] Lockstats: thread 5 tid=0x522ed locks=1876 total=0.006047s avg=3.223us max=53.146us ratio=7.39%
+[HOOKS] Lockstats: thread 4 tid=0x522ef locks=1874 total=0.006110s avg=3.260us max=34.312us ratio=7.47%
+[HOOKS] Lockstats: thread 3 tid=0x522ee locks=1867 total=0.006351s avg=3.402us max=52.600us ratio=7.77%
+[HOOKS] Lockstats: thread 2 tid=0x522ec locks=1900 total=0.004858s avg=2.557us max=29.660us ratio=5.94%
+[HOOKS] Lockstats: thread 1 tid=0x522eb locks=1892 total=0.005156s avg=2.725us max=52.477us ratio=6.31%
+[HOOKS] Lockstats: thread 0 tid=0x522ea locks=1874 total=0.005534s avg=2.953us max=29.448us ratio=6.77%
+[HOOKS] Barrierstats: ROI duration 0.081778s
+[HOOKS] Barrierstats: barrier waits in ROI: yes (waits=13920, threads=16)
+[HOOKS] Barrierstats: wait time sum 0.843020s, avg 60.562us, max 3091.334us
+[HOOKS] Barrierstats: wait ratio (sum/(ROI*threads)) 64.43%
+[HOOKS] Barrierstats: thread 15 tid=0x522f8 waits=870 total=0.055515s avg=63.810us max=3087.771us ratio=67.88%
+[HOOKS] Barrierstats: thread 14 tid=0x522e9 waits=870 total=0.055785s avg=64.121us max=3091.334us ratio=68.22%
+[HOOKS] Barrierstats: thread 13 tid=0x522f7 waits=870 total=0.055750s avg=64.081us max=3088.379us ratio=68.17%
+[HOOKS] Barrierstats: thread 12 tid=0x522f6 waits=870 total=0.055551s avg=63.852us max=3090.313us ratio=67.93%
+[HOOKS] Barrierstats: thread 11 tid=0x522f5 waits=870 total=0.052084s avg=59.867us max=531.468us ratio=63.69%
+[HOOKS] Barrierstats: thread 10 tid=0x522f4 waits=870 total=0.051990s avg=59.759us max=577.162us ratio=63.57%
+[HOOKS] Barrierstats: thread 9 tid=0x522f3 waits=870 total=0.051863s avg=59.612us max=572.527us ratio=63.42%
+[HOOKS] Barrierstats: thread 8 tid=0x522f2 waits=870 total=0.051996s avg=59.766us max=571.785us ratio=63.58%
+[HOOKS] Barrierstats: thread 7 tid=0x522f1 waits=870 total=0.051137s avg=58.779us max=1100.365us ratio=62.53%
+[HOOKS] Barrierstats: thread 6 tid=0x522f0 waits=870 total=0.051011s avg=58.633us max=1108.087us ratio=62.38%
+[HOOKS] Barrierstats: thread 5 tid=0x522ed waits=870 total=0.049955s avg=57.420us max=1108.310us ratio=61.09%
+[HOOKS] Barrierstats: thread 4 tid=0x522ef waits=870 total=0.050760s avg=58.345us max=1107.953us ratio=62.07%
+[HOOKS] Barrierstats: thread 3 tid=0x522ee waits=870 total=0.052195s avg=59.995us max=1592.153us ratio=63.83%
+[HOOKS] Barrierstats: thread 2 tid=0x522ec waits=870 total=0.052646s avg=60.513us max=1594.288us ratio=64.38%
+[HOOKS] Barrierstats: thread 1 tid=0x522eb waits=870 total=0.052361s avg=60.185us max=1595.236us ratio=64.03%
+[HOOKS] Barrierstats: thread 0 tid=0x522ea waits=870 total=0.052419s avg=60.252us max=1593.772us ratio=64.10%
+[HOOKS] Atomic ops in ROI: total=0, threads=0
+[HOOKS] Terminating
+
+real	0m0.093s
+user	0m0.184s
+sys	0m0.557s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC] Done.

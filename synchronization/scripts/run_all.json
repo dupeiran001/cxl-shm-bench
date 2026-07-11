@@ -1,0 +1,230 @@
+[
+  [
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock lfm --hosts 1 --host_id 0 --threads 1 --locks 1 --hold_ns 0 --gap_ns 0 --seconds 10 --init --no_flush_stats"
+  ],
+  [
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock peterson --hosts 1 --host_id 0 --threads 1 --locks 1 --hold_ns 0 --gap_ns 0 --seconds 10 --init --no_flush_stats"
+  ],
+  [
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock bakery --hosts 1 --host_id 0 --threads 1 --locks 1 --hold_ns 0 --gap_ns 0 --seconds 10 --init --no_flush_stats"
+  ],
+  [
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock spin --hosts 1 --host_id 0 --threads 1 --locks 1 --hold_ns 0 --gap_ns 0 --seconds 10 --init --no_flush_stats"
+  ],
+  [
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock lfm --hosts 2 --host_id 0 --threads 1 --locks 1 --hold_ns 0 --gap_ns 0 --seconds 10 --init --no_flush_stats",
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock lfm --hosts 2 --host_id 1 --threads 1 --locks 1 --hold_ns 0 --gap_ns 0 --seconds 10 --no_flush_stats"
+  ],
+  [
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock peterson --hosts 2 --host_id 0 --threads 1 --locks 1 --hold_ns 0 --gap_ns 0 --seconds 10 --init --no_flush_stats",
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock peterson --hosts 2 --host_id 1 --threads 1 --locks 1 --hold_ns 0 --gap_ns 0 --seconds 10 --no_flush_stats"
+  ],
+  [
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock bakery --hosts 2 --host_id 0 --threads 1 --locks 1 --hold_ns 0 --gap_ns 0 --seconds 10 --init --no_flush_stats",
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock bakery --hosts 2 --host_id 1 --threads 1 --locks 1 --hold_ns 0 --gap_ns 0 --seconds 10 --no_flush_stats"
+  ],
+  [
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock lfm --hosts 3 --host_id 0 --threads 1 --locks 1 --hold_ns 0 --gap_ns 0 --seconds 10 --init --no_flush_stats",
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock lfm --hosts 3 --host_id 1 --threads 1 --locks 1 --hold_ns 0 --gap_ns 0 --seconds 10 --no_flush_stats",
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock lfm --hosts 3 --host_id 2 --threads 1 --locks 1 --hold_ns 0 --gap_ns 0 --seconds 10 --no_flush_stats"
+  ],
+  [
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock peterson --hosts 3 --host_id 0 --threads 1 --locks 1 --hold_ns 0 --gap_ns 0 --seconds 10 --init --no_flush_stats",
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock peterson --hosts 3 --host_id 1 --threads 1 --locks 1 --hold_ns 0 --gap_ns 0 --seconds 10 --no_flush_stats",
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock peterson --hosts 3 --host_id 2 --threads 1 --locks 1 --hold_ns 0 --gap_ns 0 --seconds 10 --no_flush_stats"
+  ],
+  [
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock bakery --hosts 3 --host_id 0 --threads 1 --locks 1 --hold_ns 0 --gap_ns 0 --seconds 10 --init --no_flush_stats",
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock bakery --hosts 3 --host_id 1 --threads 1 --locks 1 --hold_ns 0 --gap_ns 0 --seconds 10 --no_flush_stats",
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock bakery --hosts 3 --host_id 2 --threads 1 --locks 1 --hold_ns 0 --gap_ns 0 --seconds 10 --no_flush_stats"
+  ],
+  [
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock lfm --hosts 4 --host_id 0 --threads 1 --locks 1 --hold_ns 0 --gap_ns 0 --seconds 10 --init --no_flush_stats",
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock lfm --hosts 4 --host_id 1 --threads 1 --locks 1 --hold_ns 0 --gap_ns 0 --seconds 10 --no_flush_stats",
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock lfm --hosts 4 --host_id 2 --threads 1 --locks 1 --hold_ns 0 --gap_ns 0 --seconds 10 --no_flush_stats",
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock lfm --hosts 4 --host_id 3 --threads 1 --locks 1 --hold_ns 0 --gap_ns 0 --seconds 10 --no_flush_stats"
+  ],
+  [
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock peterson --hosts 4 --host_id 0 --threads 1 --locks 1 --hold_ns 0 --gap_ns 0 --seconds 10 --init --no_flush_stats",
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock peterson --hosts 4 --host_id 1 --threads 1 --locks 1 --hold_ns 0 --gap_ns 0 --seconds 10 --no_flush_stats",
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock peterson --hosts 4 --host_id 2 --threads 1 --locks 1 --hold_ns 0 --gap_ns 0 --seconds 10 --no_flush_stats",
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock peterson --hosts 4 --host_id 3 --threads 1 --locks 1 --hold_ns 0 --gap_ns 0 --seconds 10 --no_flush_stats"
+  ],
+  [
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock bakery --hosts 4 --host_id 0 --threads 1 --locks 1 --hold_ns 0 --gap_ns 0 --seconds 10 --init --no_flush_stats",
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock bakery --hosts 4 --host_id 1 --threads 1 --locks 1 --hold_ns 0 --gap_ns 0 --seconds 10 --no_flush_stats",
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock bakery --hosts 4 --host_id 2 --threads 1 --locks 1 --hold_ns 0 --gap_ns 0 --seconds 10 --no_flush_stats",
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock bakery --hosts 4 --host_id 3 --threads 1 --locks 1 --hold_ns 0 --gap_ns 0 --seconds 10 --no_flush_stats"
+  ],
+  [
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock spin --hosts 1 --host_id 0 --threads 2 --locks 1 --hold_ns 0 --gap_ns 0 --seconds 10 --init --no_flush_stats"
+  ],
+  [
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock spin --hosts 1 --host_id 0 --threads 3 --locks 1 --hold_ns 0 --gap_ns 0 --seconds 10 --init --no_flush_stats"
+  ],
+  [
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock spin --hosts 1 --host_id 0 --threads 4 --locks 1 --hold_ns 0 --gap_ns 0 --seconds 10 --init --no_flush_stats"
+  ],
+  [
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock lfm --hosts 1 --host_id 0 --threads 1 --locks 2 --hold_ns 0 --gap_ns 0 --seconds 10 --init --no_flush_stats"
+  ],
+  [
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock peterson --hosts 1 --host_id 0 --threads 1 --locks 2 --hold_ns 0 --gap_ns 0 --seconds 10 --init --no_flush_stats"
+  ],
+  [
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock bakery --hosts 1 --host_id 0 --threads 1 --locks 2 --hold_ns 0 --gap_ns 0 --seconds 10 --init --no_flush_stats"
+  ],
+  [
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock lfm --hosts 1 --host_id 0 --threads 1 --locks 4 --hold_ns 0 --gap_ns 0 --seconds 10 --init --no_flush_stats"
+  ],
+  [
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock peterson --hosts 1 --host_id 0 --threads 1 --locks 4 --hold_ns 0 --gap_ns 0 --seconds 10 --init --no_flush_stats"
+  ],
+  [
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock bakery --hosts 1 --host_id 0 --threads 1 --locks 4 --hold_ns 0 --gap_ns 0 --seconds 10 --init --no_flush_stats"
+  ],
+  [
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock lfm --hosts 1 --host_id 0 --threads 1 --locks 8 --hold_ns 0 --gap_ns 0 --seconds 10 --init --no_flush_stats"
+  ],
+  [
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock peterson --hosts 1 --host_id 0 --threads 1 --locks 8 --hold_ns 0 --gap_ns 0 --seconds 10 --init --no_flush_stats"
+  ],
+  [
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock bakery --hosts 1 --host_id 0 --threads 1 --locks 8 --hold_ns 0 --gap_ns 0 --seconds 10 --init --no_flush_stats"
+  ],
+  [
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock lfm --hosts 2 --host_id 0 --threads 1 --locks 2 --hold_ns 0 --gap_ns 0 --seconds 10 --init --no_flush_stats",
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock lfm --hosts 2 --host_id 1 --threads 1 --locks 2 --hold_ns 0 --gap_ns 0 --seconds 10 --no_flush_stats"
+  ],
+  [
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock peterson --hosts 2 --host_id 0 --threads 1 --locks 2 --hold_ns 0 --gap_ns 0 --seconds 10 --init --no_flush_stats",
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock peterson --hosts 2 --host_id 1 --threads 1 --locks 2 --hold_ns 0 --gap_ns 0 --seconds 10 --no_flush_stats"
+  ],
+  [
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock bakery --hosts 2 --host_id 0 --threads 1 --locks 2 --hold_ns 0 --gap_ns 0 --seconds 10 --init --no_flush_stats",
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock bakery --hosts 2 --host_id 1 --threads 1 --locks 2 --hold_ns 0 --gap_ns 0 --seconds 10 --no_flush_stats"
+  ],
+  [
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock lfm --hosts 2 --host_id 0 --threads 1 --locks 4 --hold_ns 0 --gap_ns 0 --seconds 10 --init --no_flush_stats",
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock lfm --hosts 2 --host_id 1 --threads 1 --locks 4 --hold_ns 0 --gap_ns 0 --seconds 10 --no_flush_stats"
+  ],
+  [
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock peterson --hosts 2 --host_id 0 --threads 1 --locks 4 --hold_ns 0 --gap_ns 0 --seconds 10 --init --no_flush_stats",
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock peterson --hosts 2 --host_id 1 --threads 1 --locks 4 --hold_ns 0 --gap_ns 0 --seconds 10 --no_flush_stats"
+  ],
+  [
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock bakery --hosts 2 --host_id 0 --threads 1 --locks 4 --hold_ns 0 --gap_ns 0 --seconds 10 --init --no_flush_stats",
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock bakery --hosts 2 --host_id 1 --threads 1 --locks 4 --hold_ns 0 --gap_ns 0 --seconds 10 --no_flush_stats"
+  ],
+  [
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock lfm --hosts 2 --host_id 0 --threads 1 --locks 8 --hold_ns 0 --gap_ns 0 --seconds 10 --init --no_flush_stats",
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock lfm --hosts 2 --host_id 1 --threads 1 --locks 8 --hold_ns 0 --gap_ns 0 --seconds 10 --no_flush_stats"
+  ],
+  [
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock peterson --hosts 2 --host_id 0 --threads 1 --locks 8 --hold_ns 0 --gap_ns 0 --seconds 10 --init --no_flush_stats",
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock peterson --hosts 2 --host_id 1 --threads 1 --locks 8 --hold_ns 0 --gap_ns 0 --seconds 10 --no_flush_stats"
+  ],
+  [
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock bakery --hosts 2 --host_id 0 --threads 1 --locks 8 --hold_ns 0 --gap_ns 0 --seconds 10 --init --no_flush_stats",
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock bakery --hosts 2 --host_id 1 --threads 1 --locks 8 --hold_ns 0 --gap_ns 0 --seconds 10 --no_flush_stats"
+  ],
+  [
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock lfm --hosts 3 --host_id 0 --threads 1 --locks 2 --hold_ns 0 --gap_ns 0 --seconds 10 --init --no_flush_stats",
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock lfm --hosts 3 --host_id 1 --threads 1 --locks 2 --hold_ns 0 --gap_ns 0 --seconds 10 --no_flush_stats",
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock lfm --hosts 3 --host_id 2 --threads 1 --locks 2 --hold_ns 0 --gap_ns 0 --seconds 10 --no_flush_stats"
+  ],
+  [
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock peterson --hosts 3 --host_id 0 --threads 1 --locks 2 --hold_ns 0 --gap_ns 0 --seconds 10 --init --no_flush_stats",
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock peterson --hosts 3 --host_id 1 --threads 1 --locks 2 --hold_ns 0 --gap_ns 0 --seconds 10 --no_flush_stats",
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock peterson --hosts 3 --host_id 2 --threads 1 --locks 2 --hold_ns 0 --gap_ns 0 --seconds 10 --no_flush_stats"
+  ],
+  [
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock bakery --hosts 3 --host_id 0 --threads 1 --locks 2 --hold_ns 0 --gap_ns 0 --seconds 10 --init --no_flush_stats",
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock bakery --hosts 3 --host_id 1 --threads 1 --locks 2 --hold_ns 0 --gap_ns 0 --seconds 10 --no_flush_stats",
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock bakery --hosts 3 --host_id 2 --threads 1 --locks 2 --hold_ns 0 --gap_ns 0 --seconds 10 --no_flush_stats"
+  ],
+  [
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock lfm --hosts 3 --host_id 0 --threads 1 --locks 4 --hold_ns 0 --gap_ns 0 --seconds 10 --init --no_flush_stats",
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock lfm --hosts 3 --host_id 1 --threads 1 --locks 4 --hold_ns 0 --gap_ns 0 --seconds 10 --no_flush_stats",
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock lfm --hosts 3 --host_id 2 --threads 1 --locks 4 --hold_ns 0 --gap_ns 0 --seconds 10 --no_flush_stats"
+  ],
+  [
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock peterson --hosts 3 --host_id 0 --threads 1 --locks 4 --hold_ns 0 --gap_ns 0 --seconds 10 --init --no_flush_stats",
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock peterson --hosts 3 --host_id 1 --threads 1 --locks 4 --hold_ns 0 --gap_ns 0 --seconds 10 --no_flush_stats",
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock peterson --hosts 3 --host_id 2 --threads 1 --locks 4 --hold_ns 0 --gap_ns 0 --seconds 10 --no_flush_stats"
+  ],
+  [
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock bakery --hosts 3 --host_id 0 --threads 1 --locks 4 --hold_ns 0 --gap_ns 0 --seconds 10 --init --no_flush_stats",
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock bakery --hosts 3 --host_id 1 --threads 1 --locks 4 --hold_ns 0 --gap_ns 0 --seconds 10 --no_flush_stats",
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock bakery --hosts 3 --host_id 2 --threads 1 --locks 4 --hold_ns 0 --gap_ns 0 --seconds 10 --no_flush_stats"
+  ],
+  [
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock lfm --hosts 3 --host_id 0 --threads 1 --locks 8 --hold_ns 0 --gap_ns 0 --seconds 10 --init --no_flush_stats",
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock lfm --hosts 3 --host_id 1 --threads 1 --locks 8 --hold_ns 0 --gap_ns 0 --seconds 10 --no_flush_stats",
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock lfm --hosts 3 --host_id 2 --threads 1 --locks 8 --hold_ns 0 --gap_ns 0 --seconds 10 --no_flush_stats"
+  ],
+  [
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock peterson --hosts 3 --host_id 0 --threads 1 --locks 8 --hold_ns 0 --gap_ns 0 --seconds 10 --init --no_flush_stats",
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock peterson --hosts 3 --host_id 1 --threads 1 --locks 8 --hold_ns 0 --gap_ns 0 --seconds 10 --no_flush_stats",
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock peterson --hosts 3 --host_id 2 --threads 1 --locks 8 --hold_ns 0 --gap_ns 0 --seconds 10 --no_flush_stats"
+  ],
+  [
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock bakery --hosts 3 --host_id 0 --threads 1 --locks 8 --hold_ns 0 --gap_ns 0 --seconds 10 --init --no_flush_stats",
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock bakery --hosts 3 --host_id 1 --threads 1 --locks 8 --hold_ns 0 --gap_ns 0 --seconds 10 --no_flush_stats",
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock bakery --hosts 3 --host_id 2 --threads 1 --locks 8 --hold_ns 0 --gap_ns 0 --seconds 10 --no_flush_stats"
+  ],
+  [
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock lfm --hosts 4 --host_id 0 --threads 1 --locks 2 --hold_ns 0 --gap_ns 0 --seconds 10 --init --no_flush_stats",
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock lfm --hosts 4 --host_id 1 --threads 1 --locks 2 --hold_ns 0 --gap_ns 0 --seconds 10 --no_flush_stats",
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock lfm --hosts 4 --host_id 2 --threads 1 --locks 2 --hold_ns 0 --gap_ns 0 --seconds 10 --no_flush_stats",
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock lfm --hosts 4 --host_id 3 --threads 1 --locks 2 --hold_ns 0 --gap_ns 0 --seconds 10 --no_flush_stats"
+  ],
+  [
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock peterson --hosts 4 --host_id 0 --threads 1 --locks 2 --hold_ns 0 --gap_ns 0 --seconds 10 --init --no_flush_stats",
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock peterson --hosts 4 --host_id 1 --threads 1 --locks 2 --hold_ns 0 --gap_ns 0 --seconds 10 --no_flush_stats",
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock peterson --hosts 4 --host_id 2 --threads 1 --locks 2 --hold_ns 0 --gap_ns 0 --seconds 10 --no_flush_stats",
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock peterson --hosts 4 --host_id 3 --threads 1 --locks 2 --hold_ns 0 --gap_ns 0 --seconds 10 --no_flush_stats"
+  ],
+  [
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock bakery --hosts 4 --host_id 0 --threads 1 --locks 2 --hold_ns 0 --gap_ns 0 --seconds 10 --init --no_flush_stats",
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock bakery --hosts 4 --host_id 1 --threads 1 --locks 2 --hold_ns 0 --gap_ns 0 --seconds 10 --no_flush_stats",
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock bakery --hosts 4 --host_id 2 --threads 1 --locks 2 --hold_ns 0 --gap_ns 0 --seconds 10 --no_flush_stats",
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock bakery --hosts 4 --host_id 3 --threads 1 --locks 2 --hold_ns 0 --gap_ns 0 --seconds 10 --no_flush_stats"
+  ],
+  [
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock lfm --hosts 4 --host_id 0 --threads 1 --locks 4 --hold_ns 0 --gap_ns 0 --seconds 10 --init --no_flush_stats",
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock lfm --hosts 4 --host_id 1 --threads 1 --locks 4 --hold_ns 0 --gap_ns 0 --seconds 10 --no_flush_stats",
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock lfm --hosts 4 --host_id 2 --threads 1 --locks 4 --hold_ns 0 --gap_ns 0 --seconds 10 --no_flush_stats",
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock lfm --hosts 4 --host_id 3 --threads 1 --locks 4 --hold_ns 0 --gap_ns 0 --seconds 10 --no_flush_stats"
+  ],
+  [
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock peterson --hosts 4 --host_id 0 --threads 1 --locks 4 --hold_ns 0 --gap_ns 0 --seconds 10 --init --no_flush_stats",
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock peterson --hosts 4 --host_id 1 --threads 1 --locks 4 --hold_ns 0 --gap_ns 0 --seconds 10 --no_flush_stats",
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock peterson --hosts 4 --host_id 2 --threads 1 --locks 4 --hold_ns 0 --gap_ns 0 --seconds 10 --no_flush_stats",
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock peterson --hosts 4 --host_id 3 --threads 1 --locks 4 --hold_ns 0 --gap_ns 0 --seconds 10 --no_flush_stats"
+  ],
+  [
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock bakery --hosts 4 --host_id 0 --threads 1 --locks 4 --hold_ns 0 --gap_ns 0 --seconds 10 --init --no_flush_stats",
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock bakery --hosts 4 --host_id 1 --threads 1 --locks 4 --hold_ns 0 --gap_ns 0 --seconds 10 --no_flush_stats",
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock bakery --hosts 4 --host_id 2 --threads 1 --locks 4 --hold_ns 0 --gap_ns 0 --seconds 10 --no_flush_stats",
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock bakery --hosts 4 --host_id 3 --threads 1 --locks 4 --hold_ns 0 --gap_ns 0 --seconds 10 --no_flush_stats"
+  ],
+  [
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock lfm --hosts 4 --host_id 0 --threads 1 --locks 8 --hold_ns 0 --gap_ns 0 --seconds 10 --init --no_flush_stats",
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock lfm --hosts 4 --host_id 1 --threads 1 --locks 8 --hold_ns 0 --gap_ns 0 --seconds 10 --no_flush_stats",
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock lfm --hosts 4 --host_id 2 --threads 1 --locks 8 --hold_ns 0 --gap_ns 0 --seconds 10 --no_flush_stats",
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock lfm --hosts 4 --host_id 3 --threads 1 --locks 8 --hold_ns 0 --gap_ns 0 --seconds 10 --no_flush_stats"
+  ],
+  [
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock peterson --hosts 4 --host_id 0 --threads 1 --locks 8 --hold_ns 0 --gap_ns 0 --seconds 10 --init --no_flush_stats",
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock peterson --hosts 4 --host_id 1 --threads 1 --locks 8 --hold_ns 0 --gap_ns 0 --seconds 10 --no_flush_stats",
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock peterson --hosts 4 --host_id 2 --threads 1 --locks 8 --hold_ns 0 --gap_ns 0 --seconds 10 --no_flush_stats",
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock peterson --hosts 4 --host_id 3 --threads 1 --locks 8 --hold_ns 0 --gap_ns 0 --seconds 10 --no_flush_stats"
+  ],
+  [
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock bakery --hosts 4 --host_id 0 --threads 1 --locks 8 --hold_ns 0 --gap_ns 0 --seconds 10 --init --no_flush_stats",
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock bakery --hosts 4 --host_id 1 --threads 1 --locks 8 --hold_ns 0 --gap_ns 0 --seconds 10 --no_flush_stats",
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock bakery --hosts 4 --host_id 2 --threads 1 --locks 8 --hold_ns 0 --gap_ns 0 --seconds 10 --no_flush_stats",
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock bakery --hosts 4 --host_id 3 --threads 1 --locks 8 --hold_ns 0 --gap_ns 0 --seconds 10 --no_flush_stats"
+  ]
+]

@@ -1,0 +1,22 @@
+#!/bin/bash
+#
+# gcc-hooks.bldconf - file containing global information necessary to build
+#                     PARSEC with hooks API
+#
+# Copyright (C) 2006-2007 Princeton University
+# Written by Christian Bienia
+
+source ${PARSECDIR}/config/gcc.bldconf
+
+# Enable PARSEC hooks
+CFLAGS="${CFLAGS} -DENABLE_PARSEC_HOOKS -DPARSEC_ATOMIC_HOOKS -include ${PARSECDIR}/pkgs/libs/hooks/src/include/atomic_hooks.h -I${PARSECDIR}/pkgs/libs/hooks/inst/${PARSECPLAT}/include"
+CXXFLAGS="${CXXFLAGS} -DENABLE_PARSEC_HOOKS -DPARSEC_ATOMIC_HOOKS -include ${PARSECDIR}/pkgs/libs/hooks/src/include/atomic_hooks.h -I${PARSECDIR}/pkgs/libs/hooks/inst/${PARSECPLAT}/include"
+LDFLAGS="${LDFLAGS} -fuse-ld=lld -L${PARSECDIR}/pkgs/libs/hooks/inst/${PARSECPLAT}/lib"   # lld: binutils 2.44 BFD-ld crashes (_bfd_mmap_read_temporary) on this image
+LIBS="${LIBS} -lhooks -ldl"
+
+# Add directory with hooks library to library search path
+if [ -z "${LD_LIBRARY_PATH}" ]; then
+  export LD_LIBRARY_PATH="${PARSECDIR}/pkgs/libs/hooks/inst/${PARSECPLAT}/lib"
+else
+  export LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${PARSECDIR}/pkgs/libs/hooks/inst/${PARSECPLAT}/lib"
+fi

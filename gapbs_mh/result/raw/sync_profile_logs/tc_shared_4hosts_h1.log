@@ -1,0 +1,5 @@
+Mapped /dev/interleave_dax at 0x7fa2bf9a4000 (len=17179869184)
+[Host 1] Ready, waiting at initial barrier...
+[Host 1] All hosts synchronized, starting TC
+[Host 1] Trial 1 complete
+SYNC_STATS tag=tc publish_lines=5889625 observe_lines=1199040 lock_acquires=10 lock_retries=1 barrier_waits=6 atomic_rmw=0

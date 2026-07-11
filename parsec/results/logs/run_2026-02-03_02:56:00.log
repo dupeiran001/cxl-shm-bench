@@ -1,0 +1,53 @@
+[PARSEC] [========== PARSEC 3.0-beta-20120904 RUN LOGFILE ==========]
+
+[PARSEC] Run with amd64-linux.gcc-hooks binaries and input simlarge started on Tue Feb 3 02:56:00 UTC 2026.
+[PARSEC] Benchmarks to run:  parsec.freqmine
+
+[PARSEC] [========== Running benchmark parsec.freqmine [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] Unpacking benchmark input 'simlarge'.
+kosarak_990k.dat
+[PARSEC] Running 'time /root/cxl_profiler/parsec/pkgs/apps/freqmine/inst/amd64-linux.gcc-hooks/bin/freqmine kosarak_990k.dat 790':
+[PARSEC] [---------- Beginning of output ----------]
+PARSEC Benchmark Suite Version 3.0-beta-20120904
+[HOOKS] PARSEC Hooks Version 1.2
+[HOOKS] Entering ROI
+transaction number is 990002
+[HOOKS] Leaving ROI
+1548
+13483
+46649
+131381
+415489
+1239344
+2985564
+5696308
+8709873
+10789491
+10902648
+9011183
+6094236
+3374161
+1530954
+564958
+165173
+36535
+5727
+578
+33
+1
+the data preparation cost 0.327611 seconds, the FPgrowth cost 0.820781 seconds
+[HOOKS] Total time spent in ROI: 1.138s
+[HOOKS] Lockstats: ROI duration 1.137527s
+[HOOKS] Lockstats: lock-based sync in ROI: no (no lock acquisitions)
+[HOOKS] Barrierstats: ROI duration 1.137527s
+[HOOKS] Barrierstats: barrier waits in ROI: no (count=0)
+[HOOKS] Atomic ops in ROI: total=0, threads=0
+[HOOKS] Terminating
+
+real	0m1.159s
+user	0m6.841s
+sys	0m0.277s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC] Done.

@@ -1,0 +1,90 @@
+[PARSEC] [========== PARSEC 3.0-beta-20120904 RUN LOGFILE ==========]
+
+[PARSEC] Run with amd64-linux.gcc-hooks binaries and input simlarge started on Tue Feb 3 02:55:28 UTC 2026.
+[PARSEC] Benchmarks to run:  parsec.dedup
+
+[PARSEC] [========== Running benchmark parsec.dedup [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] Unpacking benchmark input 'simlarge'.
+media.dat
+[PARSEC] Running 'time /root/cxl_profiler/parsec/pkgs/kernels/dedup/inst/amd64-linux.gcc-hooks/bin/dedup -c -p -v -t 16 -i media.dat -o output.dat.ddp':
+[PARSEC] [---------- Beginning of output ----------]
+PARSEC Benchmark Suite Version 3.0-beta-20120904
+[HOOKS] PARSEC Hooks Version 1.2
+[HOOKS] Entering ROI
+[HOOKS] Leaving ROI
+Total input size:                      184.08 MB
+Total output size:                      78.50 MB
+Effective compression factor:            2.35x
+
+Mean data chunk size:                    2.02 KB (stddev: 1053.73 KB)
+Amount of duplicate chunks:             50.84%
+Data size after deduplication:         182.41 MB (compression factor: 1.01x)
+Data size after compression:            76.77 MB (compression factor: 2.38x)
+Output overhead:                         2.19%
+[HOOKS] Total time spent in ROI: 3.132s
+[HOOKS] Lockstats: ROI duration 3.131503s
+[HOOKS] Lockstats: lock-based sync in ROI: yes (acquisitions=435683, threads=50)
+[HOOKS] Lockstats: critical-section time sum 17.817134s, avg 40.895us, max 3175.229us
+[HOOKS] Lockstats: critical-section ratio (sum/(ROI*threads)) 11.38%
+[HOOKS] Lockstats: thread 49 tid=0x50611 locks=191 total=0.000726s avg=3.799us max=509.906us ratio=0.02%
+[HOOKS] Lockstats: thread 48 tid=0x50642 locks=37292 total=0.511272s avg=13.710us max=922.767us ratio=16.33%
+[HOOKS] Lockstats: thread 47 tid=0x50641 locks=8931 total=1.063170s avg=119.043us max=2749.190us ratio=33.95%
+[HOOKS] Lockstats: thread 46 tid=0x50640 locks=8931 total=1.064745s avg=119.219us max=2511.161us ratio=34.00%
+[HOOKS] Lockstats: thread 45 tid=0x5063f locks=9022 total=1.063814s avg=117.913us max=2632.196us ratio=33.97%
+[HOOKS] Lockstats: thread 44 tid=0x5063e locks=9055 total=1.063313s avg=117.428us max=2262.064us ratio=33.96%
+[HOOKS] Lockstats: thread 43 tid=0x5063d locks=8730 total=1.073157s avg=122.927us max=2084.297us ratio=34.27%
+[HOOKS] Lockstats: thread 42 tid=0x5063c locks=8931 total=1.070538s avg=119.868us max=2077.985us ratio=34.19%
+[HOOKS] Lockstats: thread 41 tid=0x5063b locks=8869 total=1.073754s avg=121.068us max=2470.430us ratio=34.29%
+[HOOKS] Lockstats: thread 40 tid=0x5063a locks=9303 total=1.072853s avg=115.323us max=2393.977us ratio=34.26%
+[HOOKS] Lockstats: thread 39 tid=0x50639 locks=8998 total=1.074793s avg=119.448us max=3118.062us ratio=34.32%
+[HOOKS] Lockstats: thread 38 tid=0x50638 locks=9117 total=1.077233s avg=118.156us max=3175.229us ratio=34.40%
+[HOOKS] Lockstats: thread 37 tid=0x50637 locks=9055 total=1.078705s avg=119.128us max=2420.465us ratio=34.45%
+[HOOKS] Lockstats: thread 36 tid=0x50636 locks=8559 total=1.079966s avg=126.179us max=2174.009us ratio=34.49%
+[HOOKS] Lockstats: thread 35 tid=0x50635 locks=8869 total=1.075237s avg=121.235us max=3111.521us ratio=34.34%
+[HOOKS] Lockstats: thread 34 tid=0x50634 locks=8931 total=1.073592s avg=120.210us max=2572.948us ratio=34.28%
+[HOOKS] Lockstats: thread 33 tid=0x50633 locks=8591 total=1.075016s avg=125.133us max=2470.286us ratio=34.33%
+[HOOKS] Lockstats: thread 32 tid=0x50632 locks=9613 total=1.074140s avg=111.738us max=2260.274us ratio=34.30%
+[HOOKS] Lockstats: thread 31 tid=0x50631 locks=10226 total=0.008108s avg=0.793us max=609.749us ratio=0.26%
+[HOOKS] Lockstats: thread 30 tid=0x50630 locks=10245 total=0.007606s avg=0.742us max=642.283us ratio=0.24%
+[HOOKS] Lockstats: thread 29 tid=0x5062f locks=9991 total=0.007299s avg=0.731us max=487.952us ratio=0.23%
+[HOOKS] Lockstats: thread 28 tid=0x5062e locks=9921 total=0.008952s avg=0.902us max=644.136us ratio=0.29%
+[HOOKS] Lockstats: thread 27 tid=0x5062d locks=8984 total=0.006718s avg=0.748us max=535.398us ratio=0.21%
+[HOOKS] Lockstats: thread 26 tid=0x5062c locks=8889 total=0.007183s avg=0.808us max=585.077us ratio=0.23%
+[HOOKS] Lockstats: thread 25 tid=0x5062b locks=9055 total=0.006167s avg=0.681us max=487.720us ratio=0.20%
+[HOOKS] Lockstats: thread 24 tid=0x5062a locks=9608 total=0.007412s avg=0.771us max=640.138us ratio=0.24%
+[HOOKS] Lockstats: thread 23 tid=0x50629 locks=10792 total=0.008835s avg=0.819us max=608.320us ratio=0.28%
+[HOOKS] Lockstats: thread 22 tid=0x50628 locks=10466 total=0.008012s avg=0.766us max=629.873us ratio=0.26%
+[HOOKS] Lockstats: thread 21 tid=0x50627 locks=10440 total=0.008140s avg=0.780us max=612.022us ratio=0.26%
+[HOOKS] Lockstats: thread 20 tid=0x50626 locks=10598 total=0.008455s avg=0.798us max=621.838us ratio=0.27%
+[HOOKS] Lockstats: thread 19 tid=0x50625 locks=9505 total=0.007469s avg=0.786us max=609.855us ratio=0.24%
+[HOOKS] Lockstats: thread 18 tid=0x50624 locks=8929 total=0.007024s avg=0.787us max=601.927us ratio=0.22%
+[HOOKS] Lockstats: thread 17 tid=0x50623 locks=8915 total=0.006632s avg=0.744us max=572.231us ratio=0.21%
+[HOOKS] Lockstats: thread 16 tid=0x50622 locks=9285 total=0.007887s avg=0.849us max=541.826us ratio=0.25%
+[HOOKS] Lockstats: thread 15 tid=0x50621 locks=1725 total=0.000537s avg=0.312us max=15.105us ratio=0.02%
+[HOOKS] Lockstats: thread 14 tid=0x50620 locks=2205 total=0.000613s avg=0.278us max=15.522us ratio=0.02%
+[HOOKS] Lockstats: thread 13 tid=0x5061f locks=7762 total=0.002181s avg=0.281us max=26.186us ratio=0.07%
+[HOOKS] Lockstats: thread 12 tid=0x5061e locks=13738 total=0.003980s avg=0.290us max=33.617us ratio=0.13%
+[HOOKS] Lockstats: thread 11 tid=0x5061d locks=14908 total=0.004180s avg=0.280us max=31.552us ratio=0.13%
+[HOOKS] Lockstats: thread 10 tid=0x5061c locks=5474 total=0.001535s avg=0.280us max=15.511us ratio=0.05%
+[HOOKS] Lockstats: thread 9 tid=0x5061b locks=1922 total=0.000562s avg=0.292us max=16.858us ratio=0.02%
+[HOOKS] Lockstats: thread 8 tid=0x5061a locks=1205 total=0.000374s avg=0.310us max=10.721us ratio=0.01%
+[HOOKS] Lockstats: thread 7 tid=0x50619 locks=6427 total=0.001807s avg=0.281us max=20.790us ratio=0.06%
+[HOOKS] Lockstats: thread 6 tid=0x50618 locks=1667 total=0.000504s avg=0.302us max=11.826us ratio=0.02%
+[HOOKS] Lockstats: thread 5 tid=0x50617 locks=14899 total=0.004449s avg=0.299us max=35.422us ratio=0.14%
+[HOOKS] Lockstats: thread 4 tid=0x50616 locks=3334 total=0.001000s avg=0.300us max=24.412us ratio=0.03%
+[HOOKS] Lockstats: thread 3 tid=0x50615 locks=12190 total=0.003940s avg=0.323us max=29.561us ratio=0.13%
+[HOOKS] Lockstats: thread 2 tid=0x50614 locks=2542 total=0.000808s avg=0.318us max=17.340us ratio=0.03%
+[HOOKS] Lockstats: thread 1 tid=0x50612 locks=6980 total=0.002115s avg=0.303us max=22.649us ratio=0.07%
+[HOOKS] Lockstats: thread 0 tid=0x50613 locks=1868 total=0.000627s avg=0.336us max=15.454us ratio=0.02%
+[HOOKS] Barrierstats: ROI duration 3.131503s
+[HOOKS] Barrierstats: barrier waits in ROI: no (count=0)
+[HOOKS] Atomic ops in ROI: total=0, threads=0
+[HOOKS] Terminating
+
+real	0m3.299s
+user	0m10.393s
+sys	0m8.525s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC] Done.

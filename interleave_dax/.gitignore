@@ -1,0 +1,29 @@
+# Kernel module build artifacts (`make` against the kernel tree)
+*.o
+*.ko
+*.ko.*
+*.mod.c
+*.mod
+*.mod.o
+*.symvers
+*.order
+modules.order
+Module.symvers
+Module.markers
+.*.cmd
+*.cmd
+.tmp_versions/
+
+# Runtime debug captures
+*.log
+*.dmesg
+
+# Scratch files + local tooling (editor noise is covered by the root .gitignore)
+*.tmp
+*.bak
+compile_commands.json
+tags
+TAGS
+GTAGS
+GRTAGS
+GPATH

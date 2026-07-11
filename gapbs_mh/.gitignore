@@ -1,0 +1,6 @@
+# Built multi-host GAPBS kernels (`make`)
+/bfs_mh
+/pr_mh
+/pr_spmv_mh
+/tc_mh
+*.o

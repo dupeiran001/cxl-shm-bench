@@ -1,0 +1,12 @@
+Mapped /dev/interleave_dax at 0x7fb19b715000 (len=67108864000)
+[Host 0] Building graph...
+Generate Time:       3.64546
+Build Time:          2.17282
+[Host 0] Initializing PR arrays...
+[Host 0] Initialization complete.
+[Host 0] Ready, waiting at initial barrier...
+[Host 0] All hosts synchronized, starting PR
+Graph has 33554432 nodes and 1592793612 undirected edges for degree: 47
+Trial Time:          13.27033
+Average Time:        13.27033
+SYNC_STATS tag=pr publish_lines=266221492 observe_lines=10829401 lock_acquires=66 lock_retries=10 barrier_waits=31 atomic_rmw=0

@@ -1,0 +1,7 @@
+timestamp,mode,test,size_bytes,repetition,parallel,host,speed_mb_s
+2026-02-02T01:10:36Z,dax_local,rd,1073741824,10,1,local,16649.2
+2026-02-02T01:10:54Z,dax_local,rd,1073741824,10,2,local,26597.3
+2026-02-02T01:11:23Z,dax_local,rd,1073741824,10,4,local,27880.2
+2026-02-02T01:12:20Z,dax_local,rd,1073741824,10,8,local,26951.8
+2026-02-02T01:14:10Z,dax_local,rd,1073741824,10,16,local,26505.7
+

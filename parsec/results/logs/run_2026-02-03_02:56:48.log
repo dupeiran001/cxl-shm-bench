@@ -1,0 +1,140 @@
+[PARSEC] [========== PARSEC 3.0-beta-20120904 RUN LOGFILE ==========]
+
+[PARSEC] Run with amd64-linux.gcc-hooks binaries and input simlarge started on Tue Feb 3 02:56:48 UTC 2026.
+[PARSEC] Benchmarks to run:  splash2x.fft
+
+[PARSEC] [========== Running benchmark splash2x.fft [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'simlarge' available, skipping input setup.
+[PARSEC] Running 'time /root/cxl_profiler/parsec/ext/splash2x/kernels/fft/inst/amd64-linux.gcc-hooks/bin/run.sh 16 simlarge':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /root/cxl_profiler/parsec/ext/splash2x/kernels/fft/inst/amd64-linux.gcc-hooks/bin/fft -m24 -p16:
+[HOOKS] PARSEC Hooks Version 1.2
+
+FFT with Blocking Transpose
+   16777216 Complex Doubles
+   16 Processors
+   65536 Cache lines
+   16 Byte line size
+   4096 Bytes per page
+
+[HOOKS] Entering ROI
+iter_num = 256
+iter_num = 256
+iter_num = 256
+iter_num = 256
+iter_num = 256
+iter_num = 256
+iter_num = 256
+iter_num = 256
+iter_num = 256
+iter_num = 256
+iter_num = 256
+iter_num = 256
+iter_num = 256
+iter_num = 256
+iter_num = 256
+iter_num = 256
+Transpose: iter_num = 0
+Transpose: iter_num = 65536
+Transpose: iter_num = 131072
+Transpose: iter_num = 262144
+Transpose: iter_num = 196608
+Transpose: iter_num = 327680
+Transpose: iter_num = 393216
+Transpose: iter_num = 458752
+Transpose: iter_num = 524288
+Transpose: iter_num = 786432
+Transpose: iter_num = 589824
+Transpose: iter_num = 655360
+Transpose: iter_num = 720896
+Transpose: iter_num = 917504
+Transpose: iter_num = 851968
+FFt1DOnce: iter_num = 24576
+Transpose: iter_num = 983040
+Step 1:     9004
+Transpose: iter_num = 0
+Step 2:    32162
+Transpose: iter_num = 65536
+Transpose: iter_num = 131072
+Transpose: iter_num = 196608
+Transpose: iter_num = 262144
+Transpose: iter_num = 327680
+Transpose: iter_num = 393216
+Transpose: iter_num = 458752
+Transpose: iter_num = 524288
+Transpose: iter_num = 589824
+Transpose: iter_num = 655360
+Transpose: iter_num = 720896
+Transpose: iter_num = 851968
+Transpose: iter_num = 786432
+Transpose: iter_num = 917504
+Transpose: iter_num = 983040
+Step 3:     5340
+Step 4:    28514
+Transpose: iter_num = 0
+Transpose: iter_num = 65536
+Transpose: iter_num = 131072
+Transpose: iter_num = 196608
+Transpose: iter_num = 262144
+Transpose: iter_num = 327680
+Transpose: iter_num = 393216
+Transpose: iter_num = 458752
+Transpose: iter_num = 524288
+Transpose: iter_num = 589824
+Transpose: iter_num = 655360
+Transpose: iter_num = 720896
+Transpose: iter_num = 786432
+Transpose: iter_num = 851968
+Transpose: iter_num = 917504
+Transpose: iter_num = 983040
+Step 5:     4965
+[HOOKS] Leaving ROI
+
+                 PROCESS STATISTICS
+            Computation      Transpose     Transpose
+ Proc          Time            Time        Fraction
+    0             80422          19309       0.24010
+
+                 TIMING INFORMATION
+Start time                        : 1770087408535427
+Initialization finish time        : 1770087409240745
+Overall finish time               : 1770087409321167
+Total time with initialization    :           785740
+Total time without initialization :            80422
+Overall transpose time            :            19309
+Overall transpose fraction        :          0.24010
+
+[HOOKS] Total time spent in ROI: 0.084s
+[HOOKS] Lockstats: ROI duration 0.083538s
+[HOOKS] Lockstats: lock-based sync in ROI: yes (acquisitions=233, threads=16)
+[HOOKS] Lockstats: critical-section time sum 0.000726s, avg 3.118us, max 34.438us
+[HOOKS] Lockstats: critical-section ratio (sum/(ROI*threads)) 0.05%
+[HOOKS] Lockstats: thread 15 tid=0x5301f locks=12 total=0.000111s avg=9.249us max=33.090us ratio=0.13%
+[HOOKS] Lockstats: thread 14 tid=0x53014 locks=14 total=0.000063s avg=4.512us max=28.451us ratio=0.08%
+[HOOKS] Lockstats: thread 13 tid=0x53022 locks=15 total=0.000038s avg=2.562us max=7.145us ratio=0.05%
+[HOOKS] Lockstats: thread 12 tid=0x5301c locks=15 total=0.000036s avg=2.368us max=9.653us ratio=0.04%
+[HOOKS] Lockstats: thread 11 tid=0x53020 locks=15 total=0.000041s avg=2.744us max=7.730us ratio=0.05%
+[HOOKS] Lockstats: thread 10 tid=0x53023 locks=15 total=0.000035s avg=2.310us max=7.188us ratio=0.04%
+[HOOKS] Lockstats: thread 9 tid=0x53021 locks=15 total=0.000038s avg=2.538us max=6.614us ratio=0.05%
+[HOOKS] Lockstats: thread 8 tid=0x5301b locks=15 total=0.000038s avg=2.530us max=6.309us ratio=0.05%
+[HOOKS] Lockstats: thread 7 tid=0x5301e locks=14 total=0.000055s avg=3.906us max=29.594us ratio=0.07%
+[HOOKS] Lockstats: thread 6 tid=0x5301d locks=14 total=0.000052s avg=3.698us max=30.600us ratio=0.06%
+[HOOKS] Lockstats: thread 5 tid=0x5301a locks=15 total=0.000038s avg=2.514us max=9.710us ratio=0.05%
+[HOOKS] Lockstats: thread 4 tid=0x53019 locks=15 total=0.000026s avg=1.762us max=7.460us ratio=0.03%
+[HOOKS] Lockstats: thread 3 tid=0x53018 locks=14 total=0.000059s avg=4.237us max=34.438us ratio=0.07%
+[HOOKS] Lockstats: thread 2 tid=0x53017 locks=15 total=0.000031s avg=2.069us max=8.116us ratio=0.04%
+[HOOKS] Lockstats: thread 1 tid=0x53016 locks=15 total=0.000033s avg=2.225us max=6.804us ratio=0.04%
+[HOOKS] Lockstats: thread 0 tid=0x53015 locks=15 total=0.000032s avg=2.146us max=7.957us ratio=0.04%
+[HOOKS] Barrierstats: ROI duration 0.083538s
+[HOOKS] Barrierstats: barrier waits in ROI: no (count=0)
+[HOOKS] Atomic ops in ROI: total=0, threads=0
+[HOOKS] Terminating
+
+real	0m0.801s
+user	0m1.849s
+sys	0m0.109s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC] Done.

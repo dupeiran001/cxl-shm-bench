@@ -1,0 +1,19 @@
+[PARSEC] [========== PARSEC 3.0-beta-20120904 RUN LOGFILE ==========]
+
+[PARSEC] Run with amd64-linux.gcc-hooks binaries and input simlarge started on Tue Feb 3 02:56:12 UTC 2026.
+[PARSEC] Benchmarks to run:  parsec.vips
+
+[PARSEC] [========== Running benchmark parsec.vips [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] Unpacking benchmark input 'simlarge'.
+bigben_2662x5500.v
+[PARSEC] Running 'time /root/cxl_profiler/parsec/pkgs/apps/vips/inst/amd64-linux.gcc-hooks/bin/vips im_benchmark bigben_2662x5500.v output.v':
+[PARSEC] [---------- Beginning of output ----------]
+/root/cxl_profiler/parsec/pkgs/apps/vips/inst/amd64-linux.gcc-hooks/bin/vips: error while loading shared libraries: libxml2.so.16: cannot open shared object file: No such file or directory
+
+real	0m0.004s
+user	0m0.001s
+sys	0m0.003s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC] Done.

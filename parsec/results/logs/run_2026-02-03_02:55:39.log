@@ -1,0 +1,125 @@
+[PARSEC] [========== PARSEC 3.0-beta-20120904 RUN LOGFILE ==========]
+
+[PARSEC] Run with amd64-linux.gcc-hooks binaries and input simlarge started on Tue Feb 3 02:55:39 UTC 2026.
+[PARSEC] Benchmarks to run:  parsec.bodytrack
+
+[PARSEC] [========== Running benchmark parsec.bodytrack [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] Unpacking benchmark input 'simlarge'.
+sequenceB_4/
+sequenceB_4/BodyShapeParameters.txt
+sequenceB_4/CALIB/
+sequenceB_4/CALIB/Camera1.cal
+sequenceB_4/CALIB/Camera2.cal
+sequenceB_4/CALIB/Camera3.cal
+sequenceB_4/CALIB/Camera4.cal
+sequenceB_4/CAM1/
+sequenceB_4/CAM1/image0000.bmp
+sequenceB_4/CAM1/image0001.bmp
+sequenceB_4/CAM1/image0002.bmp
+sequenceB_4/CAM1/image0003.bmp
+sequenceB_4/CAM2/
+sequenceB_4/CAM2/image0000.bmp
+sequenceB_4/CAM2/image0001.bmp
+sequenceB_4/CAM2/image0002.bmp
+sequenceB_4/CAM2/image0003.bmp
+sequenceB_4/CAM3/
+sequenceB_4/CAM3/image0000.bmp
+sequenceB_4/CAM3/image0001.bmp
+sequenceB_4/CAM3/image0002.bmp
+sequenceB_4/CAM3/image0003.bmp
+sequenceB_4/CAM4/
+sequenceB_4/CAM4/image0000.bmp
+sequenceB_4/CAM4/image0001.bmp
+sequenceB_4/CAM4/image0002.bmp
+sequenceB_4/CAM4/image0003.bmp
+sequenceB_4/FG1/
+sequenceB_4/FG1/image0000.bmp
+sequenceB_4/FG1/image0001.bmp
+sequenceB_4/FG1/image0002.bmp
+sequenceB_4/FG1/image0003.bmp
+sequenceB_4/FG2/
+sequenceB_4/FG2/image0000.bmp
+sequenceB_4/FG2/image0001.bmp
+sequenceB_4/FG2/image0002.bmp
+sequenceB_4/FG2/image0003.bmp
+sequenceB_4/FG3/
+sequenceB_4/FG3/image0000.bmp
+sequenceB_4/FG3/image0001.bmp
+sequenceB_4/FG3/image0002.bmp
+sequenceB_4/FG3/image0003.bmp
+sequenceB_4/FG4/
+sequenceB_4/FG4/image0000.bmp
+sequenceB_4/FG4/image0001.bmp
+sequenceB_4/FG4/image0002.bmp
+sequenceB_4/FG4/image0003.bmp
+sequenceB_4/InitialPose.txt
+sequenceB_4/PoseParameters.txt
+[PARSEC] Running 'time /root/cxl_profiler/parsec/pkgs/apps/bodytrack/inst/amd64-linux.gcc-hooks/bin/bodytrack sequenceB_4 4 4 4000 5 0 16':
+[PARSEC] [---------- Beginning of output ----------]
+PARSEC Benchmark Suite Version 3.0-beta-20120904
+[HOOKS] PARSEC Hooks Version 1.2
+Threading with Posix Threads
+Number of threads : 16
+Using dataset : sequenceB_4/
+4000 particles with 5 annealing layers
+
+[HOOKS] Entering ROI
+Processing frame 0
+Processing frame 1
+Processing frame 2
+Processing frame 3
+[HOOKS] Leaving ROI
+[HOOKS] Total time spent in ROI: 0.210s
+[HOOKS] Lockstats: ROI duration 0.209868s
+[HOOKS] Lockstats: lock-based sync in ROI: yes (acquisitions=27891, threads=18)
+[HOOKS] Lockstats: critical-section time sum 0.012707s, avg 0.456us, max 33.688us
+[HOOKS] Lockstats: critical-section ratio (sum/(ROI*threads)) 0.34%
+[HOOKS] Lockstats: thread 17 tid=0x50aa4 locks=1 total=0.000001s avg=0.896us max=0.896us ratio=0.00%
+[HOOKS] Lockstats: thread 16 tid=0x50a93 locks=80 total=0.001179s avg=14.737us max=33.688us ratio=0.56%
+[HOOKS] Lockstats: thread 15 tid=0x50aa3 locks=1739 total=0.000681s avg=0.392us max=11.976us ratio=0.32%
+[HOOKS] Lockstats: thread 14 tid=0x50aa2 locks=1735 total=0.000670s avg=0.386us max=11.197us ratio=0.32%
+[HOOKS] Lockstats: thread 13 tid=0x50aa1 locks=1731 total=0.000753s avg=0.435us max=11.398us ratio=0.36%
+[HOOKS] Lockstats: thread 12 tid=0x50aa0 locks=1734 total=0.000711s avg=0.410us max=10.850us ratio=0.34%
+[HOOKS] Lockstats: thread 11 tid=0x50a9f locks=1747 total=0.000749s avg=0.429us max=27.978us ratio=0.36%
+[HOOKS] Lockstats: thread 10 tid=0x50a9e locks=1710 total=0.000749s avg=0.438us max=10.411us ratio=0.36%
+[HOOKS] Lockstats: thread 9 tid=0x50a9c locks=1736 total=0.000685s avg=0.395us max=11.375us ratio=0.33%
+[HOOKS] Lockstats: thread 8 tid=0x50a9d locks=1735 total=0.000729s avg=0.420us max=17.175us ratio=0.35%
+[HOOKS] Lockstats: thread 7 tid=0x50a9b locks=1733 total=0.000677s avg=0.391us max=14.792us ratio=0.32%
+[HOOKS] Lockstats: thread 6 tid=0x50a9a locks=1726 total=0.000743s avg=0.430us max=12.084us ratio=0.35%
+[HOOKS] Lockstats: thread 5 tid=0x50a99 locks=1737 total=0.000717s avg=0.413us max=13.083us ratio=0.34%
+[HOOKS] Lockstats: thread 4 tid=0x50a98 locks=1740 total=0.000716s avg=0.412us max=10.567us ratio=0.34%
+[HOOKS] Lockstats: thread 3 tid=0x50a97 locks=1730 total=0.000648s avg=0.375us max=11.903us ratio=0.31%
+[HOOKS] Lockstats: thread 2 tid=0x50a96 locks=1733 total=0.000927s avg=0.535us max=14.157us ratio=0.44%
+[HOOKS] Lockstats: thread 1 tid=0x50a95 locks=1741 total=0.000636s avg=0.365us max=11.059us ratio=0.30%
+[HOOKS] Lockstats: thread 0 tid=0x50a94 locks=1803 total=0.000734s avg=0.407us max=11.302us ratio=0.35%
+[HOOKS] Barrierstats: ROI duration 0.209868s
+[HOOKS] Barrierstats: barrier waits in ROI: yes (waits=3757, threads=17)
+[HOOKS] Barrierstats: wait time sum 0.283763s, avg 75.529us, max 4815.605us
+[HOOKS] Barrierstats: wait ratio (sum/(ROI*threads)) 7.95%
+[HOOKS] Barrierstats: thread 16 tid=0x50a93 waits=77 total=0.115010s avg=1493.630us max=4815.605us ratio=54.80%
+[HOOKS] Barrierstats: thread 15 tid=0x50aa3 waits=230 total=0.010806s avg=46.982us max=542.727us ratio=5.15%
+[HOOKS] Barrierstats: thread 14 tid=0x50aa2 waits=230 total=0.010303s avg=44.795us max=541.179us ratio=4.91%
+[HOOKS] Barrierstats: thread 13 tid=0x50aa1 waits=230 total=0.010861s avg=47.223us max=540.971us ratio=5.18%
+[HOOKS] Barrierstats: thread 12 tid=0x50aa0 waits=230 total=0.010659s avg=46.343us max=542.471us ratio=5.08%
+[HOOKS] Barrierstats: thread 11 tid=0x50a9f waits=230 total=0.010506s avg=45.680us max=543.047us ratio=5.01%
+[HOOKS] Barrierstats: thread 10 tid=0x50a9e waits=230 total=0.010570s avg=45.958us max=542.521us ratio=5.04%
+[HOOKS] Barrierstats: thread 9 tid=0x50a9c waits=230 total=0.010761s avg=46.788us max=542.684us ratio=5.13%
+[HOOKS] Barrierstats: thread 8 tid=0x50a9d waits=230 total=0.010836s avg=47.114us max=539.107us ratio=5.16%
+[HOOKS] Barrierstats: thread 7 tid=0x50a9b waits=230 total=0.010832s avg=47.095us max=541.931us ratio=5.16%
+[HOOKS] Barrierstats: thread 6 tid=0x50a9a waits=230 total=0.010669s avg=46.385us max=542.421us ratio=5.08%
+[HOOKS] Barrierstats: thread 5 tid=0x50a99 waits=230 total=0.010766s avg=46.808us max=541.079us ratio=5.13%
+[HOOKS] Barrierstats: thread 4 tid=0x50a98 waits=230 total=0.010635s avg=46.237us max=542.745us ratio=5.07%
+[HOOKS] Barrierstats: thread 3 tid=0x50a97 waits=230 total=0.010685s avg=46.455us max=542.964us ratio=5.09%
+[HOOKS] Barrierstats: thread 2 tid=0x50a96 waits=230 total=0.010392s avg=45.182us max=542.258us ratio=4.95%
+[HOOKS] Barrierstats: thread 1 tid=0x50a95 waits=230 total=0.010793s avg=46.926us max=540.032us ratio=5.14%
+[HOOKS] Barrierstats: thread 0 tid=0x50a94 waits=230 total=0.008680s avg=37.739us max=128.184us ratio=4.14%
+[HOOKS] Atomic ops in ROI: total=0, threads=0
+[HOOKS] Terminating
+
+real	0m0.253s
+user	0m1.838s
+sys	0m0.160s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC] Done.

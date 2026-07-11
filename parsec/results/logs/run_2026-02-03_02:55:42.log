@@ -1,0 +1,184 @@
+[PARSEC] [========== PARSEC 3.0-beta-20120904 RUN LOGFILE ==========]
+
+[PARSEC] Run with amd64-linux.gcc-hooks binaries and input simlarge started on Tue Feb 3 02:55:42 UTC 2026.
+[PARSEC] Benchmarks to run:  parsec.facesim
+
+[PARSEC] [========== Running benchmark parsec.facesim [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] Unpacking benchmark input 'simlarge'.
+Face_Data/
+Face_Data/Eftychis_840k/
+Face_Data/Eftychis_840k/Front_370k/
+Face_Data/Eftychis_840k/Front_370k/attachment_list.txt
+Face_Data/Eftychis_840k/Front_370k/buccinator_left.constitutive_data
+Face_Data/Eftychis_840k/Front_370k/buccinator_right.constitutive_data
+Face_Data/Eftychis_840k/Front_370k/corrugator_supercilii_left.constitutive_data
+Face_Data/Eftychis_840k/Front_370k/corrugator_supercilii_right.constitutive_data
+Face_Data/Eftychis_840k/Front_370k/cranium.attached_nodes
+Face_Data/Eftychis_840k/Front_370k/cranium_extended.attached_nodes
+Face_Data/Eftychis_840k/Front_370k/depressor_anguli_oris_left.constitutive_data
+Face_Data/Eftychis_840k/Front_370k/depressor_anguli_oris_right.constitutive_data
+Face_Data/Eftychis_840k/Front_370k/depressor_labii_inferioris_left.constitutive_data
+Face_Data/Eftychis_840k/Front_370k/depressor_labii_inferioris_right.constitutive_data
+Face_Data/Eftychis_840k/Front_370k/face_simulation.tet
+Face_Data/Eftychis_840k/Front_370k/face_simulation_1.tet
+Face_Data/Eftychis_840k/Front_370k/face_simulation_128.tet
+Face_Data/Eftychis_840k/Front_370k/face_simulation_16.tet
+Face_Data/Eftychis_840k/Front_370k/face_simulation_2.tet
+Face_Data/Eftychis_840k/Front_370k/face_simulation_3.tet
+Face_Data/Eftychis_840k/Front_370k/face_simulation_32.tet
+Face_Data/Eftychis_840k/Front_370k/face_simulation_4.tet
+Face_Data/Eftychis_840k/Front_370k/face_simulation_6.tet
+Face_Data/Eftychis_840k/Front_370k/face_simulation_64.tet
+Face_Data/Eftychis_840k/Front_370k/face_simulation_8.tet
+Face_Data/Eftychis_840k/Front_370k/face_simulation_original.log
+Face_Data/Eftychis_840k/Front_370k/flesh.attached_nodes
+Face_Data/Eftychis_840k/Front_370k/flesh_extended.attached_nodes
+Face_Data/Eftychis_840k/Front_370k/jaw.attached_nodes
+Face_Data/Eftychis_840k/Front_370k/jaw_joint_parameters
+Face_Data/Eftychis_840k/Front_370k/levator_anguli_oris_left.constitutive_data
+Face_Data/Eftychis_840k/Front_370k/levator_anguli_oris_right.constitutive_data
+Face_Data/Eftychis_840k/Front_370k/levator_labii_superioris_left.constitutive_data
+Face_Data/Eftychis_840k/Front_370k/levator_labii_superioris_right.constitutive_data
+Face_Data/Eftychis_840k/Front_370k/llsan_lateral_left.constitutive_data
+Face_Data/Eftychis_840k/Front_370k/llsan_lateral_right.constitutive_data
+Face_Data/Eftychis_840k/Front_370k/llsan_medial_left.constitutive_data
+Face_Data/Eftychis_840k/Front_370k/llsan_medial_right.constitutive_data
+Face_Data/Eftychis_840k/Front_370k/mentalis_left.constitutive_data
+Face_Data/Eftychis_840k/Front_370k/mentalis_right.constitutive_data
+Face_Data/Eftychis_840k/Front_370k/muscle_list.txt
+Face_Data/Eftychis_840k/Front_370k/nasalis_alar_left.constitutive_data
+Face_Data/Eftychis_840k/Front_370k/nasalis_alar_right.constitutive_data
+Face_Data/Eftychis_840k/Front_370k/nasalis_transverse.constitutive_data
+Face_Data/Eftychis_840k/Front_370k/node_divisions_1.dat
+Face_Data/Eftychis_840k/Front_370k/node_divisions_128.dat
+Face_Data/Eftychis_840k/Front_370k/node_divisions_16.dat
+Face_Data/Eftychis_840k/Front_370k/node_divisions_2.dat
+Face_Data/Eftychis_840k/Front_370k/node_divisions_3.dat
+Face_Data/Eftychis_840k/Front_370k/node_divisions_32.dat
+Face_Data/Eftychis_840k/Front_370k/node_divisions_4.dat
+Face_Data/Eftychis_840k/Front_370k/node_divisions_6.dat
+Face_Data/Eftychis_840k/Front_370k/node_divisions_64.dat
+Face_Data/Eftychis_840k/Front_370k/node_divisions_8.dat
+Face_Data/Eftychis_840k/Front_370k/orbicularis_oculi_left.constitutive_data
+Face_Data/Eftychis_840k/Front_370k/orbicularis_oculi_right.constitutive_data
+Face_Data/Eftychis_840k/Front_370k/orbicularis_oris.constitutive_data
+Face_Data/Eftychis_840k/Front_370k/particle_positions_1.dat
+Face_Data/Eftychis_840k/Front_370k/particle_positions_128.dat
+Face_Data/Eftychis_840k/Front_370k/particle_positions_16.dat
+Face_Data/Eftychis_840k/Front_370k/particle_positions_2.dat
+Face_Data/Eftychis_840k/Front_370k/particle_positions_3.dat
+Face_Data/Eftychis_840k/Front_370k/particle_positions_32.dat
+Face_Data/Eftychis_840k/Front_370k/particle_positions_4.dat
+Face_Data/Eftychis_840k/Front_370k/particle_positions_6.dat
+Face_Data/Eftychis_840k/Front_370k/particle_positions_64.dat
+Face_Data/Eftychis_840k/Front_370k/particle_positions_8.dat
+Face_Data/Eftychis_840k/Front_370k/peak_isometric_stress_list.txt
+Face_Data/Eftychis_840k/Front_370k/procerus_left.constitutive_data
+Face_Data/Eftychis_840k/Front_370k/procerus_right.constitutive_data
+Face_Data/Eftychis_840k/Front_370k/risorius_left.constitutive_data
+Face_Data/Eftychis_840k/Front_370k/risorius_right.constitutive_data
+Face_Data/Eftychis_840k/Front_370k/zygomatic_major_left.constitutive_data
+Face_Data/Eftychis_840k/Front_370k/zygomatic_major_right.constitutive_data
+Face_Data/Eftychis_840k/Front_370k/zygomatic_minor_left.constitutive_data
+Face_Data/Eftychis_840k/Front_370k/zygomatic_minor_right.constitutive_data
+Face_Data/Eftychis_840k/eftychis_cranium_collision_surface.phi
+Face_Data/Eftychis_840k/eftychis_cranium_collision_surface.rgd
+Face_Data/Eftychis_840k/eftychis_cranium_collision_surface.tri
+Face_Data/Eftychis_840k/eftychis_cranium_collision_surface_smoothed.phi
+Face_Data/Eftychis_840k/eftychis_cranium_collision_surface_smoothed.rgd
+Face_Data/Eftychis_840k/eftychis_cranium_collision_surface_smoothed.tri
+Face_Data/Eftychis_840k/eftychis_jaw_collision_surface.phi
+Face_Data/Eftychis_840k/eftychis_jaw_collision_surface.rgd
+Face_Data/Eftychis_840k/eftychis_jaw_collision_surface.tri
+Face_Data/Eftychis_840k/eftychis_jaw_collision_surface_smoothed.phi
+Face_Data/Eftychis_840k/eftychis_jaw_collision_surface_smoothed.rgd
+Face_Data/Eftychis_840k/eftychis_jaw_collision_surface_smoothed.tri
+Face_Data/Motion_Data/
+Face_Data/Motion_Data/Storytelling_Controls/
+Face_Data/Motion_Data/Storytelling_Controls/storytelling_controls.1
+Face_Data/Motion_Data/Storytelling_Controls/storytelling_controls.2
+[PARSEC] Running 'time /root/cxl_profiler/parsec/pkgs/apps/facesim/inst/amd64-linux.gcc-hooks/bin/facesim -timing -threads 16':
+[PARSEC] [---------- Beginning of output ----------]
+PARSEC Benchmark Suite Version 3.0-beta-20120904
+[HOOKS] PARSEC Hooks Version 1.2
+Creating directory using system("mkdir -p Storytelling/output")...Successful!
+Simulation                                        Reading simulation model : ./Face_Data/Eftychis_840k/Front_370k/face_simulation_16.tet
+Total particles = 80598
+Total tetrahedra = 372126
+muscles = 32
+attachments = 3
+[HOOKS] Entering ROI
+
+  Frame 1                                         
+  END Frame 1                                       1.8759 s[HOOKS] Leaving ROI
+
+SIMULATION                                          0.0000
+  FRAME                                             1.8759
+    ADB                                             1.8734
+      UPBS                                          0.4018
+        UPBS (FEM) - Initialize                     0.1470 s
+        UPBS (FEM) - Element Loop                   0.2547 s
+        UPBS (CPF)                                  0.0000 s
+      ADO                                           1.4715
+        ADO - Update collision bodies               0.0000 s
+        AOTSQ                                       1.4714
+          AOTSQ - Initialize                        0.0019 s
+          AOTSQ - NR loop                           1.4695
+            AOTSQ - NR loop - Initialize            0.0003 s
+            UCPF                                    0.2310 s
+            NRS                                     0.9230
+              NRS - Initialize                      0.0000 s
+              NRS - Boundary conditions 1           0.0016 s
+              UPBS                                  0.2989
+                UPBS (FEM) - Initialize             0.0000 s
+                UPBS (FEM) - Element Loop           0.2989 s
+                UPBS (CPF)                          0.0000 s
+              AFD (FEM)                             0.0019 s
+              AVIF                                  0.0155
+                AVIF (FEM)                          0.0150 s
+                AVIF (CPF)                          0.0004 s
+              NRS - Boundary conditions 2           0.0001 s
+              NRS - Compute residual                0.0012
+              NRS - Copy initial guess              0.0035 s
+            UPBS                                    0.2977
+              UPBS (FEM) - Initialize               0.0000 s
+              UPBS (FEM) - Element Loop             0.2977 s
+              UPBS (CPF)                            0.0000 s
+            AVIF                                    0.0162
+              AVIF (FEM)                            0.0157 s
+              AVIF (CPF)                            0.0004 s
+            AOTSQ - NR loop - Boundary conditions   0.0003 s
+            AOTSQ - NR loop - Compute residual      0.0007 s
+[HOOKS] Total time spent in ROI: 1.876s
+[HOOKS] Lockstats: ROI duration 1.876048s
+[HOOKS] Lockstats: lock-based sync in ROI: yes (acquisitions=50632, threads=16)
+[HOOKS] Lockstats: critical-section time sum 0.052509s, avg 1.037us, max 153.172us
+[HOOKS] Lockstats: critical-section ratio (sum/(ROI*threads)) 0.17%
+[HOOKS] Lockstats: thread 15 tid=0x50c16 locks=2468 total=0.002097s avg=0.850us max=9.392us ratio=0.11%
+[HOOKS] Lockstats: thread 14 tid=0x50c12 locks=2466 total=0.002253s avg=0.914us max=151.313us ratio=0.12%
+[HOOKS] Lockstats: thread 13 tid=0x50c15 locks=2467 total=0.001933s avg=0.783us max=8.988us ratio=0.10%
+[HOOKS] Lockstats: thread 12 tid=0x50c14 locks=2472 total=0.002272s avg=0.919us max=72.873us ratio=0.12%
+[HOOKS] Lockstats: thread 11 tid=0x50c13 locks=2473 total=0.002481s avg=1.003us max=111.866us ratio=0.13%
+[HOOKS] Lockstats: thread 10 tid=0x50c05 locks=13556 total=0.019409s avg=1.432us max=153.172us ratio=1.03%
+[HOOKS] Lockstats: thread 9 tid=0x50c11 locks=2475 total=0.002240s avg=0.905us max=28.634us ratio=0.12%
+[HOOKS] Lockstats: thread 8 tid=0x50c10 locks=2474 total=0.002239s avg=0.905us max=42.965us ratio=0.12%
+[HOOKS] Lockstats: thread 7 tid=0x50c0f locks=2478 total=0.002093s avg=0.844us max=22.147us ratio=0.11%
+[HOOKS] Lockstats: thread 6 tid=0x50c0e locks=2474 total=0.002296s avg=0.928us max=31.400us ratio=0.12%
+[HOOKS] Lockstats: thread 5 tid=0x50c0c locks=2470 total=0.002173s avg=0.880us max=8.919us ratio=0.12%
+[HOOKS] Lockstats: thread 4 tid=0x50c0d locks=2486 total=0.002113s avg=0.850us max=53.873us ratio=0.11%
+[HOOKS] Lockstats: thread 3 tid=0x50c0b locks=2470 total=0.002080s avg=0.842us max=49.865us ratio=0.11%
+[HOOKS] Lockstats: thread 2 tid=0x50c0a locks=2466 total=0.002120s avg=0.860us max=91.567us ratio=0.11%
+[HOOKS] Lockstats: thread 1 tid=0x50c09 locks=2469 total=0.002347s avg=0.951us max=70.866us ratio=0.13%
+[HOOKS] Lockstats: thread 0 tid=0x50c08 locks=2468 total=0.002365s avg=0.958us max=127.781us ratio=0.13%
+[HOOKS] Barrierstats: ROI duration 1.876048s
+[HOOKS] Barrierstats: barrier waits in ROI: no (count=0)
+[HOOKS] Atomic ops in ROI: total=0, threads=0
+[HOOKS] Terminating
+
+real	0m8.486s
+user	0m27.775s
+sys	0m0.560s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC] Done.

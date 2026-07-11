@@ -1,0 +1,74 @@
+[
+  [
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock centralized --hosts 1 --host_id 0 --threads 1 --locks 1 --channels 1 --hold_ns 0 --gap_ns 0 --seconds 10 --daemon --no_flush_stats"
+  ],
+  [
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock centralized --hosts 2 --host_id 0 --threads 1 --locks 1 --channels 1 --hold_ns 0 --gap_ns 0 --seconds 10 --daemon --no_flush_stats",
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock centralized --hosts 2 --host_id 1 --threads 1 --locks 1 --channels 1 --hold_ns 0 --gap_ns 0 --seconds 10 --no_flush_stats"
+  ],
+  [
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock centralized --hosts 3 --host_id 0 --threads 1 --locks 1 --channels 1 --hold_ns 0 --gap_ns 0 --seconds 10 --daemon --no_flush_stats",
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock centralized --hosts 3 --host_id 1 --threads 1 --locks 1 --channels 1 --hold_ns 0 --gap_ns 0 --seconds 10 --no_flush_stats",
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock centralized --hosts 3 --host_id 2 --threads 1 --locks 1 --channels 1 --hold_ns 0 --gap_ns 0 --seconds 10 --no_flush_stats"
+  ],
+  [
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock centralized --hosts 4 --host_id 0 --threads 1 --locks 1 --channels 1 --hold_ns 0 --gap_ns 0 --seconds 10 --daemon --no_flush_stats",
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock centralized --hosts 4 --host_id 1 --threads 1 --locks 1 --channels 1 --hold_ns 0 --gap_ns 0 --seconds 10 --no_flush_stats",
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock centralized --hosts 4 --host_id 2 --threads 1 --locks 1 --channels 1 --hold_ns 0 --gap_ns 0 --seconds 10 --no_flush_stats",
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock centralized --hosts 4 --host_id 3 --threads 1 --locks 1 --channels 1 --hold_ns 0 --gap_ns 0 --seconds 10 --no_flush_stats"
+  ],
+  [
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock centralized --hosts 1 --host_id 0 --threads 1 --locks 2 --channels 1 --hold_ns 0 --gap_ns 0 --seconds 10 --daemon --no_flush_stats"
+  ],
+  [
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock centralized --hosts 1 --host_id 0 --threads 1 --locks 4 --channels 1 --hold_ns 0 --gap_ns 0 --seconds 10 --daemon --no_flush_stats"
+  ],
+  [
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock centralized --hosts 1 --host_id 0 --threads 1 --locks 8 --channels 1 --hold_ns 0 --gap_ns 0 --seconds 10 --daemon --no_flush_stats"
+  ],
+  [
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock centralized --hosts 2 --host_id 0 --threads 1 --locks 2 --channels 1 --hold_ns 0 --gap_ns 0 --seconds 10 --daemon --no_flush_stats",
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock centralized --hosts 2 --host_id 1 --threads 1 --locks 2 --channels 1 --hold_ns 0 --gap_ns 0 --seconds 10 --no_flush_stats"
+  ],
+  [
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock centralized --hosts 2 --host_id 0 --threads 1 --locks 4 --channels 1 --hold_ns 0 --gap_ns 0 --seconds 10 --daemon --no_flush_stats",
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock centralized --hosts 2 --host_id 1 --threads 1 --locks 4 --channels 1 --hold_ns 0 --gap_ns 0 --seconds 10 --no_flush_stats"
+  ],
+  [
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock centralized --hosts 2 --host_id 0 --threads 1 --locks 8 --channels 1 --hold_ns 0 --gap_ns 0 --seconds 10 --daemon --no_flush_stats",
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock centralized --hosts 2 --host_id 1 --threads 1 --locks 8 --channels 1 --hold_ns 0 --gap_ns 0 --seconds 10 --no_flush_stats"
+  ],
+  [
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock centralized --hosts 3 --host_id 0 --threads 1 --locks 2 --channels 1 --hold_ns 0 --gap_ns 0 --seconds 10 --daemon --no_flush_stats",
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock centralized --hosts 3 --host_id 1 --threads 1 --locks 2 --channels 1 --hold_ns 0 --gap_ns 0 --seconds 10 --no_flush_stats",
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock centralized --hosts 3 --host_id 2 --threads 1 --locks 2 --channels 1 --hold_ns 0 --gap_ns 0 --seconds 10 --no_flush_stats"
+  ],
+  [
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock centralized --hosts 3 --host_id 0 --threads 1 --locks 4 --channels 1 --hold_ns 0 --gap_ns 0 --seconds 10 --daemon --no_flush_stats",
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock centralized --hosts 3 --host_id 1 --threads 1 --locks 4 --channels 1 --hold_ns 0 --gap_ns 0 --seconds 10 --no_flush_stats",
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock centralized --hosts 3 --host_id 2 --threads 1 --locks 4 --channels 1 --hold_ns 0 --gap_ns 0 --seconds 10 --no_flush_stats"
+  ],
+  [
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock centralized --hosts 3 --host_id 0 --threads 1 --locks 8 --channels 1 --hold_ns 0 --gap_ns 0 --seconds 10 --daemon --no_flush_stats",
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock centralized --hosts 3 --host_id 1 --threads 1 --locks 8 --channels 1 --hold_ns 0 --gap_ns 0 --seconds 10 --no_flush_stats",
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock centralized --hosts 3 --host_id 2 --threads 1 --locks 8 --channels 1 --hold_ns 0 --gap_ns 0 --seconds 10 --no_flush_stats"
+  ],
+  [
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock centralized --hosts 4 --host_id 0 --threads 1 --locks 2 --channels 1 --hold_ns 0 --gap_ns 0 --seconds 10 --daemon --no_flush_stats",
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock centralized --hosts 4 --host_id 1 --threads 1 --locks 2 --channels 1 --hold_ns 0 --gap_ns 0 --seconds 10 --no_flush_stats",
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock centralized --hosts 4 --host_id 2 --threads 1 --locks 2 --channels 1 --hold_ns 0 --gap_ns 0 --seconds 10 --no_flush_stats",
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock centralized --hosts 4 --host_id 3 --threads 1 --locks 2 --channels 1 --hold_ns 0 --gap_ns 0 --seconds 10 --no_flush_stats"
+  ],
+  [
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock centralized --hosts 4 --host_id 0 --threads 1 --locks 4 --channels 1 --hold_ns 0 --gap_ns 0 --seconds 10 --daemon --no_flush_stats",
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock centralized --hosts 4 --host_id 1 --threads 1 --locks 4 --channels 1 --hold_ns 0 --gap_ns 0 --seconds 10 --no_flush_stats",
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock centralized --hosts 4 --host_id 2 --threads 1 --locks 4 --channels 1 --hold_ns 0 --gap_ns 0 --seconds 10 --no_flush_stats",
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock centralized --hosts 4 --host_id 3 --threads 1 --locks 4 --channels 1 --hold_ns 0 --gap_ns 0 --seconds 10 --no_flush_stats"
+  ],
+  [
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock centralized --hosts 4 --host_id 0 --threads 1 --locks 8 --channels 1 --hold_ns 0 --gap_ns 0 --seconds 10 --daemon --no_flush_stats",
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock centralized --hosts 4 --host_id 1 --threads 1 --locks 8 --channels 1 --hold_ns 0 --gap_ns 0 --seconds 10 --no_flush_stats",
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock centralized --hosts 4 --host_id 2 --threads 1 --locks 8 --channels 1 --hold_ns 0 --gap_ns 0 --seconds 10 --no_flush_stats",
+    "{BIN_ROOT}/lock_bench --dax_dev /dev/interleave_dax --lock centralized --hosts 4 --host_id 3 --threads 1 --locks 8 --channels 1 --hold_ns 0 --gap_ns 0 --seconds 10 --no_flush_stats"
+  ]
+]

@@ -1,0 +1,14 @@
+Mapped /dev/interleave_dax at 0x7f5a2d646000 (len=17179869184)
+Using 86 threads for graph generation...
+[Host 0] Building graph...
+Generate Time:       0.14977
+Build Time:          0.15263
+Relabel:             0.14451
+Restored 16 threads for TC execution.
+[Host 0] Initialization complete.
+[Host 0] Ready, waiting at initial barrier...
+[Host 0] All hosts synchronized, starting TC
+Graph has 1048576 nodes and 46067423 undirected edges for degree: 43
+Trial Time:          3.07496
+Average Time:        3.07496
+SYNC_STATS tag=tc publish_lines=5902535 observe_lines=4970101 lock_acquires=30 lock_retries=1 barrier_waits=6 atomic_rmw=0

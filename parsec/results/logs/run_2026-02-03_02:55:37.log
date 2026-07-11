@@ -1,0 +1,32 @@
+[PARSEC] [========== PARSEC 3.0-beta-20120904 RUN LOGFILE ==========]
+
+[PARSEC] Run with amd64-linux.gcc-hooks binaries and input simlarge started on Tue Feb 3 02:55:37 UTC 2026.
+[PARSEC] Benchmarks to run:  parsec.blackscholes
+
+[PARSEC] [========== Running benchmark parsec.blackscholes [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] Unpacking benchmark input 'simlarge'.
+in_64K.txt
+[PARSEC] Running 'time /root/cxl_profiler/parsec/pkgs/apps/blackscholes/inst/amd64-linux.gcc-hooks/bin/blackscholes 16 in_64K.txt prices.txt':
+[PARSEC] [---------- Beginning of output ----------]
+PARSEC Benchmark Suite Version 3.0-beta-20120904
+[HOOKS] PARSEC Hooks Version 1.2
+Num of Options: 65536
+Num of Runs: 100
+Size of data: 2621440
+[HOOKS] Entering ROI
+[HOOKS] Leaving ROI
+[HOOKS] Total time spent in ROI: 0.028s
+[HOOKS] Lockstats: ROI duration 0.028417s
+[HOOKS] Lockstats: lock-based sync in ROI: no (no lock acquisitions)
+[HOOKS] Barrierstats: ROI duration 0.028417s
+[HOOKS] Barrierstats: barrier waits in ROI: no (count=0)
+[HOOKS] Atomic ops in ROI: total=0, threads=0
+[HOOKS] Terminating
+
+real	0m0.155s
+user	0m0.544s
+sys	0m0.016s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC] Done.

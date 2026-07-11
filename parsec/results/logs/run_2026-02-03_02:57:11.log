@@ -1,0 +1,108 @@
+[PARSEC] [========== PARSEC 3.0-beta-20120904 RUN LOGFILE ==========]
+
+[PARSEC] Run with amd64-linux.gcc-hooks binaries and input simlarge started on Tue Feb 3 02:57:11 UTC 2026.
+[PARSEC] Benchmarks to run:  splash2x.raytrace
+
+[PARSEC] [========== Running benchmark splash2x.raytrace [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] Unpacking benchmark input 'simlarge'.
+balls4.env
+car.env
+teapot.env
+balls4.geo
+car.geo
+teapot.geo
+[PARSEC] Running 'time /root/cxl_profiler/parsec/ext/splash2x/apps/raytrace/inst/amd64-linux.gcc-hooks/bin/run.sh 16 simlarge':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /root/cxl_profiler/parsec/ext/splash2x/apps/raytrace/inst/amd64-linux.gcc-hooks/bin/raytrace -s -p16 -a8 balls4.env:
+[HOOKS] PARSEC Hooks Version 1.2
+Uniform Hierarchy built.
+
+Number of processors:     	16
+Global shared memory size:	32 MB
+Samples per pixel:        	8
+
+Number of primitive objects: 	7382
+Number of primitive elements:	7382
+[HOOKS] Entering ROI
+[HOOKS] Leaving ROI
+
+****** Hierarchial uniform grid memory allocation summary ******* 
+
+     < struct >:            < current >   < maximum >    < sizeof > 
+     <  bytes >:             <  bytes >   <   bytes >    <  bytes > 
+
+     grid:                        432           432           144 
+     hashtable entries:           376           376             8 
+     emptycell entries:            40            40             8 
+     voxel:                     10040         10040            40 
+     bintree_node:              59760         59760           120 
+
+     Totals:                    70648         70648      
+
+TIMING STATISTICS MEASURED BY MAIN PROCESS:
+        Overall start time         1770087431949944
+        Overall end time       1770087432609270
+        Total time with initialization                659326
+        Total time without initialization                658961
+
+
+
+PER-PROCESS STATISTICS:
+                Proc                Time
+                            Tracing Rays
+
+                   0              648831
+                   1              649837
+                   2              656548
+                   3              647845
+                   4              656733
+                   5              656443
+                   6              655160
+                   7              657632
+                   8              647601
+                   9              651508
+                  10              653705
+                  11              647161
+                  12              651209
+                  13              653120
+                  14              651972
+                  15              645856
+
+
+              Max =               657632
+              Min =               645856
+              Avg =               651947
+[HOOKS] Total time spent in ROI: 0.659s
+[HOOKS] Lockstats: ROI duration 0.659346s
+[HOOKS] Lockstats: lock-based sync in ROI: yes (acquisitions=954095, threads=16)
+[HOOKS] Lockstats: critical-section time sum 1.997014s, avg 2.093us, max 104.962us
+[HOOKS] Lockstats: critical-section ratio (sum/(ROI*threads)) 18.93%
+[HOOKS] Lockstats: thread 15 tid=0x53b9b locks=60231 total=0.122217s avg=2.029us max=42.865us ratio=18.54%
+[HOOKS] Lockstats: thread 14 tid=0x53b9a locks=56917 total=0.121125s avg=2.128us max=38.271us ratio=18.37%
+[HOOKS] Lockstats: thread 13 tid=0x53b99 locks=58605 total=0.120295s avg=2.053us max=38.649us ratio=18.24%
+[HOOKS] Lockstats: thread 12 tid=0x53b98 locks=59262 total=0.119471s avg=2.016us max=39.478us ratio=18.12%
+[HOOKS] Lockstats: thread 11 tid=0x53b97 locks=60975 total=0.128073s avg=2.100us max=37.608us ratio=19.42%
+[HOOKS] Lockstats: thread 10 tid=0x53b96 locks=62491 total=0.124030s avg=1.985us max=37.575us ratio=18.81%
+[HOOKS] Lockstats: thread 9 tid=0x53b95 locks=63047 total=0.129414s avg=2.053us max=41.836us ratio=19.63%
+[HOOKS] Lockstats: thread 8 tid=0x53b92 locks=56000 total=0.133505s avg=2.384us max=36.239us ratio=20.25%
+[HOOKS] Lockstats: thread 7 tid=0x53b93 locks=53886 total=0.110371s avg=2.048us max=42.157us ratio=16.74%
+[HOOKS] Lockstats: thread 6 tid=0x53b94 locks=55696 total=0.117344s avg=2.107us max=36.367us ratio=17.80%
+[HOOKS] Lockstats: thread 5 tid=0x53b91 locks=61088 total=0.128913s avg=2.110us max=38.306us ratio=19.55%
+[HOOKS] Lockstats: thread 4 tid=0x53b90 locks=57819 total=0.123988s avg=2.144us max=38.205us ratio=18.80%
+[HOOKS] Lockstats: thread 3 tid=0x53b8f locks=60355 total=0.125033s avg=2.072us max=34.854us ratio=18.96%
+[HOOKS] Lockstats: thread 2 tid=0x53b8e locks=64094 total=0.133754s avg=2.087us max=104.962us ratio=20.29%
+[HOOKS] Lockstats: thread 1 tid=0x53b8d locks=64582 total=0.131847s avg=2.042us max=39.556us ratio=20.00%
+[HOOKS] Lockstats: thread 0 tid=0x53b8c locks=59047 total=0.127633s avg=2.162us max=41.196us ratio=19.36%
+[HOOKS] Barrierstats: ROI duration 0.659346s
+[HOOKS] Barrierstats: barrier waits in ROI: no (count=0)
+[HOOKS] Atomic ops in ROI: total=0, threads=0
+[HOOKS] Terminating
+
+real	0m0.698s
+user	0m6.965s
+sys	0m3.013s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC] Done.

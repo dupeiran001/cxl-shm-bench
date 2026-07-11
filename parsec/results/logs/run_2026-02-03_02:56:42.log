@@ -1,0 +1,116 @@
+[PARSEC] [========== PARSEC 3.0-beta-20120904 RUN LOGFILE ==========]
+
+[PARSEC] Run with amd64-linux.gcc-hooks binaries and input simlarge started on Tue Feb 3 02:56:42 UTC 2026.
+[PARSEC] Benchmarks to run:  splash2.water_spatial
+
+[PARSEC] [========== Running benchmark splash2.water_spatial [1] ==========]
+[PARSEC] NOTE: SPLASH-2 only supports "test" input sets.
+[PARSEC]       Please use SPLASH-2x for multiple input sets.
+[PARSEC] NOTE: SPLASH-2 only supports "test" input sets.
+[PARSEC]       Please use SPLASH-2x for multiple input sets.
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'test' available, skipping input setup.
+[PARSEC] Running 'time /root/cxl_profiler/parsec/ext/splash2/apps/water_spatial/inst/amd64-linux.gcc-hooks/bin/run.sh 16 test':
+[PARSEC] [---------- Beginning of output ----------]
+Generating default input file input_16...
+Running /root/cxl_profiler/parsec/ext/splash2/apps/water_spatial/inst/amd64-linux.gcc-hooks/bin/water_spatial 16 < input_16:
+Using 16 procs on 1 steps of 512 mols
+Other parameters:
+	TSTEP = 1.00e-15
+	NORDER = 6
+	NSAVE = 0
+	NRST = 0
+	NPRINT = 1
+	NFMC = 0
+	CUTOFF = 6.200000
+
+64 boxes with 16 processors
+
+
+TEMPERATURE                =   298.00 K
+DENSITY                    =  0.99800 G/C.C.
+NUMBER OF MOLECULES        =      512
+NUMBER OF PROCESSORS       =       16
+TIME STEP                  = 1.00e+00 SEC
+ORDER USED TO SOLVE F=MA   =        6 
+NO. OF TIME STEPS          =        1 
+FREQUENCY OF DATA SAVING   =        0 
+FREQUENCY TO WRITE RST FILE=        0 
+[HOOKS] Entering ROI
+xprocs = 2	yprocs = 2	zprocs = 4
+x_inc = 2	 y_inc = 2	 z_inc = 1
+x_left = 0	 y_left = 0	 z_left = 0
+SPHERICAL CUTOFF RADIUS    =   6.2000 ANGSTROM
+
+NS = 7.9999999999999893
+BOXL =  24.851010
+CUTOFF =   6.200000
+BOX_LENGTH =   6.212752
+BOX_PER_SIDE = 4
+XS =   3.106376
+ZERO = 1.55319
+WCOS = 0.585882
+WSIN = 0.756950
+***** NEW RUN STARTING FROM REGULAR LATTICE *****
+         1        1.89217      0.28450     10.25773     -2.34729 
+           10.087        375.91045        -24.32965
+CREATETIME = 4721
+COMPUTESTART (after initialization) = 1770087402287479
+COMPUTEEND = 1770087402287904
+COMPUTETIME (after initialization) = 425
+Measured Time (2nd timestep onward) = 0
+Intramolecular time only (2nd timestep onward) = 0
+Intermolecular time only (2nd timestep onward) = 0
+Other time (2nd timestep onward) = 0
+
+Exited Happily with XTT = 0 (note: XTT value is garbage if NPRINT > NSTEP)
+[HOOKS] Total time spent in ROI: -1770087402.280s
+[HOOKS] Lockstats: ROI duration 0.007691s
+[HOOKS] Lockstats: lock-based sync in ROI: yes (acquisitions=456, threads=16)
+[HOOKS] Lockstats: critical-section time sum 0.001269s, avg 2.784us, max 43.136us
+[HOOKS] Lockstats: critical-section ratio (sum/(ROI*threads)) 1.03%
+[HOOKS] Lockstats: thread 15 tid=0x52bd0 locks=28 total=0.000130s avg=4.629us max=43.136us ratio=1.69%
+[HOOKS] Lockstats: thread 14 tid=0x52bcc locks=27 total=0.000113s avg=4.191us max=30.723us ratio=1.47%
+[HOOKS] Lockstats: thread 13 tid=0x52bcf locks=27 total=0.000114s avg=4.212us max=31.618us ratio=1.48%
+[HOOKS] Lockstats: thread 12 tid=0x52bce locks=28 total=0.000084s avg=3.000us max=24.806us ratio=1.09%
+[HOOKS] Lockstats: thread 11 tid=0x52bcd locks=29 total=0.000058s avg=2.008us max=9.302us ratio=0.76%
+[HOOKS] Lockstats: thread 10 tid=0x52bc1 locks=30 total=0.000055s avg=1.836us max=9.125us ratio=0.72%
+[HOOKS] Lockstats: thread 9 tid=0x52bcb locks=29 total=0.000050s avg=1.712us max=10.971us ratio=0.65%
+[HOOKS] Lockstats: thread 8 tid=0x52bca locks=29 total=0.000071s avg=2.452us max=11.255us ratio=0.92%
+[HOOKS] Lockstats: thread 7 tid=0x52bc9 locks=28 total=0.000103s avg=3.672us max=26.999us ratio=1.34%
+[HOOKS] Lockstats: thread 6 tid=0x52bc8 locks=29 total=0.000056s avg=1.938us max=8.905us ratio=0.73%
+[HOOKS] Lockstats: thread 5 tid=0x52bc7 locks=29 total=0.000056s avg=1.928us max=9.274us ratio=0.73%
+[HOOKS] Lockstats: thread 4 tid=0x52bc6 locks=29 total=0.000076s avg=2.605us max=10.855us ratio=0.98%
+[HOOKS] Lockstats: thread 3 tid=0x52bc5 locks=28 total=0.000088s avg=3.141us max=24.954us ratio=1.14%
+[HOOKS] Lockstats: thread 2 tid=0x52bc4 locks=28 total=0.000091s avg=3.232us max=29.910us ratio=1.18%
+[HOOKS] Lockstats: thread 1 tid=0x52bc3 locks=29 total=0.000065s avg=2.244us max=10.951us ratio=0.85%
+[HOOKS] Lockstats: thread 0 tid=0x52bc2 locks=29 total=0.000061s avg=2.099us max=9.519us ratio=0.79%
+[HOOKS] Barrierstats: ROI duration 0.007691s
+[HOOKS] Barrierstats: barrier waits in ROI: yes (waits=160, threads=16)
+[HOOKS] Barrierstats: wait time sum 0.025066s, avg 156.664us, max 1800.659us
+[HOOKS] Barrierstats: wait ratio (sum/(ROI*threads)) 20.37%
+[HOOKS] Barrierstats: thread 15 tid=0x52bd0 waits=10 total=0.000676s avg=67.640us max=185.067us ratio=8.80%
+[HOOKS] Barrierstats: thread 14 tid=0x52bcc waits=10 total=0.000672s avg=67.246us max=224.232us ratio=8.74%
+[HOOKS] Barrierstats: thread 13 tid=0x52bcf waits=10 total=0.000959s avg=95.925us max=302.712us ratio=12.47%
+[HOOKS] Barrierstats: thread 12 tid=0x52bce waits=10 total=0.001095s avg=109.489us max=385.670us ratio=14.24%
+[HOOKS] Barrierstats: thread 11 tid=0x52bcd waits=10 total=0.001078s avg=107.797us max=553.841us ratio=14.02%
+[HOOKS] Barrierstats: thread 10 tid=0x52bc1 waits=10 total=0.001189s avg=118.912us max=595.921us ratio=15.46%
+[HOOKS] Barrierstats: thread 9 tid=0x52bcb waits=10 total=0.001375s avg=137.466us max=650.074us ratio=17.87%
+[HOOKS] Barrierstats: thread 8 tid=0x52bca waits=10 total=0.001502s avg=150.214us max=809.042us ratio=19.53%
+[HOOKS] Barrierstats: thread 7 tid=0x52bc9 waits=10 total=0.001568s avg=156.829us max=967.646us ratio=20.39%
+[HOOKS] Barrierstats: thread 6 tid=0x52bc8 waits=10 total=0.001722s avg=172.191us max=1101.917us ratio=22.39%
+[HOOKS] Barrierstats: thread 5 tid=0x52bc7 waits=10 total=0.001968s avg=196.794us max=1218.106us ratio=25.59%
+[HOOKS] Barrierstats: thread 4 tid=0x52bc6 waits=10 total=0.002066s avg=206.565us max=1369.164us ratio=26.86%
+[HOOKS] Barrierstats: thread 3 tid=0x52bc5 waits=10 total=0.002086s avg=208.634us max=1475.134us ratio=27.13%
+[HOOKS] Barrierstats: thread 2 tid=0x52bc4 waits=10 total=0.002148s avg=214.816us max=1597.930us ratio=27.93%
+[HOOKS] Barrierstats: thread 1 tid=0x52bc3 waits=10 total=0.002432s avg=243.151us max=1689.297us ratio=31.62%
+[HOOKS] Barrierstats: thread 0 tid=0x52bc2 waits=10 total=0.002530s avg=252.956us max=1800.659us ratio=32.89%
+[HOOKS] Atomic ops in ROI: total=0, threads=0
+[HOOKS] Terminating
+
+real	0m0.026s
+user	0m0.049s
+sys	0m0.011s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC] Done.

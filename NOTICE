@@ -1,0 +1,45 @@
+Third-Party Components
+======================
+
+This repository contains and/or depends on the following third-party
+components, each retained under its own license. The LICENSE file at the
+root of this repository applies only to code authored by us; the
+components below are governed by the licenses cited.
+
+1.  GAP Benchmark Suite (GAPBS)
+    Location: gapbs/ (unmodified upstream reference), and headers from
+              gapbs/src/ are included by our kernels in gapbs_mh/src/.
+    License:  BSD 3-Clause (see gapbs/LICENSE).
+    Copyright (c) 2015, The Regents of the University of California.
+
+2.  PARSEC 3.0 Benchmark Suite, modified
+    Location: parsec/
+    License:  BSD 3-Clause (see parsec/LICENSE), applied to both the
+              upstream source and our modifications.
+    Copyright (c) 2006-2012, Princeton University.
+    Modifications by us, also BSD 3-Clause:
+      - pkgs/libs/hooks/  instrumentation recording per-ROI atomic,
+                          lock, and barrier counts/durations.
+      - minor build-system fixes for modern gcc / x86-64 toolchains
+        (see parsec/CHANGELOG).
+    Inputs: parsec-3.0-input-sim.tar.gz (unmodified upstream input
+      sets; the original Princeton download URL is defunct) is not
+      redistributed in this repository; parsec/setup.sh fetches it
+      from the archival mirror at
+      https://doi.org/10.5281/zenodo.21314344 (SHA-256
+      378b3653d8597cad29476b20ff520bdb25b8e90269a3f044e262ff660899fed2).
+
+3.  LMBench (bw_mem)
+    Location: benchmark/bw_mem/lmbench/
+    License:  BSD-style; see per-file copyright headers in the source.
+    Copyright Larry McVoy and Carl Staelin.
+    Modifications by us (BSD-style):
+      - DAX-device allocation path, non-temporal store support, and
+        the multi-process worker driver in call_memory_test.cc.
+
+4.  Abseil C++ Common Libraries
+    Location: fetched into benchmark/third_party/abseil-cpp/ by
+              `make -C benchmark deps` (pinned to upstream tag
+              20250814.1); not committed to this repository.
+    License:  Apache License 2.0.
+    Copyright Google LLC.

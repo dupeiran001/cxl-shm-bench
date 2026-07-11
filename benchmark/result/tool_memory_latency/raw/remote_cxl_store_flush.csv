@@ -1,0 +1,9 @@
+measurement,value,method
+avg,1331,clwb
+p50,1300,clwb
+p95,1450,clwb
+p99,2300,clwb
+avg,2312,clflushopt
+p50,2300,clflushopt
+p95,2500,clflushopt
+p99,2700,clflushopt

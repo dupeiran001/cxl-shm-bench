@@ -1,0 +1,9 @@
+# 2026-07-10T06:08:27Z g3(server) <-> g4(client)
+hca_id:	mlx5_0
+	fw_ver:				32.41.1300
+			link_layer:		InfiniBand
+hca_id:	mlx5_1
+	fw_ver:				32.41.1300
+			link_layer:		Ethernet
+	Identifier                                : 0x0d (QSFP+)
+	Transmitter technology                    : 0xa0 (Copper cable, unequalized)

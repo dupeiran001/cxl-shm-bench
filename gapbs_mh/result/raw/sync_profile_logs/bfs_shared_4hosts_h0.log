@@ -1,0 +1,12 @@
+Mapped /dev/interleave_dax at 0x7fcff103f000 (len=67108864000)
+Using 86 threads for graph generation...
+Generate Time:       14.78422
+Build Time:          9.84260
+Restored 16 threads for BFS execution.
+[Host 0] Initialization complete. Waiting for other hosts...
+[Host 0] Ready, waiting at initial barrier...
+[Host 0] All hosts synchronized, starting BFS
+Graph has 134217728 nodes and 6475185222 undirected edges for degree: 48
+Trial Time:          0.83453
+Average Time:        0.83453
+SYNC_STATS tag=bfs publish_lines=891609431 observe_lines=48733130 lock_acquires=77 lock_retries=9 barrier_waits=29 atomic_rmw=0

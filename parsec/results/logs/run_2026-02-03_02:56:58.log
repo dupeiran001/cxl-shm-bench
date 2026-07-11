@@ -1,0 +1,69 @@
+[PARSEC] [========== PARSEC 3.0-beta-20120904 RUN LOGFILE ==========]
+
+[PARSEC] Run with amd64-linux.gcc-hooks binaries and input simlarge started on Tue Feb 3 02:56:58 UTC 2026.
+[PARSEC] Benchmarks to run:  splash2x.ocean_cp
+
+[PARSEC] [========== Running benchmark splash2x.ocean_cp [1] ==========]
+[PARSEC] Deleting old run directory.
+[PARSEC] Setting up run directory.
+[PARSEC] No archive for input 'simlarge' available, skipping input setup.
+[PARSEC] Running 'time /root/cxl_profiler/parsec/ext/splash2x/apps/ocean_cp/inst/amd64-linux.gcc-hooks/bin/run.sh 16 simlarge':
+[PARSEC] [---------- Beginning of output ----------]
+Generating input file ...
+Running /root/cxl_profiler/parsec/ext/splash2x/apps/ocean_cp/inst/amd64-linux.gcc-hooks/bin/ocean_cp -n2050 -p16 -e1e-07 -r20000 -t28800:
+[HOOKS] PARSEC Hooks Version 1.2
+
+Ocean simulation with W-cycle multigrid solver
+    Processors                         : 16
+    Grid size                          : 2050 x 2050
+    Grid resolution (meters)           : 20000.00
+    Time between relaxations (seconds) : 28800
+    Error tolerance                    : 1e-07
+
+[HOOKS] Entering ROI
+[HOOKS] Leaving ROI
+
+                       PROCESS STATISTICS
+                  Total          Multigrid         Multigrid
+ Proc             Time             Time            Fraction
+    0            154183              38681             0.251
+
+                       TIMING INFORMATION
+Start time                        : 1770087418109453
+Initialization finish time        : 1770087418353615
+Overall finish time               : 1770087418508192
+Total time with initialization    :           398739
+Total time without initialization :           154577
+    (excludes first timestep)
+
+[HOOKS] Total time spent in ROI: 0.381s
+[HOOKS] Lockstats: ROI duration 0.381008s
+[HOOKS] Lockstats: lock-based sync in ROI: yes (acquisitions=23498, threads=16)
+[HOOKS] Lockstats: critical-section time sum 0.056458s, avg 2.403us, max 52.080us
+[HOOKS] Lockstats: critical-section ratio (sum/(ROI*threads)) 0.93%
+[HOOKS] Lockstats: thread 15 tid=0x535df locks=1473 total=0.003340s avg=2.267us max=38.572us ratio=0.88%
+[HOOKS] Lockstats: thread 14 tid=0x535da locks=1485 total=0.003220s avg=2.169us max=51.345us ratio=0.85%
+[HOOKS] Lockstats: thread 13 tid=0x535de locks=1485 total=0.003062s avg=2.062us max=29.736us ratio=0.80%
+[HOOKS] Lockstats: thread 12 tid=0x535dd locks=1468 total=0.003514s avg=2.393us max=33.194us ratio=0.92%
+[HOOKS] Lockstats: thread 11 tid=0x535dc locks=1482 total=0.003138s avg=2.117us max=33.196us ratio=0.82%
+[HOOKS] Lockstats: thread 10 tid=0x535db locks=1465 total=0.003520s avg=2.403us max=31.614us ratio=0.92%
+[HOOKS] Lockstats: thread 9 tid=0x535d0 locks=1480 total=0.003151s avg=2.129us max=29.273us ratio=0.83%
+[HOOKS] Lockstats: thread 8 tid=0x535d9 locks=1484 total=0.003120s avg=2.102us max=29.856us ratio=0.82%
+[HOOKS] Lockstats: thread 7 tid=0x535d8 locks=1405 total=0.005530s avg=3.936us max=52.080us ratio=1.45%
+[HOOKS] Lockstats: thread 6 tid=0x535d5 locks=1466 total=0.003636s avg=2.480us max=32.921us ratio=0.95%
+[HOOKS] Lockstats: thread 5 tid=0x535d6 locks=1443 total=0.004162s avg=2.884us max=36.051us ratio=1.09%
+[HOOKS] Lockstats: thread 4 tid=0x535d7 locks=1482 total=0.003259s avg=2.199us max=29.586us ratio=0.86%
+[HOOKS] Lockstats: thread 3 tid=0x535d3 locks=1476 total=0.003161s avg=2.142us max=31.002us ratio=0.83%
+[HOOKS] Lockstats: thread 2 tid=0x535d4 locks=1443 total=0.004166s avg=2.887us max=32.958us ratio=1.09%
+[HOOKS] Lockstats: thread 1 tid=0x535d2 locks=1491 total=0.002956s avg=1.983us max=31.307us ratio=0.78%
+[HOOKS] Lockstats: thread 0 tid=0x535d1 locks=1470 total=0.003523s avg=2.397us max=32.897us ratio=0.92%
+[HOOKS] Barrierstats: ROI duration 0.381008s
+[HOOKS] Barrierstats: barrier waits in ROI: no (count=0)
+[HOOKS] Atomic ops in ROI: total=0, threads=0
+[HOOKS] Terminating
+
+real	0m0.567s
+user	0m3.605s
+sys	0m1.929s
+[PARSEC] [----------    End of output    ----------]
+[PARSEC] Done.

@@ -1,0 +1,2905 @@
+timestamp_utc,group,cmd_index,host,command,exit_code,duration_s,stdout,stderr
+2026-02-01T07:02:16Z,1,1,root@g1.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock lfm --hosts 1 --host_id 0 --threads 1 --locks 1 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --init --no_flush_stats,0,10.641,"Initialized locks (lock=0 hosts=1 locks=1 channels=1)
+
+--- Lock Benchmark Results ---
+lock type:           0
+hosts/host_id:       1/0
+threads:             1
+locks:               1
+channels:            1
+seconds:             10.000
+total ops:           1139887
+local counter:       1139887
+total time:          10000.057 ms
+lock avg:            3666.03 ns
+lock p50/p95/p99:    3657 / 3696 / 3708 ns
+unlock avg:          3037.83 ns
+unlock p50/p95/p99:  3024 / 3037 / 3072 ns
+total retries:       0
+avg retries/op:      0.0000
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      1139887
+error count:         0
+----------------------------
+",
+2026-02-01T07:02:27Z,2,1,root@g1.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock lfm --hosts 1 --host_id 0 --threads 1 --locks 2 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --init --no_flush_stats,0,10.617,"Initialized locks (lock=0 hosts=1 locks=2 channels=1)
+
+--- Lock Benchmark Results ---
+lock type:           0
+hosts/host_id:       1/0
+threads:             1
+locks:               2
+channels:            1
+seconds:             10.000
+total ops:           1191408
+local counter:       1191408
+total time:          10000.060 ms
+lock avg:            3630.05 ns
+lock p50/p95/p99:    3687 / 3728 / 3852 ns
+unlock avg:          2844.96 ns
+unlock p50/p95/p99:  2900 / 2928 / 3267 ns
+total retries:       0
+avg retries/op:      0.0000
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      1191408
+error count:         0
+----------------------------
+",
+2026-02-01T07:02:37Z,3,1,root@g1.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock lfm --hosts 1 --host_id 0 --threads 1 --locks 4 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --init --no_flush_stats,0,10.650,"Initialized locks (lock=0 hosts=1 locks=4 channels=1)
+
+--- Lock Benchmark Results ---
+lock type:           0
+hosts/host_id:       1/0
+threads:             1
+locks:               4
+channels:            1
+seconds:             10.000
+total ops:           1160982
+local counter:       1160982
+total time:          10000.055 ms
+lock avg:            3569.93 ns
+lock p50/p95/p99:    3515 / 3806 / 3927 ns
+unlock avg:          2982.40 ns
+unlock p50/p95/p99:  2957 / 3074 / 3537 ns
+total retries:       0
+avg retries/op:      0.0000
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      1160982
+error count:         0
+----------------------------
+",
+2026-02-01T07:02:48Z,4,1,root@g1.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock lfm --hosts 1 --host_id 0 --threads 1 --locks 8 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --init --no_flush_stats,0,10.645,"Initialized locks (lock=0 hosts=1 locks=8 channels=1)
+
+--- Lock Benchmark Results ---
+lock type:           0
+hosts/host_id:       1/0
+threads:             1
+locks:               8
+channels:            1
+seconds:             10.000
+total ops:           1153371
+local counter:       1153371
+total time:          10000.059 ms
+lock avg:            3643.51 ns
+lock p50/p95/p99:    3705 / 3881 / 3932 ns
+unlock avg:          3018.86 ns
+unlock p50/p95/p99:  3003 / 3536 / 3579 ns
+total retries:       0
+avg retries/op:      0.0000
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      1153371
+error count:         0
+----------------------------
+",
+2026-02-01T07:02:59Z,5,1,root@g1.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock peterson --hosts 1 --host_id 0 --threads 1 --locks 1 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --init --no_flush_stats,0,10.795,"Initialized locks (lock=1 hosts=1 locks=1 channels=1)
+
+--- Lock Benchmark Results ---
+lock type:           1
+hosts/host_id:       1/0
+threads:             1
+locks:               1
+channels:            1
+seconds:             10.000
+total ops:           1801988
+local counter:       1801988
+total time:          10000.060 ms
+lock avg:            757.61 ns
+lock p50/p95/p99:    741 / 879 / 903 ns
+unlock avg:          2678.45 ns
+unlock p50/p95/p99:  2654 / 2841 / 2846 ns
+total retries:       0
+avg retries/op:      0.0000
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      1801988
+error count:         0
+----------------------------
+",
+2026-02-01T07:03:10Z,6,1,root@g1.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock peterson --hosts 1 --host_id 0 --threads 1 --locks 2 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --init --no_flush_stats,0,10.823,"Initialized locks (lock=1 hosts=1 locks=2 channels=1)
+
+--- Lock Benchmark Results ---
+lock type:           1
+hosts/host_id:       1/0
+threads:             1
+locks:               2
+channels:            1
+seconds:             10.000
+total ops:           1937271
+local counter:       1937271
+total time:          10000.070 ms
+lock avg:            720.48 ns
+lock p50/p95/p99:    706 / 862 / 890 ns
+unlock avg:          2448.98 ns
+unlock p50/p95/p99:  2434 / 2480 / 2997 ns
+total retries:       0
+avg retries/op:      0.0000
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      1937271
+error count:         0
+----------------------------
+",
+2026-02-01T07:03:20Z,7,1,root@g1.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock peterson --hosts 1 --host_id 0 --threads 1 --locks 4 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --init --no_flush_stats,0,10.833,"Initialized locks (lock=1 hosts=1 locks=4 channels=1)
+
+--- Lock Benchmark Results ---
+lock type:           1
+hosts/host_id:       1/0
+threads:             1
+locks:               4
+channels:            1
+seconds:             10.000
+total ops:           1884121
+local counter:       1884121
+total time:          10000.059 ms
+lock avg:            750.33 ns
+lock p50/p95/p99:    740 / 794 / 910 ns
+unlock avg:          2555.83 ns
+unlock p50/p95/p99:  2470 / 3037 / 3163 ns
+total retries:       0
+avg retries/op:      0.0000
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      1884121
+error count:         0
+----------------------------
+",
+2026-02-01T07:03:31Z,8,1,root@g1.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock peterson --hosts 1 --host_id 0 --threads 1 --locks 8 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --init --no_flush_stats,0,10.849,"Initialized locks (lock=1 hosts=1 locks=8 channels=1)
+
+--- Lock Benchmark Results ---
+lock type:           1
+hosts/host_id:       1/0
+threads:             1
+locks:               8
+channels:            1
+seconds:             10.000
+total ops:           1908733
+local counter:       1908733
+total time:          10000.063 ms
+lock avg:            718.78 ns
+lock p50/p95/p99:    710 / 746 / 868 ns
+unlock avg:          2475.23 ns
+unlock p50/p95/p99:  2439 / 2662 / 2998 ns
+total retries:       0
+avg retries/op:      0.0000
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      1908733
+error count:         0
+----------------------------
+",
+2026-02-01T07:03:42Z,9,1,root@g1.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock bakery --hosts 1 --host_id 0 --threads 1 --locks 1 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --init --no_flush_stats,0,10.650,"Initialized locks (lock=2 hosts=1 locks=1 channels=1)
+
+--- Lock Benchmark Results ---
+lock type:           2
+hosts/host_id:       1/0
+threads:             1
+locks:               1
+channels:            1
+seconds:             10.000
+total ops:           1298289
+local counter:       1298289
+total time:          10000.067 ms
+lock avg:            1765.13 ns
+lock p50/p95/p99:    1750 / 1892 / 1936 ns
+unlock avg:          2406.56 ns
+unlock p50/p95/p99:  2394 / 2404 / 2933 ns
+total retries:       0
+avg retries/op:      0.0000
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      1298289
+error count:         0
+----------------------------
+",
+2026-02-01T07:03:53Z,10,1,root@g1.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock bakery --hosts 1 --host_id 0 --threads 1 --locks 2 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --init --no_flush_stats,0,10.655,"Initialized locks (lock=2 hosts=1 locks=2 channels=1)
+
+--- Lock Benchmark Results ---
+lock type:           2
+hosts/host_id:       1/0
+threads:             1
+locks:               2
+channels:            1
+seconds:             10.000
+total ops:           1304178
+local counter:       1304178
+total time:          10000.062 ms
+lock avg:            1809.43 ns
+lock p50/p95/p99:    1806 / 1992 / 2003 ns
+unlock avg:          2314.36 ns
+unlock p50/p95/p99:  2301 / 2319 / 2813 ns
+total retries:       0
+avg retries/op:      0.0000
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      1304178
+error count:         0
+----------------------------
+",
+2026-02-01T07:04:03Z,11,1,root@g1.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock bakery --hosts 1 --host_id 0 --threads 1 --locks 4 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --init --no_flush_stats,0,10.679,"Initialized locks (lock=2 hosts=1 locks=4 channels=1)
+
+--- Lock Benchmark Results ---
+lock type:           2
+hosts/host_id:       1/0
+threads:             1
+locks:               4
+channels:            1
+seconds:             10.000
+total ops:           1259204
+local counter:       1259204
+total time:          10000.060 ms
+lock avg:            1875.12 ns
+lock p50/p95/p99:    1863 / 1986 / 2021 ns
+unlock avg:          2440.16 ns
+unlock p50/p95/p99:  2379 / 2936 / 2979 ns
+total retries:       0
+avg retries/op:      0.0000
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      1259204
+error count:         0
+----------------------------
+",
+2026-02-01T07:04:14Z,12,1,root@g1.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock bakery --hosts 1 --host_id 0 --threads 1 --locks 8 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --init --no_flush_stats,0,10.650,"Initialized locks (lock=2 hosts=1 locks=8 channels=1)
+
+--- Lock Benchmark Results ---
+lock type:           2
+hosts/host_id:       1/0
+threads:             1
+locks:               8
+channels:            1
+seconds:             10.000
+total ops:           1261960
+local counter:       1261960
+total time:          10000.057 ms
+lock avg:            1813.42 ns
+lock p50/p95/p99:    1817 / 1942 / 2000 ns
+unlock avg:          2456.38 ns
+unlock p50/p95/p99:  2452 / 2519 / 2528 ns
+total retries:       0
+avg retries/op:      0.0000
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      1261960
+error count:         0
+----------------------------
+",
+2026-02-01T07:04:36Z,13,1,root@g1.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock spin --hosts 1 --host_id 0 --threads 1 --locks 1 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --init --no_flush_stats,0,22.154,"Initialized locks (lock=4 hosts=1 locks=1 channels=1)
+
+--- Lock Benchmark Results ---
+lock type:           4
+hosts/host_id:       1/0
+threads:             1
+locks:               1
+channels:            1
+seconds:             10.000
+total ops:           49239718
+local counter:       49239718
+total time:          10000.063 ms
+lock avg:            41.31 ns
+lock p50/p95/p99:    41 / 43 / 45 ns
+unlock avg:          32.20 ns
+unlock p50/p95/p99:  32 / 34 / 36 ns
+total retries:       0
+avg retries/op:      0.0000
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      49239718
+error count:         0
+----------------------------
+",
+2026-02-01T07:05:00Z,14,1,root@g1.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock spin --hosts 1 --host_id 0 --threads 1 --locks 2 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --init --no_flush_stats,0,23.593,"Initialized locks (lock=4 hosts=1 locks=2 channels=1)
+
+--- Lock Benchmark Results ---
+lock type:           4
+hosts/host_id:       1/0
+threads:             1
+locks:               2
+channels:            1
+seconds:             10.000
+total ops:           53254795
+local counter:       53254795
+total time:          10000.085 ms
+lock avg:            41.30 ns
+lock p50/p95/p99:    41 / 43 / 45 ns
+unlock avg:          32.05 ns
+unlock p50/p95/p99:  32 / 34 / 36 ns
+total retries:       0
+avg retries/op:      0.0000
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      53254795
+error count:         0
+----------------------------
+",
+2026-02-01T07:05:24Z,15,1,root@g1.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock spin --hosts 1 --host_id 0 --threads 1 --locks 4 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --init --no_flush_stats,0,24.071,"Initialized locks (lock=4 hosts=1 locks=4 channels=1)
+
+--- Lock Benchmark Results ---
+lock type:           4
+hosts/host_id:       1/0
+threads:             1
+locks:               4
+channels:            1
+seconds:             10.000
+total ops:           55245556
+local counter:       55245556
+total time:          10000.065 ms
+lock avg:            41.23 ns
+lock p50/p95/p99:    41 / 43 / 45 ns
+unlock avg:          32.21 ns
+unlock p50/p95/p99:  32 / 35 / 36 ns
+total retries:       0
+avg retries/op:      0.0000
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      55245556
+error count:         0
+----------------------------
+",
+2026-02-01T07:05:48Z,16,1,root@g1.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock spin --hosts 1 --host_id 0 --threads 1 --locks 8 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --init --no_flush_stats,0,24.384,"Initialized locks (lock=4 hosts=1 locks=8 channels=1)
+
+--- Lock Benchmark Results ---
+lock type:           4
+hosts/host_id:       1/0
+threads:             1
+locks:               8
+channels:            1
+seconds:             10.000
+total ops:           55761071
+local counter:       55761071
+total time:          10000.087 ms
+lock avg:            41.47 ns
+lock p50/p95/p99:    41 / 45 / 49 ns
+unlock avg:          32.77 ns
+unlock p50/p95/p99:  32 / 35 / 36 ns
+total retries:       0
+avg retries/op:      0.0000
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      55761071
+error count:         0
+----------------------------
+",
+2026-02-01T07:05:59Z,17,1,root@g1.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock lfm --hosts 2 --host_id 0 --threads 1 --locks 1 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --init --no_flush_stats,0,10.480,"Initialized locks (lock=0 hosts=2 locks=1 channels=1)
+
+--- Lock Benchmark Results ---
+lock type:           0
+hosts/host_id:       2/0
+threads:             1
+locks:               1
+channels:            1
+seconds:             10.000
+total ops:           481847
+local counter:       481847
+total time:          10000.062 ms
+lock avg:            15712.64 ns
+lock p50/p95/p99:    6437 / 44565 / 67007 ns
+unlock avg:          3006.96 ns
+unlock p50/p95/p99:  2991 / 3009 / 3056 ns
+total retries:       553445
+avg retries/op:      1.1486
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      1044877
+error count:         0
+----------------------------
+",
+2026-02-01T07:05:59Z,17,1,root@g2.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock lfm --hosts 2 --host_id 1 --threads 1 --locks 1 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --no_flush_stats,0,10.462,"
+--- Lock Benchmark Results ---
+lock type:           0
+hosts/host_id:       2/1
+threads:             1
+locks:               1
+channels:            1
+seconds:             10.000
+total ops:           563030
+local counter:       563030
+total time:          10000.064 ms
+lock avg:            12657.54 ns
+lock p50/p95/p99:    6276 / 34234 / 44154 ns
+unlock avg:          3038.32 ns
+unlock p50/p95/p99:  3000 / 3237 / 3590 ns
+total retries:       472261
+avg retries/op:      0.8388
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      1044877
+error count:         0
+----------------------------
+",
+2026-02-01T07:06:09Z,18,1,root@g1.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock lfm --hosts 2 --host_id 0 --threads 1 --locks 2 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --init --no_flush_stats,0,10.614,"Initialized locks (lock=0 hosts=2 locks=2 channels=1)
+
+--- Lock Benchmark Results ---
+lock type:           0
+hosts/host_id:       2/0
+threads:             1
+locks:               2
+channels:            1
+seconds:             10.000
+total ops:           1168023
+local counter:       1168023
+total time:          10000.061 ms
+lock avg:            3704.65 ns
+lock p50/p95/p99:    3710 / 3890 / 3928 ns
+unlock avg:          2873.50 ns
+unlock p50/p95/p99:  2894 / 2919 / 3396 ns
+total retries:       6918
+avg retries/op:      0.0059
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      2061538
+error count:         0
+----------------------------
+",
+2026-02-01T07:06:09Z,18,1,root@g2.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock lfm --hosts 2 --host_id 1 --threads 1 --locks 2 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --no_flush_stats,0,10.652,"
+--- Lock Benchmark Results ---
+lock type:           0
+hosts/host_id:       2/1
+threads:             1
+locks:               2
+channels:            1
+seconds:             10.000
+total ops:           1167645
+local counter:       1167645
+total time:          10000.062 ms
+lock avg:            3658.76 ns
+lock p50/p95/p99:    3583 / 3835 / 3906 ns
+unlock avg:          2952.62 ns
+unlock p50/p95/p99:  2928 / 2946 / 3473 ns
+total retries:       7951
+avg retries/op:      0.0068
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      2061538
+error count:         0
+----------------------------
+",
+2026-02-01T07:06:20Z,19,1,root@g1.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock lfm --hosts 2 --host_id 0 --threads 1 --locks 4 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --init --no_flush_stats,0,10.643,"Initialized locks (lock=0 hosts=2 locks=4 channels=1)
+
+--- Lock Benchmark Results ---
+lock type:           0
+hosts/host_id:       2/0
+threads:             1
+locks:               4
+channels:            1
+seconds:             10.000
+total ops:           1142222
+local counter:       1142222
+total time:          10000.055 ms
+lock avg:            3791.30 ns
+lock p50/p95/p99:    3508 / 3943 / 8216 ns
+unlock avg:          2978.19 ns
+unlock p50/p95/p99:  2949 / 3099 / 3507 ns
+total retries:       54695
+avg retries/op:      0.0479
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      1984901
+error count:         0
+----------------------------
+",
+2026-02-01T07:06:20Z,19,1,root@g2.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock lfm --hosts 2 --host_id 1 --threads 1 --locks 4 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --no_flush_stats,0,10.645,"
+--- Lock Benchmark Results ---
+lock type:           0
+hosts/host_id:       2/1
+threads:             1
+locks:               4
+channels:            1
+seconds:             10.000
+total ops:           1139141
+local counter:       1139141
+total time:          10000.068 ms
+lock avg:            3735.14 ns
+lock p50/p95/p99:    3681 / 3924 / 3985 ns
+unlock avg:          3005.85 ns
+unlock p50/p95/p99:  2972 / 3519 / 3577 ns
+total retries:       1312
+avg retries/op:      0.0012
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      1984901
+error count:         0
+----------------------------
+",
+2026-02-01T07:06:31Z,20,1,root@g1.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock lfm --hosts 2 --host_id 0 --threads 1 --locks 8 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --init --no_flush_stats,0,10.633,"Initialized locks (lock=0 hosts=2 locks=8 channels=1)
+
+--- Lock Benchmark Results ---
+lock type:           0
+hosts/host_id:       2/0
+threads:             1
+locks:               8
+channels:            1
+seconds:             10.000
+total ops:           1150165
+local counter:       1150165
+total time:          10000.063 ms
+lock avg:            3679.30 ns
+lock p50/p95/p99:    3704 / 3924 / 3999 ns
+unlock avg:          3018.68 ns
+unlock p50/p95/p99:  2942 / 3521 / 3615 ns
+total retries:       2613
+avg retries/op:      0.0023
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      2105210
+error count:         0
+----------------------------
+",
+2026-02-01T07:06:31Z,20,1,root@g2.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock lfm --hosts 2 --host_id 1 --threads 1 --locks 8 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --no_flush_stats,0,10.643,"
+--- Lock Benchmark Results ---
+lock type:           0
+hosts/host_id:       2/1
+threads:             1
+locks:               8
+channels:            1
+seconds:             10.000
+total ops:           1149186
+local counter:       1149186
+total time:          10000.069 ms
+lock avg:            3679.08 ns
+lock p50/p95/p99:    3638 / 3865 / 3924 ns
+unlock avg:          3002.06 ns
+unlock p50/p95/p99:  2967 / 3016 / 3552 ns
+total retries:       919
+avg retries/op:      0.0008
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      2105210
+error count:         0
+----------------------------
+",
+2026-02-01T07:06:42Z,21,1,root@g1.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock peterson --hosts 2 --host_id 0 --threads 1 --locks 1 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --init --no_flush_stats,0,10.544,"Initialized locks (lock=1 hosts=2 locks=1 channels=1)
+
+--- Lock Benchmark Results ---
+lock type:           1
+hosts/host_id:       2/0
+threads:             1
+locks:               1
+channels:            1
+seconds:             10.000
+total ops:           800613
+local counter:       800613
+total time:          10000.065 ms
+lock avg:            6849.84 ns
+lock p50/p95/p99:    6575 / 7704 / 7820 ns
+unlock avg:          3672.87 ns
+unlock p50/p95/p99:  3631 / 3794 / 3815 ns
+total retries:       0
+avg retries/op:      0.0000
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      1600402
+error count:         0
+----------------------------
+",
+2026-02-01T07:06:42Z,21,1,root@g2.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock peterson --hosts 2 --host_id 1 --threads 1 --locks 1 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --no_flush_stats,0,10.570,"
+--- Lock Benchmark Results ---
+lock type:           1
+hosts/host_id:       2/1
+threads:             1
+locks:               1
+channels:            1
+seconds:             10.000
+total ops:           799789
+local counter:       799789
+total time:          10000.066 ms
+lock avg:            6830.63 ns
+lock p50/p95/p99:    6807 / 8142 / 8219 ns
+unlock avg:          3637.11 ns
+unlock p50/p95/p99:  3595 / 3762 / 3790 ns
+total retries:       0
+avg retries/op:      0.0000
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      1600402
+error count:         0
+----------------------------
+",
+2026-02-01T07:06:52Z,22,1,root@g1.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock peterson --hosts 2 --host_id 0 --threads 1 --locks 2 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --init --no_flush_stats,0,10.643,"Initialized locks (lock=1 hosts=2 locks=2 channels=1)
+
+--- Lock Benchmark Results ---
+lock type:           1
+hosts/host_id:       2/0
+threads:             1
+locks:               2
+channels:            1
+seconds:             10.000
+total ops:           1204406
+local counter:       1204406
+total time:          10000.062 ms
+lock avg:            2831.75 ns
+lock p50/p95/p99:    2676 / 3858 / 4059 ns
+unlock avg:          3578.45 ns
+unlock p50/p95/p99:  3609 / 3720 / 3788 ns
+total retries:       0
+avg retries/op:      0.0000
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      2380816
+error count:         0
+----------------------------
+",
+2026-02-01T07:06:52Z,22,1,root@g2.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock peterson --hosts 2 --host_id 1 --threads 1 --locks 2 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --no_flush_stats,0,10.666,"
+--- Lock Benchmark Results ---
+lock type:           1
+hosts/host_id:       2/1
+threads:             1
+locks:               2
+channels:            1
+seconds:             10.000
+total ops:           1202748
+local counter:       1202748
+total time:          10000.065 ms
+lock avg:            2646.89 ns
+lock p50/p95/p99:    2627 / 2653 / 2778 ns
+unlock avg:          3668.21 ns
+unlock p50/p95/p99:  3631 / 3766 / 3800 ns
+total retries:       0
+avg retries/op:      0.0000
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      2380816
+error count:         0
+----------------------------
+",
+2026-02-01T07:07:03Z,23,1,root@g1.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock peterson --hosts 2 --host_id 0 --threads 1 --locks 4 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --init --no_flush_stats,0,10.682,"Initialized locks (lock=1 hosts=2 locks=4 channels=1)
+
+--- Lock Benchmark Results ---
+lock type:           1
+hosts/host_id:       2/0
+threads:             1
+locks:               4
+channels:            1
+seconds:             10.000
+total ops:           1202871
+local counter:       1202871
+total time:          10000.057 ms
+lock avg:            2614.82 ns
+lock p50/p95/p99:    2627 / 2779 / 2890 ns
+unlock avg:          3669.74 ns
+unlock p50/p95/p99:  3615 / 4164 / 4289 ns
+total retries:       0
+avg retries/op:      0.0000
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      2140343
+error count:         0
+----------------------------
+",
+2026-02-01T07:07:03Z,23,1,root@g2.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock peterson --hosts 2 --host_id 1 --threads 1 --locks 4 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --no_flush_stats,0,10.675,"
+--- Lock Benchmark Results ---
+lock type:           1
+hosts/host_id:       2/1
+threads:             1
+locks:               4
+channels:            1
+seconds:             10.000
+total ops:           1203449
+local counter:       1203449
+total time:          10000.062 ms
+lock avg:            2610.12 ns
+lock p50/p95/p99:    2579 / 2678 / 3882 ns
+unlock avg:          3676.39 ns
+unlock p50/p95/p99:  3655 / 3794 / 3834 ns
+total retries:       0
+avg retries/op:      0.0000
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      2140343
+error count:         0
+----------------------------
+",
+2026-02-01T07:07:14Z,24,1,root@g1.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock peterson --hosts 2 --host_id 0 --threads 1 --locks 8 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --init --no_flush_stats,0,10.660,"Initialized locks (lock=1 hosts=2 locks=8 channels=1)
+
+--- Lock Benchmark Results ---
+lock type:           1
+hosts/host_id:       2/0
+threads:             1
+locks:               8
+channels:            1
+seconds:             10.000
+total ops:           1179757
+local counter:       1179757
+total time:          10000.067 ms
+lock avg:            2745.24 ns
+lock p50/p95/p99:    2654 / 3248 / 3290 ns
+unlock avg:          3665.64 ns
+unlock p50/p95/p99:  3618 / 3839 / 4240 ns
+total retries:       0
+avg retries/op:      0.0000
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      2306907
+error count:         0
+----------------------------
+",
+2026-02-01T07:07:14Z,24,1,root@g2.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock peterson --hosts 2 --host_id 1 --threads 1 --locks 8 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --no_flush_stats,0,10.682,"
+--- Lock Benchmark Results ---
+lock type:           1
+hosts/host_id:       2/1
+threads:             1
+locks:               8
+channels:            1
+seconds:             10.000
+total ops:           1185821
+local counter:       1185821
+total time:          10000.071 ms
+lock avg:            2797.30 ns
+lock p50/p95/p99:    2583 / 4017 / 4075 ns
+unlock avg:          3632.93 ns
+unlock p50/p95/p99:  3586 / 3765 / 4213 ns
+total retries:       0
+avg retries/op:      0.0000
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      2306907
+error count:         0
+----------------------------
+",
+2026-02-01T07:07:25Z,25,1,root@g1.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock bakery --hosts 2 --host_id 0 --threads 1 --locks 1 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --init --no_flush_stats,0,10.592,"Initialized locks (lock=2 hosts=2 locks=1 channels=1)
+
+--- Lock Benchmark Results ---
+lock type:           2
+hosts/host_id:       2/0
+threads:             1
+locks:               1
+channels:            1
+seconds:             10.000
+total ops:           993890
+local counter:       993890
+total time:          10000.064 ms
+lock avg:            5693.15 ns
+lock p50/p95/p99:    5623 / 5837 / 6312 ns
+unlock avg:          2371.69 ns
+unlock p50/p95/p99:  2360 / 2402 / 2423 ns
+total retries:       0
+avg retries/op:      0.0000
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      1987769
+error count:         0
+----------------------------
+",
+2026-02-01T07:07:25Z,25,1,root@g2.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock bakery --hosts 2 --host_id 1 --threads 1 --locks 1 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --no_flush_stats,0,10.574,"
+--- Lock Benchmark Results ---
+lock type:           2
+hosts/host_id:       2/1
+threads:             1
+locks:               1
+channels:            1
+seconds:             10.000
+total ops:           993879
+local counter:       993879
+total time:          10000.070 ms
+lock avg:            5666.28 ns
+lock p50/p95/p99:    5480 / 6171 / 6387 ns
+unlock avg:          2403.48 ns
+unlock p50/p95/p99:  2390 / 2402 / 2928 ns
+total retries:       0
+avg retries/op:      0.0000
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      1987769
+error count:         0
+----------------------------
+",
+2026-02-01T07:07:35Z,26,1,root@g1.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock bakery --hosts 2 --host_id 0 --threads 1 --locks 2 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --init --no_flush_stats,0,10.584,"Initialized locks (lock=2 hosts=2 locks=2 channels=1)
+
+--- Lock Benchmark Results ---
+lock type:           2
+hosts/host_id:       2/0
+threads:             1
+locks:               2
+channels:            1
+seconds:             10.000
+total ops:           999688
+local counter:       999688
+total time:          10000.067 ms
+lock avg:            5652.06 ns
+lock p50/p95/p99:    5590 / 5775 / 6397 ns
+unlock avg:          2364.50 ns
+unlock p50/p95/p99:  2342 / 2356 / 2906 ns
+total retries:       0
+avg retries/op:      0.0000
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      1971560
+error count:         0
+----------------------------
+",
+2026-02-01T07:07:35Z,26,1,root@g2.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock bakery --hosts 2 --host_id 1 --threads 1 --locks 2 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --no_flush_stats,0,10.587,"
+--- Lock Benchmark Results ---
+lock type:           2
+hosts/host_id:       2/1
+threads:             1
+locks:               2
+channels:            1
+seconds:             10.000
+total ops:           999653
+local counter:       999653
+total time:          10000.072 ms
+lock avg:            5631.57 ns
+lock p50/p95/p99:    5651 / 5828 / 5964 ns
+unlock avg:          2409.42 ns
+unlock p50/p95/p99:  2408 / 2431 / 2441 ns
+total retries:       0
+avg retries/op:      0.0000
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      1971560
+error count:         0
+----------------------------
+",
+2026-02-01T07:07:46Z,27,1,root@g1.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock bakery --hosts 2 --host_id 0 --threads 1 --locks 4 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --init --no_flush_stats,0,10.589,"Initialized locks (lock=2 hosts=2 locks=4 channels=1)
+
+--- Lock Benchmark Results ---
+lock type:           2
+hosts/host_id:       2/0
+threads:             1
+locks:               4
+channels:            1
+seconds:             10.000
+total ops:           999177
+local counter:       999177
+total time:          10000.061 ms
+lock avg:            5555.76 ns
+lock p50/p95/p99:    5508 / 5784 / 6013 ns
+unlock avg:          2428.96 ns
+unlock p50/p95/p99:  2385 / 2933 / 2957 ns
+total retries:       0
+avg retries/op:      0.0000
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      1917344
+error count:         0
+----------------------------
+",
+2026-02-01T07:07:46Z,27,1,root@g2.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock bakery --hosts 2 --host_id 1 --threads 1 --locks 4 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --no_flush_stats,0,10.623,"
+--- Lock Benchmark Results ---
+lock type:           2
+hosts/host_id:       2/1
+threads:             1
+locks:               4
+channels:            1
+seconds:             10.000
+total ops:           1001178
+local counter:       1001178
+total time:          10000.065 ms
+lock avg:            5643.59 ns
+lock p50/p95/p99:    5560 / 5926 / 6319 ns
+unlock avg:          2386.04 ns
+unlock p50/p95/p99:  2324 / 2893 / 2984 ns
+total retries:       0
+avg retries/op:      0.0000
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      1917344
+error count:         0
+----------------------------
+",
+2026-02-01T07:07:57Z,28,1,root@g1.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock bakery --hosts 2 --host_id 0 --threads 1 --locks 8 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --init --no_flush_stats,0,10.594,"Initialized locks (lock=2 hosts=2 locks=8 channels=1)
+
+--- Lock Benchmark Results ---
+lock type:           2
+hosts/host_id:       2/0
+threads:             1
+locks:               8
+channels:            1
+seconds:             10.000
+total ops:           990516
+local counter:       990516
+total time:          10000.066 ms
+lock avg:            5559.44 ns
+lock p50/p95/p99:    5503 / 5905 / 6285 ns
+unlock avg:          2454.52 ns
+unlock p50/p95/p99:  2449 / 2494 / 2991 ns
+total retries:       0
+avg retries/op:      0.0000
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      1893061
+error count:         0
+----------------------------
+",
+2026-02-01T07:07:57Z,28,1,root@g2.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock bakery --hosts 2 --host_id 1 --threads 1 --locks 8 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --no_flush_stats,0,10.606,"
+--- Lock Benchmark Results ---
+lock type:           2
+hosts/host_id:       2/1
+threads:             1
+locks:               8
+channels:            1
+seconds:             10.000
+total ops:           988379
+local counter:       988379
+total time:          10000.062 ms
+lock avg:            5662.13 ns
+lock p50/p95/p99:    5624 / 5918 / 6040 ns
+unlock avg:          2420.74 ns
+unlock p50/p95/p99:  2397 / 2445 / 2985 ns
+total retries:       0
+avg retries/op:      0.0000
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      1893061
+error count:         0
+----------------------------
+",
+2026-02-01T07:08:07Z,29,1,root@g3.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock lfm --hosts 3 --host_id 2 --threads 1 --locks 1 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --no_flush_stats,0,10.333,"
+--- Lock Benchmark Results ---
+lock type:           0
+hosts/host_id:       3/2
+threads:             1
+locks:               1
+channels:            1
+seconds:             10.000
+total ops:           330374
+local counter:       330374
+total time:          10000.036 ms
+lock avg:            25481.89 ns
+lock p50/p95/p99:    7259 / 86077 / 142463 ns
+unlock avg:          2948.79 ns
+unlock p50/p95/p99:  2904 / 3428 / 3467 ns
+total retries:       670292
+avg retries/op:      2.0289
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      1011748
+error count:         0
+----------------------------
+",
+2026-02-01T07:08:07Z,29,1,root@g1.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock lfm --hosts 3 --host_id 0 --threads 1 --locks 1 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --init --no_flush_stats,0,10.453,"Initialized locks (lock=0 hosts=3 locks=1 channels=1)
+
+--- Lock Benchmark Results ---
+lock type:           0
+hosts/host_id:       3/0
+threads:             1
+locks:               1
+channels:            1
+seconds:             10.000
+total ops:           359056
+local counter:       359056
+total time:          10000.145 ms
+lock avg:            22857.95 ns
+lock p50/p95/p99:    8103 / 70707 / 110896 ns
+unlock avg:          3009.75 ns
+unlock p50/p95/p99:  2997 / 3031 / 3137 ns
+total retries:       641297
+avg retries/op:      1.7861
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      1011748
+error count:         0
+----------------------------
+",
+2026-02-01T07:08:07Z,29,1,root@g2.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock lfm --hosts 3 --host_id 1 --threads 1 --locks 1 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --no_flush_stats,0,10.427,"
+--- Lock Benchmark Results ---
+lock type:           0
+hosts/host_id:       3/1
+threads:             1
+locks:               1
+channels:            1
+seconds:             10.000
+total ops:           322318
+local counter:       322318
+total time:          10000.060 ms
+lock avg:            25946.74 ns
+lock p50/p95/p99:    7804 / 93008 / 146362 ns
+unlock avg:          3047.37 ns
+unlock p50/p95/p99:  2993 / 3542 / 3611 ns
+total retries:       677220
+avg retries/op:      2.1011
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      1011748
+error count:         0
+----------------------------
+",
+2026-02-01T07:08:18Z,30,1,root@g3.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock lfm --hosts 3 --host_id 2 --threads 1 --locks 2 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --no_flush_stats,0,10.377,"
+--- Lock Benchmark Results ---
+lock type:           0
+hosts/host_id:       3/2
+threads:             1
+locks:               2
+channels:            1
+seconds:             10.000
+total ops:           697700
+local counter:       697700
+total time:          10000.032 ms
+lock avg:            9314.03 ns
+lock p50/p95/p99:    7659 / 27778 / 61054 ns
+unlock avg:          3090.22 ns
+unlock p50/p95/p99:  2965 / 3522 / 3632 ns
+total retries:       537406
+avg retries/op:      0.7703
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      1931024
+error count:         0
+----------------------------
+",
+2026-02-01T07:08:18Z,30,1,root@g1.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock lfm --hosts 3 --host_id 0 --threads 1 --locks 2 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --init --no_flush_stats,0,10.532,"Initialized locks (lock=0 hosts=3 locks=2 channels=1)
+
+--- Lock Benchmark Results ---
+lock type:           0
+hosts/host_id:       3/0
+threads:             1
+locks:               2
+channels:            1
+seconds:             10.000
+total ops:           752358
+local counter:       752358
+total time:          10000.078 ms
+lock avg:            8391.82 ns
+lock p50/p95/p99:    6646 / 24295 / 54282 ns
+unlock avg:          2901.62 ns
+unlock p50/p95/p99:  2916 / 2964 / 3480 ns
+total retries:       484949
+avg retries/op:      0.6446
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      1931024
+error count:         0
+----------------------------
+",
+2026-02-01T07:08:18Z,30,1,root@g2.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock lfm --hosts 3 --host_id 1 --threads 1 --locks 2 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --no_flush_stats,0,10.507,"
+--- Lock Benchmark Results ---
+lock type:           0
+hosts/host_id:       3/1
+threads:             1
+locks:               2
+channels:            1
+seconds:             10.000
+total ops:           715343
+local counter:       715343
+total time:          10000.063 ms
+lock avg:            9090.92 ns
+lock p50/p95/p99:    6940 / 27543 / 56318 ns
+unlock avg:          2951.61 ns
+unlock p50/p95/p99:  2924 / 2982 / 3479 ns
+total retries:       514250
+avg retries/op:      0.7189
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      1931024
+error count:         0
+----------------------------
+",
+2026-02-01T07:08:29Z,31,1,root@g3.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock lfm --hosts 3 --host_id 2 --threads 1 --locks 4 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --no_flush_stats,0,10.466,"
+--- Lock Benchmark Results ---
+lock type:           0
+hosts/host_id:       3/2
+threads:             1
+locks:               4
+channels:            1
+seconds:             10.000
+total ops:           1144449
+local counter:       1144449
+total time:          10000.030 ms
+lock avg:            3614.18 ns
+lock p50/p95/p99:    3608 / 3765 / 3830 ns
+unlock avg:          3227.34 ns
+unlock p50/p95/p99:  3082 / 3646 / 3693 ns
+total retries:       7194
+avg retries/op:      0.0063
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      2717746
+error count:         0
+----------------------------
+",
+2026-02-01T07:08:29Z,31,1,root@g1.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock lfm --hosts 3 --host_id 0 --threads 1 --locks 4 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --init --no_flush_stats,0,10.646,"Initialized locks (lock=0 hosts=3 locks=4 channels=1)
+
+--- Lock Benchmark Results ---
+lock type:           0
+hosts/host_id:       3/0
+threads:             1
+locks:               4
+channels:            1
+seconds:             10.000
+total ops:           1144269
+local counter:       1144269
+total time:          10000.054 ms
+lock avg:            3843.94 ns
+lock p50/p95/p99:    3502 / 7539 / 8413 ns
+unlock avg:          2954.48 ns
+unlock p50/p95/p99:  2974 / 3007 / 3512 ns
+total retries:       68123
+avg retries/op:      0.0595
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      2717746
+error count:         0
+----------------------------
+",
+2026-02-01T07:08:29Z,31,1,root@g2.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock lfm --hosts 3 --host_id 1 --threads 1 --locks 4 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --no_flush_stats,0,10.633,"
+--- Lock Benchmark Results ---
+lock type:           0
+hosts/host_id:       3/1
+threads:             1
+locks:               4
+channels:            1
+seconds:             10.000
+total ops:           1143212
+local counter:       1143212
+total time:          10000.065 ms
+lock avg:            3726.95 ns
+lock p50/p95/p99:    3642 / 3900 / 3982 ns
+unlock avg:          2986.73 ns
+unlock p50/p95/p99:  2962 / 2996 / 3515 ns
+total retries:       7754
+avg retries/op:      0.0068
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      2717746
+error count:         0
+----------------------------
+",
+2026-02-01T07:08:39Z,32,1,root@g3.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock lfm --hosts 3 --host_id 2 --threads 1 --locks 8 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --no_flush_stats,0,10.488,"
+--- Lock Benchmark Results ---
+lock type:           0
+hosts/host_id:       3/2
+threads:             1
+locks:               8
+channels:            1
+seconds:             10.000
+total ops:           1147891
+local counter:       1147891
+total time:          10000.031 ms
+lock avg:            3648.13 ns
+lock p50/p95/p99:    3607 / 3836 / 8149 ns
+unlock avg:          3149.31 ns
+unlock p50/p95/p99:  2982 / 3558 / 3621 ns
+total retries:       15789
+avg retries/op:      0.0138
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      2779808
+error count:         0
+----------------------------
+",
+2026-02-01T07:08:39Z,32,1,root@g1.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock lfm --hosts 3 --host_id 0 --threads 1 --locks 8 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --init --no_flush_stats,0,10.657,"Initialized locks (lock=0 hosts=3 locks=8 channels=1)
+
+--- Lock Benchmark Results ---
+lock type:           0
+hosts/host_id:       3/0
+threads:             1
+locks:               8
+channels:            1
+seconds:             10.000
+total ops:           1146825
+local counter:       1146825
+total time:          10000.061 ms
+lock avg:            3705.00 ns
+lock p50/p95/p99:    3704 / 3909 / 4123 ns
+unlock avg:          3011.50 ns
+unlock p50/p95/p99:  2940 / 3520 / 3616 ns
+total retries:       9718
+avg retries/op:      0.0085
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      2779808
+error count:         0
+----------------------------
+",
+2026-02-01T07:08:39Z,32,1,root@g2.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock lfm --hosts 3 --host_id 1 --threads 1 --locks 8 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --no_flush_stats,0,10.643,"
+--- Lock Benchmark Results ---
+lock type:           0
+hosts/host_id:       3/1
+threads:             1
+locks:               8
+channels:            1
+seconds:             10.000
+total ops:           1146218
+local counter:       1146218
+total time:          10000.065 ms
+lock avg:            3705.61 ns
+lock p50/p95/p99:    3667 / 3875 / 3952 ns
+unlock avg:          2985.23 ns
+unlock p50/p95/p99:  2965 / 3024 / 3544 ns
+total retries:       1561
+avg retries/op:      0.0014
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      2779808
+error count:         0
+----------------------------
+",
+2026-02-01T07:08:50Z,33,1,root@g1.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock peterson --hosts 3 --host_id 0 --threads 1 --locks 1 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --init --no_flush_stats,0,10.438,"Initialized locks (lock=1 hosts=3 locks=1 channels=1)
+
+--- Lock Benchmark Results ---
+lock type:           1
+hosts/host_id:       3/0
+threads:             1
+locks:               1
+channels:            1
+seconds:             10.000
+total ops:           405790
+local counter:       405790
+total time:          10000.057 ms
+lock avg:            18345.14 ns
+lock p50/p95/p99:    18445 / 20017 / 21684 ns
+unlock avg:          4274.69 ns
+unlock p50/p95/p99:  4241 / 4380 / 4410 ns
+total retries:       0
+avg retries/op:      0.0000
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      1616126
+error count:         0
+----------------------------
+",
+2026-02-01T07:08:50Z,33,1,root@g3.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock peterson --hosts 3 --host_id 2 --threads 1 --locks 1 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --no_flush_stats,0,10.384,"
+--- Lock Benchmark Results ---
+lock type:           1
+hosts/host_id:       3/2
+threads:             1
+locks:               1
+channels:            1
+seconds:             10.000
+total ops:           804465
+local counter:       804465
+total time:          10000.039 ms
+lock avg:            6491.83 ns
+lock p50/p95/p99:    6952 / 7087 / 7176 ns
+unlock avg:          4074.34 ns
+unlock p50/p95/p99:  4044 / 4200 / 4237 ns
+total retries:       0
+avg retries/op:      0.0000
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      1616126
+error count:         0
+----------------------------
+",
+2026-02-01T07:08:50Z,33,1,root@g2.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock peterson --hosts 3 --host_id 1 --threads 1 --locks 1 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --no_flush_stats,0,10.422,"
+--- Lock Benchmark Results ---
+lock type:           1
+hosts/host_id:       3/1
+threads:             1
+locks:               1
+channels:            1
+seconds:             10.000
+total ops:           405871
+local counter:       405871
+total time:          10000.063 ms
+lock avg:            18439.71 ns
+lock p50/p95/p99:    18592 / 19711 / 22002 ns
+unlock avg:          4171.46 ns
+unlock p50/p95/p99:  4133 / 4287 / 4337 ns
+total retries:       0
+avg retries/op:      0.0000
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      1616126
+error count:         0
+----------------------------
+",
+2026-02-01T07:09:01Z,34,1,root@g3.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock peterson --hosts 3 --host_id 2 --threads 1 --locks 2 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --no_flush_stats,0,10.427,"
+--- Lock Benchmark Results ---
+lock type:           1
+hosts/host_id:       3/2
+threads:             1
+locks:               2
+channels:            1
+seconds:             10.000
+total ops:           928640
+local counter:       928640
+total time:          10000.039 ms
+lock avg:            4805.17 ns
+lock p50/p95/p99:    4417 / 5714 / 6963 ns
+unlock avg:          4089.17 ns
+unlock p50/p95/p99:  4130 / 4190 / 4320 ns
+total retries:       0
+avg retries/op:      0.0000
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      2773635
+error count:         0
+----------------------------
+",
+2026-02-01T07:09:01Z,34,1,root@g1.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock peterson --hosts 3 --host_id 0 --threads 1 --locks 2 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --init --no_flush_stats,0,10.578,"Initialized locks (lock=1 hosts=3 locks=2 channels=1)
+
+--- Lock Benchmark Results ---
+lock type:           1
+hosts/host_id:       3/0
+threads:             1
+locks:               2
+channels:            1
+seconds:             10.000
+total ops:           923949
+local counter:       923949
+total time:          10000.064 ms
+lock avg:            4665.95 ns
+lock p50/p95/p99:    4444 / 5774 / 7128 ns
+unlock avg:          4178.33 ns
+unlock p50/p95/p99:  4240 / 4358 / 4462 ns
+total retries:       0
+avg retries/op:      0.0000
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      2773635
+error count:         0
+----------------------------
+",
+2026-02-01T07:09:01Z,34,1,root@g2.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock peterson --hosts 3 --host_id 1 --threads 1 --locks 2 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --no_flush_stats,0,10.622,"
+--- Lock Benchmark Results ---
+lock type:           1
+hosts/host_id:       3/1
+threads:             1
+locks:               2
+channels:            1
+seconds:             10.000
+total ops:           923742
+local counter:       923742
+total time:          10000.075 ms
+lock avg:            4698.93 ns
+lock p50/p95/p99:    4493 / 5832 / 7287 ns
+unlock avg:          4181.48 ns
+unlock p50/p95/p99:  4147 / 4331 / 4453 ns
+total retries:       0
+avg retries/op:      0.0000
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      2773635
+error count:         0
+----------------------------
+",
+2026-02-01T07:09:11Z,35,1,root@g3.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock peterson --hosts 3 --host_id 2 --threads 1 --locks 4 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --no_flush_stats,0,10.402,"
+--- Lock Benchmark Results ---
+lock type:           1
+hosts/host_id:       3/2
+threads:             1
+locks:               4
+channels:            1
+seconds:             10.000
+total ops:           908576
+local counter:       908576
+total time:          10000.035 ms
+lock avg:            4864.30 ns
+lock p50/p95/p99:    4450 / 5870 / 6862 ns
+unlock avg:          4175.76 ns
+unlock p50/p95/p99:  4186 / 4334 / 4399 ns
+total retries:       0
+avg retries/op:      0.0000
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      2671257
+error count:         0
+----------------------------
+",
+2026-02-01T07:09:11Z,35,1,root@g1.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock peterson --hosts 3 --host_id 0 --threads 1 --locks 4 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --init --no_flush_stats,0,10.623,"Initialized locks (lock=1 hosts=3 locks=4 channels=1)
+
+--- Lock Benchmark Results ---
+lock type:           1
+hosts/host_id:       3/0
+threads:             1
+locks:               4
+channels:            1
+seconds:             10.000
+total ops:           905102
+local counter:       905102
+total time:          10000.056 ms
+lock avg:            4517.52 ns
+lock p50/p95/p99:    4477 / 4713 / 4779 ns
+unlock avg:          4442.54 ns
+unlock p50/p95/p99:  4331 / 4959 / 5214 ns
+total retries:       0
+avg retries/op:      0.0000
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      2671257
+error count:         0
+----------------------------
+",
+2026-02-01T07:09:11Z,35,1,root@g2.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock peterson --hosts 3 --host_id 1 --threads 1 --locks 4 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --no_flush_stats,0,10.602,"
+--- Lock Benchmark Results ---
+lock type:           1
+hosts/host_id:       3/1
+threads:             1
+locks:               4
+channels:            1
+seconds:             10.000
+total ops:           905531
+local counter:       905531
+total time:          10000.070 ms
+lock avg:            4822.13 ns
+lock p50/p95/p99:    4492 / 5938 / 6309 ns
+unlock avg:          4205.78 ns
+unlock p50/p95/p99:  4175 / 4374 / 4506 ns
+total retries:       0
+avg retries/op:      0.0000
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      2671257
+error count:         0
+----------------------------
+",
+2026-02-01T07:09:22Z,36,1,root@g3.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock peterson --hosts 3 --host_id 2 --threads 1 --locks 8 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --no_flush_stats,0,10.435,"
+--- Lock Benchmark Results ---
+lock type:           1
+hosts/host_id:       3/2
+threads:             1
+locks:               8
+channels:            1
+seconds:             10.000
+total ops:           933865
+local counter:       933865
+total time:          10000.029 ms
+lock avg:            4703.86 ns
+lock p50/p95/p99:    4430 / 5877 / 6661 ns
+unlock avg:          4120.33 ns
+unlock p50/p95/p99:  4132 / 4317 / 4374 ns
+total retries:       0
+avg retries/op:      0.0000
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      2685201
+error count:         0
+----------------------------
+",
+2026-02-01T07:09:22Z,36,1,root@g1.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock peterson --hosts 3 --host_id 0 --threads 1 --locks 8 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --init --no_flush_stats,0,10.603,"Initialized locks (lock=1 hosts=3 locks=8 channels=1)
+
+--- Lock Benchmark Results ---
+lock type:           1
+hosts/host_id:       3/0
+threads:             1
+locks:               8
+channels:            1
+seconds:             10.000
+total ops:           925088
+local counter:       925088
+total time:          10000.065 ms
+lock avg:            4716.19 ns
+lock p50/p95/p99:    4433 / 5757 / 6330 ns
+unlock avg:          4179.25 ns
+unlock p50/p95/p99:  4158 / 4373 / 4735 ns
+total retries:       0
+avg retries/op:      0.0000
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      2685201
+error count:         0
+----------------------------
+",
+2026-02-01T07:09:22Z,36,1,root@g2.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock peterson --hosts 3 --host_id 1 --threads 1 --locks 8 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --no_flush_stats,0,10.572,"
+--- Lock Benchmark Results ---
+lock type:           1
+hosts/host_id:       3/1
+threads:             1
+locks:               8
+channels:            1
+seconds:             10.000
+total ops:           924201
+local counter:       924201
+total time:          10000.067 ms
+lock avg:            4575.54 ns
+lock p50/p95/p99:    4482 / 5040 / 5150 ns
+unlock avg:          4203.30 ns
+unlock p50/p95/p99:  4168 / 4364 / 4817 ns
+total retries:       0
+avg retries/op:      0.0000
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      2685201
+error count:         0
+----------------------------
+",
+2026-02-01T07:09:33Z,37,1,root@g1.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock bakery --hosts 3 --host_id 0 --threads 1 --locks 1 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --init --no_flush_stats,0,10.484,"Initialized locks (lock=2 hosts=3 locks=1 channels=1)
+
+--- Lock Benchmark Results ---
+lock type:           2
+hosts/host_id:       3/0
+threads:             1
+locks:               1
+channels:            1
+seconds:             10.000
+total ops:           613763
+local counter:       613763
+total time:          10000.065 ms
+lock avg:            11669.49 ns
+lock p50/p95/p99:    11584 / 12894 / 14275 ns
+unlock avg:          2535.56 ns
+unlock p50/p95/p99:  2516 / 2576 / 3060 ns
+total retries:       0
+avg retries/op:      0.0000
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      1836373
+error count:         0
+----------------------------
+",
+2026-02-01T07:09:33Z,37,1,root@g3.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock bakery --hosts 3 --host_id 2 --threads 1 --locks 1 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --no_flush_stats,0,10.409,"
+--- Lock Benchmark Results ---
+lock type:           2
+hosts/host_id:       3/2
+threads:             1
+locks:               1
+channels:            1
+seconds:             10.000
+total ops:           611921
+local counter:       611921
+total time:          10000.034 ms
+lock avg:            11902.30 ns
+lock p50/p95/p99:    11797 / 13044 / 16211 ns
+unlock avg:          2470.66 ns
+unlock p50/p95/p99:  2462 / 2475 / 2593 ns
+total retries:       0
+avg retries/op:      0.0000
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      1836373
+error count:         0
+----------------------------
+",
+2026-02-01T07:09:33Z,37,1,root@g2.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock bakery --hosts 3 --host_id 1 --threads 1 --locks 1 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --no_flush_stats,0,10.512,"
+--- Lock Benchmark Results ---
+lock type:           2
+hosts/host_id:       3/1
+threads:             1
+locks:               1
+channels:            1
+seconds:             10.000
+total ops:           610689
+local counter:       610689
+total time:          10000.064 ms
+lock avg:            11982.33 ns
+lock p50/p95/p99:    11864 / 13141 / 16078 ns
+unlock avg:          2394.24 ns
+unlock p50/p95/p99:  2373 / 2405 / 2935 ns
+total retries:       0
+avg retries/op:      0.0000
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      1836373
+error count:         0
+----------------------------
+",
+2026-02-01T07:09:43Z,38,1,root@g3.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock bakery --hosts 3 --host_id 2 --threads 1 --locks 2 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --no_flush_stats,0,10.357,"
+--- Lock Benchmark Results ---
+lock type:           2
+hosts/host_id:       3/2
+threads:             1
+locks:               2
+channels:            1
+seconds:             10.000
+total ops:           677594
+local counter:       677594
+total time:          10000.034 ms
+lock avg:            10611.82 ns
+lock p50/p95/p99:    10718 / 11286 / 11971 ns
+unlock avg:          2366.01 ns
+unlock p50/p95/p99:  2253 / 2791 / 2957 ns
+total retries:       0
+avg retries/op:      0.0000
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      2017586
+error count:         0
+----------------------------
+",
+2026-02-01T07:09:43Z,38,1,root@g1.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock bakery --hosts 3 --host_id 0 --threads 1 --locks 2 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --init --no_flush_stats,0,10.545,"Initialized locks (lock=2 hosts=3 locks=2 channels=1)
+
+--- Lock Benchmark Results ---
+lock type:           2
+hosts/host_id:       3/0
+threads:             1
+locks:               2
+channels:            1
+seconds:             10.000
+total ops:           677727
+local counter:       677727
+total time:          10000.061 ms
+lock avg:            10352.64 ns
+lock p50/p95/p99:    10440 / 11468 / 12849 ns
+unlock avg:          2362.07 ns
+unlock p50/p95/p99:  2367 / 2393 / 2945 ns
+total retries:       0
+avg retries/op:      0.0000
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      2017586
+error count:         0
+----------------------------
+",
+2026-02-01T07:09:43Z,38,1,root@g2.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock bakery --hosts 3 --host_id 1 --threads 1 --locks 2 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --no_flush_stats,0,10.501,"
+--- Lock Benchmark Results ---
+lock type:           2
+hosts/host_id:       3/1
+threads:             1
+locks:               2
+channels:            1
+seconds:             10.000
+total ops:           676034
+local counter:       676034
+total time:          10000.073 ms
+lock avg:            10422.76 ns
+lock p50/p95/p99:    10499 / 11400 / 11694 ns
+unlock avg:          2397.87 ns
+unlock p50/p95/p99:  2388 / 2413 / 2451 ns
+total retries:       0
+avg retries/op:      0.0000
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      2017586
+error count:         0
+----------------------------
+",
+2026-02-01T07:09:54Z,39,1,root@g3.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock bakery --hosts 3 --host_id 2 --threads 1 --locks 4 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --no_flush_stats,0,10.407,"
+--- Lock Benchmark Results ---
+lock type:           2
+hosts/host_id:       3/2
+threads:             1
+locks:               4
+channels:            1
+seconds:             10.000
+total ops:           765955
+local counter:       765955
+total time:          10000.034 ms
+lock avg:            8453.71 ns
+lock p50/p95/p99:    7517 / 11054 / 11865 ns
+unlock avg:          2596.38 ns
+unlock p50/p95/p99:  2451 / 2977 / 3105 ns
+total retries:       0
+avg retries/op:      0.0000
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      2160284
+error count:         0
+----------------------------
+",
+2026-02-01T07:09:54Z,39,1,root@g1.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock bakery --hosts 3 --host_id 0 --threads 1 --locks 4 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --init --no_flush_stats,0,10.536,"Initialized locks (lock=2 hosts=3 locks=4 channels=1)
+
+--- Lock Benchmark Results ---
+lock type:           2
+hosts/host_id:       3/0
+threads:             1
+locks:               4
+channels:            1
+seconds:             10.000
+total ops:           766709
+local counter:       766709
+total time:          10000.056 ms
+lock avg:            8590.25 ns
+lock p50/p95/p99:    7504 / 11430 / 12364 ns
+unlock avg:          2407.24 ns
+unlock p50/p95/p99:  2392 / 2434 / 2934 ns
+total retries:       0
+avg retries/op:      0.0000
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      2160284
+error count:         0
+----------------------------
+",
+2026-02-01T07:09:54Z,39,1,root@g2.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock bakery --hosts 3 --host_id 1 --threads 1 --locks 4 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --no_flush_stats,0,10.519,"
+--- Lock Benchmark Results ---
+lock type:           2
+hosts/host_id:       3/1
+threads:             1
+locks:               4
+channels:            1
+seconds:             10.000
+total ops:           763236
+local counter:       763236
+total time:          10000.071 ms
+lock avg:            8783.91 ns
+lock p50/p95/p99:    7796 / 11381 / 11861 ns
+unlock avg:          2365.60 ns
+unlock p50/p95/p99:  2319 / 2868 / 2902 ns
+total retries:       0
+avg retries/op:      0.0000
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      2160284
+error count:         0
+----------------------------
+",
+2026-02-01T07:10:04Z,40,1,root@g3.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock bakery --hosts 3 --host_id 2 --threads 1 --locks 8 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --no_flush_stats,0,10.372,"
+--- Lock Benchmark Results ---
+lock type:           2
+hosts/host_id:       3/2
+threads:             1
+locks:               8
+channels:            1
+seconds:             10.000
+total ops:           773020
+local counter:       773020
+total time:          10000.037 ms
+lock avg:            8715.41 ns
+lock p50/p95/p99:    7669 / 11784 / 12573 ns
+unlock avg:          2347.40 ns
+unlock p50/p95/p99:  2211 / 2831 / 3321 ns
+total retries:       0
+avg retries/op:      0.0000
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      2173859
+error count:         0
+----------------------------
+",
+2026-02-01T07:10:04Z,40,1,root@g1.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock bakery --hosts 3 --host_id 0 --threads 1 --locks 8 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --init --no_flush_stats,0,10.550,"Initialized locks (lock=2 hosts=3 locks=8 channels=1)
+
+--- Lock Benchmark Results ---
+lock type:           2
+hosts/host_id:       3/0
+threads:             1
+locks:               8
+channels:            1
+seconds:             10.000
+total ops:           772108
+local counter:       772108
+total time:          10000.068 ms
+lock avg:            8444.97 ns
+lock p50/p95/p99:    7458 / 11351 / 12039 ns
+unlock avg:          2447.92 ns
+unlock p50/p95/p99:  2442 / 2496 / 2901 ns
+total retries:       0
+avg retries/op:      0.0000
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      2173859
+error count:         0
+----------------------------
+",
+2026-02-01T07:10:04Z,40,1,root@g2.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock bakery --hosts 3 --host_id 1 --threads 1 --locks 8 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --no_flush_stats,0,10.561,"
+--- Lock Benchmark Results ---
+lock type:           2
+hosts/host_id:       3/1
+threads:             1
+locks:               8
+channels:            1
+seconds:             10.000
+total ops:           769178
+local counter:       769178
+total time:          10000.067 ms
+lock avg:            8533.01 ns
+lock p50/p95/p99:    7804 / 11006 / 11500 ns
+unlock avg:          2429.97 ns
+unlock p50/p95/p99:  2398 / 2457 / 2993 ns
+total retries:       0
+avg retries/op:      0.0000
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      2173859
+error count:         0
+----------------------------
+",
+2026-02-01T07:10:15Z,41,1,root@g3.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock lfm --hosts 4 --host_id 2 --threads 1 --locks 1 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --no_flush_stats,0,10.299,"
+--- Lock Benchmark Results ---
+lock type:           0
+hosts/host_id:       4/2
+threads:             1
+locks:               1
+channels:            1
+seconds:             10.000
+total ops:           221991
+local counter:       221991
+total time:          10000.028 ms
+lock avg:            40302.16 ns
+lock p50/p95/p99:    21139 / 145847 / 236406 ns
+unlock avg:          2926.46 ns
+unlock p50/p95/p99:  2895 / 3062 / 3431 ns
+total retries:       731194
+avg retries/op:      3.2938
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      994748
+error count:         0
+----------------------------
+",
+2026-02-01T07:10:15Z,41,1,root@g1.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock lfm --hosts 4 --host_id 0 --threads 1 --locks 1 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --init --no_flush_stats,0,10.413,"Initialized locks (lock=0 hosts=4 locks=1 channels=1)
+
+--- Lock Benchmark Results ---
+lock type:           0
+hosts/host_id:       4/0
+threads:             1
+locks:               1
+channels:            1
+seconds:             10.000
+total ops:           275733
+local counter:       275733
+total time:          10000.072 ms
+lock avg:            31188.57 ns
+lock p50/p95/p99:    7291 / 124992 / 207662 ns
+unlock avg:          3050.60 ns
+unlock p50/p95/p99:  3032 / 3086 / 3246 ns
+total retries:       690855
+avg retries/op:      2.5055
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      994748
+error count:         0
+----------------------------
+",
+2026-02-01T07:10:15Z,41,1,root@g4.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock lfm --hosts 4 --host_id 3 --threads 1 --locks 1 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --no_flush_stats,0,10.318,"
+--- Lock Benchmark Results ---
+lock type:           0
+hosts/host_id:       4/3
+threads:             1
+locks:               1
+channels:            1
+seconds:             10.000
+total ops:           241057
+local counter:       241057
+total time:          10000.040 ms
+lock avg:            36690.28 ns
+lock p50/p95/p99:    18978 / 127665 / 204146 ns
+unlock avg:          2885.12 ns
+unlock p50/p95/p99:  2863 / 2947 / 3408 ns
+total retries:       727057
+avg retries/op:      3.0161
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      994748
+error count:         0
+----------------------------
+",
+2026-02-01T07:10:15Z,41,1,root@g2.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock lfm --hosts 4 --host_id 1 --threads 1 --locks 1 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --no_flush_stats,0,10.386,"
+--- Lock Benchmark Results ---
+lock type:           0
+hosts/host_id:       4/1
+threads:             1
+locks:               1
+channels:            1
+seconds:             10.000
+total ops:           255967
+local counter:       255967
+total time:          10000.068 ms
+lock avg:            33990.61 ns
+lock p50/p95/p99:    15971 / 125161 / 203329 ns
+unlock avg:          3038.00 ns
+unlock p50/p95/p99:  3008 / 3072 / 3571 ns
+total retries:       689596
+avg retries/op:      2.6941
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      994748
+error count:         0
+----------------------------
+",
+2026-02-01T07:10:26Z,42,1,root@g3.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock lfm --hosts 4 --host_id 2 --threads 1 --locks 2 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --no_flush_stats,0,10.339,"
+--- Lock Benchmark Results ---
+lock type:           0
+hosts/host_id:       4/2
+threads:             1
+locks:               2
+channels:            1
+seconds:             10.000
+total ops:           427134
+local counter:       427134
+total time:          10000.040 ms
+lock avg:            18407.35 ns
+lock p50/p95/p99:    3588 / 81970 / 147596 ns
+unlock avg:          3098.03 ns
+unlock p50/p95/p99:  2955 / 3504 / 3632 ns
+total retries:       612965
+avg retries/op:      1.4351
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      1655746
+error count:         0
+----------------------------
+",
+2026-02-01T07:10:26Z,42,1,root@g4.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock lfm --hosts 4 --host_id 3 --threads 1 --locks 2 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --no_flush_stats,0,10.364,"
+--- Lock Benchmark Results ---
+lock type:           0
+hosts/host_id:       4/3
+threads:             1
+locks:               2
+channels:            1
+seconds:             10.000
+total ops:           464520
+local counter:       464520
+total time:          10000.031 ms
+lock avg:            16557.14 ns
+lock p50/p95/p99:    3669 / 70851 / 124825 ns
+unlock avg:          3052.28 ns
+unlock p50/p95/p99:  2913 / 3486 / 3557 ns
+total retries:       594912
+avg retries/op:      1.2807
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      1655746
+error count:         0
+----------------------------
+",
+2026-02-01T07:10:26Z,42,1,root@g1.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock lfm --hosts 4 --host_id 0 --threads 1 --locks 2 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --init --no_flush_stats,0,10.494,"Initialized locks (lock=0 hosts=4 locks=2 channels=1)
+
+--- Lock Benchmark Results ---
+lock type:           0
+hosts/host_id:       4/0
+threads:             1
+locks:               2
+channels:            1
+seconds:             10.000
+total ops:           539700
+local counter:       539700
+total time:          10000.061 ms
+lock avg:            13641.09 ns
+lock p50/p95/p99:    3705 / 59631 / 112605 ns
+unlock avg:          2895.00 ns
+unlock p50/p95/p99:  2899 / 2958 / 3439 ns
+total retries:       510950
+avg retries/op:      0.9467
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      1655746
+error count:         0
+----------------------------
+",
+2026-02-01T07:10:26Z,42,1,root@g2.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock lfm --hosts 4 --host_id 1 --threads 1 --locks 2 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --no_flush_stats,0,10.489,"
+--- Lock Benchmark Results ---
+lock type:           0
+hosts/host_id:       4/1
+threads:             1
+locks:               2
+channels:            1
+seconds:             10.000
+total ops:           520803
+local counter:       520803
+total time:          10000.066 ms
+lock avg:            14286.63 ns
+lock p50/p95/p99:    3657 / 61669 / 113240 ns
+unlock avg:          2966.39 ns
+unlock p50/p95/p99:  2935 / 3043 / 3484 ns
+total retries:       517219
+avg retries/op:      0.9931
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      1655746
+error count:         0
+----------------------------
+",
+2026-02-01T07:10:36Z,43,1,root@g3.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock lfm --hosts 4 --host_id 2 --threads 1 --locks 4 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --no_flush_stats,0,10.462,"
+--- Lock Benchmark Results ---
+lock type:           0
+hosts/host_id:       4/2
+threads:             1
+locks:               4
+channels:            1
+seconds:             10.000
+total ops:           1116396
+local counter:       1116396
+total time:          10000.037 ms
+lock avg:            3790.02 ns
+lock p50/p95/p99:    3606 / 3800 / 9138 ns
+unlock avg:          3336.23 ns
+unlock p50/p95/p99:  3467 / 3624 / 4029 ns
+total retries:       36472
+avg retries/op:      0.0327
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      3094037
+error count:         0
+----------------------------
+",
+2026-02-01T07:10:36Z,43,1,root@g4.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock lfm --hosts 4 --host_id 3 --threads 1 --locks 4 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --no_flush_stats,0,10.468,"
+--- Lock Benchmark Results ---
+lock type:           0
+hosts/host_id:       4/3
+threads:             1
+locks:               4
+channels:            1
+seconds:             10.000
+total ops:           1116098
+local counter:       1116098
+total time:          10000.036 ms
+lock avg:            3892.87 ns
+lock p50/p95/p99:    3565 / 3872 / 9933 ns
+unlock avg:          3135.98 ns
+unlock p50/p95/p99:  2928 / 3496 / 3596 ns
+total retries:       52493
+avg retries/op:      0.0470
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      3094037
+error count:         0
+----------------------------
+",
+2026-02-01T07:10:36Z,43,1,root@g1.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock lfm --hosts 4 --host_id 0 --threads 1 --locks 4 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --init --no_flush_stats,0,10.647,"Initialized locks (lock=0 hosts=4 locks=4 channels=1)
+
+--- Lock Benchmark Results ---
+lock type:           0
+hosts/host_id:       4/0
+threads:             1
+locks:               4
+channels:            1
+seconds:             10.000
+total ops:           1116387
+local counter:       1116387
+total time:          10000.062 ms
+lock avg:            4141.67 ns
+lock p50/p95/p99:    3532 / 8101 / 10280 ns
+unlock avg:          2925.41 ns
+unlock p50/p95/p99:  2882 / 2999 / 3435 ns
+total retries:       117740
+avg retries/op:      0.1055
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      3094037
+error count:         0
+----------------------------
+",
+2026-02-01T07:10:36Z,43,1,root@g2.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock lfm --hosts 4 --host_id 1 --threads 1 --locks 4 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --no_flush_stats,0,10.644,"
+--- Lock Benchmark Results ---
+lock type:           0
+hosts/host_id:       4/1
+threads:             1
+locks:               4
+channels:            1
+seconds:             10.000
+total ops:           1113880
+local counter:       1113880
+total time:          10000.064 ms
+lock avg:            3961.08 ns
+lock p50/p95/p99:    3684 / 3944 / 9586 ns
+unlock avg:          2985.82 ns
+unlock p50/p95/p99:  2975 / 3028 / 3517 ns
+total retries:       46682
+avg retries/op:      0.0419
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      3094037
+error count:         0
+----------------------------
+",
+2026-02-01T07:10:47Z,44,1,root@g3.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock lfm --hosts 4 --host_id 2 --threads 1 --locks 8 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --no_flush_stats,0,10.468,"
+--- Lock Benchmark Results ---
+lock type:           0
+hosts/host_id:       4/2
+threads:             1
+locks:               8
+channels:            1
+seconds:             10.000
+total ops:           1138840
+local counter:       1138840
+total time:          10000.033 ms
+lock avg:            3586.32 ns
+lock p50/p95/p99:    3586 / 3806 / 3893 ns
+unlock avg:          3259.93 ns
+unlock p50/p95/p99:  3422 / 3646 / 3786 ns
+total retries:       2208
+avg retries/op:      0.0019
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      3332498
+error count:         0
+----------------------------
+",
+2026-02-01T07:10:47Z,44,1,root@g4.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock lfm --hosts 4 --host_id 3 --threads 1 --locks 8 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --no_flush_stats,0,10.483,"
+--- Lock Benchmark Results ---
+lock type:           0
+hosts/host_id:       4/3
+threads:             1
+locks:               8
+channels:            1
+seconds:             10.000
+total ops:           1139608
+local counter:       1139608
+total time:          10000.036 ms
+lock avg:            3682.21 ns
+lock p50/p95/p99:    3531 / 3838 / 8330 ns
+unlock avg:          3158.16 ns
+unlock p50/p95/p99:  2974 / 3594 / 3668 ns
+total retries:       33599
+avg retries/op:      0.0295
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      3332498
+error count:         0
+----------------------------
+",
+2026-02-01T07:10:47Z,44,1,root@g1.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock lfm --hosts 4 --host_id 0 --threads 1 --locks 8 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --init --no_flush_stats,0,10.657,"Initialized locks (lock=0 hosts=4 locks=8 channels=1)
+
+--- Lock Benchmark Results ---
+lock type:           0
+hosts/host_id:       4/0
+threads:             1
+locks:               8
+channels:            1
+seconds:             10.000
+total ops:           1138594
+local counter:       1138594
+total time:          10000.063 ms
+lock avg:            3776.70 ns
+lock p50/p95/p99:    3703 / 3968 / 8584 ns
+unlock avg:          3006.73 ns
+unlock p50/p95/p99:  2924 / 3510 / 3606 ns
+total retries:       22728
+avg retries/op:      0.0200
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      3332498
+error count:         0
+----------------------------
+",
+2026-02-01T07:10:47Z,44,1,root@g2.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock lfm --hosts 4 --host_id 1 --threads 1 --locks 8 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --no_flush_stats,0,10.667,"
+--- Lock Benchmark Results ---
+lock type:           0
+hosts/host_id:       4/1
+threads:             1
+locks:               8
+channels:            1
+seconds:             10.000
+total ops:           1138236
+local counter:       1138236
+total time:          10000.064 ms
+lock avg:            3759.89 ns
+lock p50/p95/p99:    3638 / 3898 / 8333 ns
+unlock avg:          2998.44 ns
+unlock p50/p95/p99:  2974 / 3020 / 3528 ns
+total retries:       18563
+avg retries/op:      0.0163
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      3332498
+error count:         0
+----------------------------
+",
+2026-02-01T07:10:58Z,45,1,root@g4.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock peterson --hosts 4 --host_id 3 --threads 1 --locks 1 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --no_flush_stats,0,10.328,"
+--- Lock Benchmark Results ---
+lock type:           1
+hosts/host_id:       4/3
+threads:             1
+locks:               1
+channels:            1
+seconds:             10.000
+total ops:           405258
+local counter:       405258
+total time:          10000.033 ms
+lock avg:            18658.80 ns
+lock p50/p95/p99:    18376 / 19683 / 22610 ns
+unlock avg:          4118.84 ns
+unlock p50/p95/p99:  4094 / 4251 / 4301 ns
+total retries:       0
+avg retries/op:      0.0000
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      1625980
+error count:         0
+----------------------------
+",
+2026-02-01T07:10:58Z,45,1,root@g3.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock peterson --hosts 4 --host_id 2 --threads 1 --locks 1 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --no_flush_stats,0,10.337,"
+--- Lock Benchmark Results ---
+lock type:           1
+hosts/host_id:       4/2
+threads:             1
+locks:               1
+channels:            1
+seconds:             10.000
+total ops:           405189
+local counter:       405189
+total time:          10000.035 ms
+lock avg:            18786.11 ns
+lock p50/p95/p99:    18988 / 19791 / 22965 ns
+unlock avg:          4069.40 ns
+unlock p50/p95/p99:  4036 / 4186 / 4242 ns
+total retries:       0
+avg retries/op:      0.0000
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      1625980
+error count:         0
+----------------------------
+",
+2026-02-01T07:10:58Z,45,1,root@g1.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock peterson --hosts 4 --host_id 0 --threads 1 --locks 1 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --init --no_flush_stats,0,10.459,"Initialized locks (lock=1 hosts=4 locks=1 channels=1)
+
+--- Lock Benchmark Results ---
+lock type:           1
+hosts/host_id:       4/0
+threads:             1
+locks:               1
+channels:            1
+seconds:             10.000
+total ops:           407836
+local counter:       407836
+total time:          10000.062 ms
+lock avg:            18316.48 ns
+lock p50/p95/p99:    18438 / 19860 / 22197 ns
+unlock avg:          4250.96 ns
+unlock p50/p95/p99:  4208 / 4391 / 4538 ns
+total retries:       0
+avg retries/op:      0.0000
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      1625980
+error count:         0
+----------------------------
+",
+2026-02-01T07:10:58Z,45,1,root@g2.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock peterson --hosts 4 --host_id 1 --threads 1 --locks 1 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --no_flush_stats,0,10.434,"
+--- Lock Benchmark Results ---
+lock type:           1
+hosts/host_id:       4/1
+threads:             1
+locks:               1
+channels:            1
+seconds:             10.000
+total ops:           407697
+local counter:       407697
+total time:          10000.069 ms
+lock avg:            18298.93 ns
+lock p50/p95/p99:    18373 / 19708 / 22240 ns
+unlock avg:          4194.89 ns
+unlock p50/p95/p99:  4148 / 4317 / 4370 ns
+total retries:       0
+avg retries/op:      0.0000
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      1625980
+error count:         0
+----------------------------
+",
+2026-02-01T07:11:08Z,46,1,root@g3.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock peterson --hosts 4 --host_id 2 --threads 1 --locks 2 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --no_flush_stats,0,10.380,"
+--- Lock Benchmark Results ---
+lock type:           1
+hosts/host_id:       4/2
+threads:             1
+locks:               2
+channels:            1
+seconds:             10.000
+total ops:           793135
+local counter:       793135
+total time:          10000.030 ms
+lock avg:            6549.32 ns
+lock p50/p95/p99:    6793 / 9414 / 10705 ns
+unlock avg:          4126.62 ns
+unlock p50/p95/p99:  4118 / 4253 / 4320 ns
+total retries:       0
+avg retries/op:      0.0000
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      2806628
+error count:         0
+----------------------------
+",
+2026-02-01T07:11:08Z,46,1,root@g4.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock peterson --hosts 4 --host_id 3 --threads 1 --locks 2 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --no_flush_stats,0,10.385,"
+--- Lock Benchmark Results ---
+lock type:           1
+hosts/host_id:       4/3
+threads:             1
+locks:               2
+channels:            1
+seconds:             10.000
+total ops:           793111
+local counter:       793111
+total time:          10000.033 ms
+lock avg:            6502.16 ns
+lock p50/p95/p99:    6696 / 9645 / 10592 ns
+unlock avg:          4184.35 ns
+unlock p50/p95/p99:  4160 / 4336 / 4368 ns
+total retries:       0
+avg retries/op:      0.0000
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      2806628
+error count:         0
+----------------------------
+",
+2026-02-01T07:11:08Z,46,1,root@g1.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock peterson --hosts 4 --host_id 0 --threads 1 --locks 2 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --init --no_flush_stats,0,10.548,"Initialized locks (lock=1 hosts=4 locks=2 channels=1)
+
+--- Lock Benchmark Results ---
+lock type:           1
+hosts/host_id:       4/0
+threads:             1
+locks:               2
+channels:            1
+seconds:             10.000
+total ops:           790357
+local counter:       790357
+total time:          10000.068 ms
+lock avg:            6360.94 ns
+lock p50/p95/p99:    5987 / 8850 / 10180 ns
+unlock avg:          4252.17 ns
+unlock p50/p95/p99:  4277 / 4419 / 4473 ns
+total retries:       0
+avg retries/op:      0.0000
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      2806628
+error count:         0
+----------------------------
+",
+2026-02-01T07:11:08Z,46,1,root@g2.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock peterson --hosts 4 --host_id 1 --threads 1 --locks 2 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --no_flush_stats,0,10.552,"
+--- Lock Benchmark Results ---
+lock type:           1
+hosts/host_id:       4/1
+threads:             1
+locks:               2
+channels:            1
+seconds:             10.000
+total ops:           790616
+local counter:       790616
+total time:          10000.065 ms
+lock avg:            6535.72 ns
+lock p50/p95/p99:    6000 / 8812 / 10227 ns
+unlock avg:          4188.04 ns
+unlock p50/p95/p99:  4161 / 4326 / 4434 ns
+total retries:       0
+avg retries/op:      0.0000
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      2806628
+error count:         0
+----------------------------
+",
+2026-02-01T07:11:19Z,47,1,root@g3.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock peterson --hosts 4 --host_id 2 --threads 1 --locks 4 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --no_flush_stats,0,10.414,"
+--- Lock Benchmark Results ---
+lock type:           1
+hosts/host_id:       4/2
+threads:             1
+locks:               4
+channels:            1
+seconds:             10.000
+total ops:           928855
+local counter:       928855
+total time:          10000.032 ms
+lock avg:            4625.31 ns
+lock p50/p95/p99:    4409 / 5728 / 6703 ns
+unlock avg:          4167.44 ns
+unlock p50/p95/p99:  4168 / 4344 / 4392 ns
+total retries:       0
+avg retries/op:      0.0000
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      3357870
+error count:         0
+----------------------------
+",
+2026-02-01T07:11:19Z,47,1,root@g4.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock peterson --hosts 4 --host_id 3 --threads 1 --locks 4 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --no_flush_stats,0,10.448,"
+--- Lock Benchmark Results ---
+lock type:           1
+hosts/host_id:       4/3
+threads:             1
+locks:               4
+channels:            1
+seconds:             10.000
+total ops:           928932
+local counter:       928932
+total time:          10000.039 ms
+lock avg:            4740.47 ns
+lock p50/p95/p99:    4351 / 5730 / 7073 ns
+unlock avg:          4107.47 ns
+unlock p50/p95/p99:  4093 / 4236 / 4304 ns
+total retries:       0
+avg retries/op:      0.0000
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      3357870
+error count:         0
+----------------------------
+",
+2026-02-01T07:11:19Z,47,1,root@g1.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock peterson --hosts 4 --host_id 0 --threads 1 --locks 4 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --init --no_flush_stats,0,10.610,"Initialized locks (lock=1 hosts=4 locks=4 channels=1)
+
+--- Lock Benchmark Results ---
+lock type:           1
+hosts/host_id:       4/0
+threads:             1
+locks:               4
+channels:            1
+seconds:             10.000
+total ops:           926152
+local counter:       926152
+total time:          10000.054 ms
+lock avg:            4463.00 ns
+lock p50/p95/p99:    4396 / 4567 / 5664 ns
+unlock avg:          4239.52 ns
+unlock p50/p95/p99:  4195 / 4735 / 4867 ns
+total retries:       0
+avg retries/op:      0.0000
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      3357870
+error count:         0
+----------------------------
+",
+2026-02-01T07:11:19Z,47,1,root@g2.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock peterson --hosts 4 --host_id 1 --threads 1 --locks 4 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --no_flush_stats,0,10.586,"
+--- Lock Benchmark Results ---
+lock type:           1
+hosts/host_id:       4/1
+threads:             1
+locks:               4
+channels:            1
+seconds:             10.000
+total ops:           926248
+local counter:       926248
+total time:          10000.071 ms
+lock avg:            4562.37 ns
+lock p50/p95/p99:    4493 / 4668 / 5828 ns
+unlock avg:          4212.20 ns
+unlock p50/p95/p99:  4194 / 4338 / 4533 ns
+total retries:       0
+avg retries/op:      0.0000
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      3357870
+error count:         0
+----------------------------
+",
+2026-02-01T07:11:30Z,48,1,root@g4.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock peterson --hosts 4 --host_id 3 --threads 1 --locks 8 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --no_flush_stats,0,10.421,"
+--- Lock Benchmark Results ---
+lock type:           1
+hosts/host_id:       4/3
+threads:             1
+locks:               8
+channels:            1
+seconds:             10.000
+total ops:           919840
+local counter:       919840
+total time:          10000.035 ms
+lock avg:            4777.21 ns
+lock p50/p95/p99:    4502 / 5852 / 6919 ns
+unlock avg:          4188.90 ns
+unlock p50/p95/p99:  4156 / 4354 / 4408 ns
+total retries:       0
+avg retries/op:      0.0000
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      3400805
+error count:         0
+----------------------------
+",
+2026-02-01T07:11:30Z,48,1,root@g3.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock peterson --hosts 4 --host_id 2 --threads 1 --locks 8 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --no_flush_stats,0,10.436,"
+--- Lock Benchmark Results ---
+lock type:           1
+hosts/host_id:       4/2
+threads:             1
+locks:               8
+channels:            1
+seconds:             10.000
+total ops:           919899
+local counter:       919899
+total time:          10000.031 ms
+lock avg:            4931.71 ns
+lock p50/p95/p99:    4512 / 5950 / 7450 ns
+unlock avg:          4088.68 ns
+unlock p50/p95/p99:  4094 / 4273 / 4339 ns
+total retries:       0
+avg retries/op:      0.0000
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      3400805
+error count:         0
+----------------------------
+",
+2026-02-01T07:11:30Z,48,1,root@g1.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock peterson --hosts 4 --host_id 0 --threads 1 --locks 8 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --init --no_flush_stats,0,10.594,"Initialized locks (lock=1 hosts=4 locks=8 channels=1)
+
+--- Lock Benchmark Results ---
+lock type:           1
+hosts/host_id:       4/0
+threads:             1
+locks:               8
+channels:            1
+seconds:             10.000
+total ops:           914146
+local counter:       914146
+total time:          10000.065 ms
+lock avg:            4855.50 ns
+lock p50/p95/p99:    4454 / 5975 / 7332 ns
+unlock avg:          4176.62 ns
+unlock p50/p95/p99:  4141 / 4395 / 4637 ns
+total retries:       0
+avg retries/op:      0.0000
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      3400805
+error count:         0
+----------------------------
+",
+2026-02-01T07:11:30Z,48,1,root@g2.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock peterson --hosts 4 --host_id 1 --threads 1 --locks 8 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --no_flush_stats,0,10.559,"
+--- Lock Benchmark Results ---
+lock type:           1
+hosts/host_id:       4/1
+threads:             1
+locks:               8
+channels:            1
+seconds:             10.000
+total ops:           913409
+local counter:       913409
+total time:          10000.067 ms
+lock avg:            4589.40 ns
+lock p50/p95/p99:    4532 / 4780 / 4862 ns
+unlock avg:          4275.12 ns
+unlock p50/p95/p99:  4222 / 4460 / 4917 ns
+total retries:       0
+avg retries/op:      0.0000
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      3400805
+error count:         0
+----------------------------
+",
+2026-02-01T07:11:40Z,49,1,root@g1.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock bakery --hosts 4 --host_id 0 --threads 1 --locks 1 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --init --no_flush_stats,0,10.429,"Initialized locks (lock=2 hosts=4 locks=1 channels=1)
+
+--- Lock Benchmark Results ---
+lock type:           2
+hosts/host_id:       4/0
+threads:             1
+locks:               1
+channels:            1
+seconds:             10.000
+total ops:           419345
+local counter:       419345
+total time:          10000.083 ms
+lock avg:            19464.90 ns
+lock p50/p95/p99:    19661 / 20961 / 23278 ns
+unlock avg:          2381.28 ns
+unlock p50/p95/p99:  2364 / 2421 / 2562 ns
+total retries:       0
+avg retries/op:      0.0000
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      1673090
+error count:         0
+----------------------------
+",
+2026-02-01T07:11:40Z,49,1,root@g3.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock bakery --hosts 4 --host_id 2 --threads 1 --locks 1 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --no_flush_stats,0,10.344,"
+--- Lock Benchmark Results ---
+lock type:           2
+hosts/host_id:       4/2
+threads:             1
+locks:               1
+channels:            1
+seconds:             10.000
+total ops:           417846
+local counter:       417846
+total time:          10000.045 ms
+lock avg:            19388.82 ns
+lock p50/p95/p99:    19497 / 20825 / 23936 ns
+unlock avg:          2550.90 ns
+unlock p50/p95/p99:  2443 / 3025 / 3150 ns
+total retries:       0
+avg retries/op:      0.0000
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      1673090
+error count:         0
+----------------------------
+",
+2026-02-01T07:11:40Z,49,1,root@g4.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock bakery --hosts 4 --host_id 3 --threads 1 --locks 1 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --no_flush_stats,0,10.355,"
+--- Lock Benchmark Results ---
+lock type:           2
+hosts/host_id:       4/3
+threads:             1
+locks:               1
+channels:            1
+seconds:             10.000
+total ops:           417683
+local counter:       417683
+total time:          10000.043 ms
+lock avg:            19635.93 ns
+lock p50/p95/p99:    19704 / 21010 / 23930 ns
+unlock avg:          2390.51 ns
+unlock p50/p95/p99:  2287 / 2847 / 2998 ns
+total retries:       0
+avg retries/op:      0.0000
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      1673090
+error count:         0
+----------------------------
+",
+2026-02-01T07:11:40Z,49,1,root@g2.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock bakery --hosts 4 --host_id 1 --threads 1 --locks 1 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --no_flush_stats,0,10.458,"
+--- Lock Benchmark Results ---
+lock type:           2
+hosts/host_id:       4/1
+threads:             1
+locks:               1
+channels:            1
+seconds:             10.000
+total ops:           418216
+local counter:       418216
+total time:          10000.073 ms
+lock avg:            19471.96 ns
+lock p50/p95/p99:    19546 / 20904 / 23384 ns
+unlock avg:          2427.12 ns
+unlock p50/p95/p99:  2409 / 2460 / 2949 ns
+total retries:       0
+avg retries/op:      0.0000
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      1673090
+error count:         0
+----------------------------
+",
+2026-02-01T07:11:51Z,50,1,root@g3.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock bakery --hosts 4 --host_id 2 --threads 1 --locks 2 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --no_flush_stats,0,10.340,"
+--- Lock Benchmark Results ---
+lock type:           2
+hosts/host_id:       4/2
+threads:             1
+locks:               2
+channels:            1
+seconds:             10.000
+total ops:           558340
+local counter:       558340
+total time:          10000.041 ms
+lock avg:            13814.97 ns
+lock p50/p95/p99:    13726 / 17713 / 19089 ns
+unlock avg:          2305.41 ns
+unlock p50/p95/p99:  2233 / 2767 / 2832 ns
+total retries:       0
+avg retries/op:      0.0000
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      2135402
+error count:         0
+----------------------------
+",
+2026-02-01T07:11:51Z,50,1,root@g1.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock bakery --hosts 4 --host_id 0 --threads 1 --locks 2 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --init --no_flush_stats,0,10.498,"Initialized locks (lock=2 hosts=4 locks=2 channels=1)
+
+--- Lock Benchmark Results ---
+lock type:           2
+hosts/host_id:       4/0
+threads:             1
+locks:               2
+channels:            1
+seconds:             10.000
+total ops:           558762
+local counter:       558762
+total time:          10000.061 ms
+lock avg:            13519.96 ns
+lock p50/p95/p99:    13366 / 17575 / 19046 ns
+unlock avg:          2339.51 ns
+unlock p50/p95/p99:  2341 / 2362 / 2523 ns
+total retries:       0
+avg retries/op:      0.0000
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      2135402
+error count:         0
+----------------------------
+",
+2026-02-01T07:11:51Z,50,1,root@g4.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock bakery --hosts 4 --host_id 3 --threads 1 --locks 2 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --no_flush_stats,0,10.421,"
+--- Lock Benchmark Results ---
+lock type:           2
+hosts/host_id:       4/3
+threads:             1
+locks:               2
+channels:            1
+seconds:             10.000
+total ops:           557684
+local counter:       557684
+total time:          10000.028 ms
+lock avg:            13605.88 ns
+lock p50/p95/p99:    13180 / 17513 / 22107 ns
+unlock avg:          2401.37 ns
+unlock p50/p95/p99:  2340 / 2892 / 2952 ns
+total retries:       0
+avg retries/op:      0.0000
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      2135402
+error count:         0
+----------------------------
+",
+2026-02-01T07:11:51Z,50,1,root@g2.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock bakery --hosts 4 --host_id 1 --threads 1 --locks 2 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --no_flush_stats,0,10.485,"
+--- Lock Benchmark Results ---
+lock type:           2
+hosts/host_id:       4/1
+threads:             1
+locks:               2
+channels:            1
+seconds:             10.000
+total ops:           557007
+local counter:       557007
+total time:          10000.074 ms
+lock avg:            13519.34 ns
+lock p50/p95/p99:    13349 / 17056 / 17760 ns
+unlock avg:          2436.14 ns
+unlock p50/p95/p99:  2436 / 2477 / 2655 ns
+total retries:       0
+avg retries/op:      0.0000
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      2135402
+error count:         0
+----------------------------
+",
+2026-02-01T07:12:01Z,51,1,root@g4.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock bakery --hosts 4 --host_id 3 --threads 1 --locks 4 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --no_flush_stats,0,10.360,"
+--- Lock Benchmark Results ---
+lock type:           2
+hosts/host_id:       4/3
+threads:             1
+locks:               4
+channels:            1
+seconds:             10.000
+total ops:           626718
+local counter:       626718
+total time:          10000.033 ms
+lock avg:            11672.45 ns
+lock p50/p95/p99:    11495 / 14184 / 17239 ns
+unlock avg:          2342.88 ns
+unlock p50/p95/p99:  2290 / 2834 / 2892 ns
+total retries:       0
+avg retries/op:      0.0000
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      2356354
+error count:         0
+----------------------------
+",
+2026-02-01T07:12:01Z,51,1,root@g1.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock bakery --hosts 4 --host_id 0 --threads 1 --locks 4 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --init --no_flush_stats,0,10.505,"Initialized locks (lock=2 hosts=4 locks=4 channels=1)
+
+--- Lock Benchmark Results ---
+lock type:           2
+hosts/host_id:       4/0
+threads:             1
+locks:               4
+channels:            1
+seconds:             10.000
+total ops:           626953
+local counter:       626953
+total time:          10000.061 ms
+lock avg:            11350.62 ns
+lock p50/p95/p99:    11036 / 13922 / 15931 ns
+unlock avg:          2466.15 ns
+unlock p50/p95/p99:  2426 / 3005 / 3094 ns
+total retries:       0
+avg retries/op:      0.0000
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      2356354
+error count:         0
+----------------------------
+",
+2026-02-01T07:12:01Z,51,1,root@g3.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock bakery --hosts 4 --host_id 2 --threads 1 --locks 4 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --no_flush_stats,0,10.431,"
+--- Lock Benchmark Results ---
+lock type:           2
+hosts/host_id:       4/2
+threads:             1
+locks:               4
+channels:            1
+seconds:             10.000
+total ops:           627199
+local counter:       627199
+total time:          10000.080 ms
+lock avg:            11446.00 ns
+lock p50/p95/p99:    11031 / 14259 / 16321 ns
+unlock avg:          2471.99 ns
+unlock p50/p95/p99:  2451 / 2999 / 3109 ns
+total retries:       0
+avg retries/op:      0.0000
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      2356354
+error count:         0
+----------------------------
+",
+2026-02-01T07:12:01Z,51,1,root@g2.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock bakery --hosts 4 --host_id 1 --threads 1 --locks 4 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --no_flush_stats,0,10.487,"
+--- Lock Benchmark Results ---
+lock type:           2
+hosts/host_id:       4/1
+threads:             1
+locks:               4
+channels:            1
+seconds:             10.000
+total ops:           626592
+local counter:       626592
+total time:          10000.075 ms
+lock avg:            11678.92 ns
+lock p50/p95/p99:    11371 / 14416 / 16376 ns
+unlock avg:          2344.20 ns
+unlock p50/p95/p99:  2317 / 2358 / 2869 ns
+total retries:       0
+avg retries/op:      0.0000
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      2356354
+error count:         0
+----------------------------
+",
+2026-02-01T07:12:12Z,52,1,root@g3.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock bakery --hosts 4 --host_id 2 --threads 1 --locks 8 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --no_flush_stats,0,10.374,"
+--- Lock Benchmark Results ---
+lock type:           2
+hosts/host_id:       4/2
+threads:             1
+locks:               8
+channels:            1
+seconds:             10.000
+total ops:           644384
+local counter:       644384
+total time:          10000.030 ms
+lock avg:            11321.31 ns
+lock p50/p95/p99:    10708 / 14327 / 15585 ns
+unlock avg:          2306.30 ns
+unlock p50/p95/p99:  2233 / 2782 / 2929 ns
+total retries:       0
+avg retries/op:      0.0000
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      2388916
+error count:         0
+----------------------------
+",
+2026-02-01T07:12:12Z,52,1,root@g4.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock bakery --hosts 4 --host_id 3 --threads 1 --locks 8 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --no_flush_stats,0,10.377,"
+--- Lock Benchmark Results ---
+lock type:           2
+hosts/host_id:       4/3
+threads:             1
+locks:               8
+channels:            1
+seconds:             10.000
+total ops:           644422
+local counter:       644422
+total time:          10000.045 ms
+lock avg:            11367.85 ns
+lock p50/p95/p99:    11016 / 14089 / 15499 ns
+unlock avg:          2278.06 ns
+unlock p50/p95/p99:  2254 / 2731 / 2837 ns
+total retries:       0
+avg retries/op:      0.0000
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      2388916
+error count:         0
+----------------------------
+",
+2026-02-01T07:12:12Z,52,1,root@g1.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock bakery --hosts 4 --host_id 0 --threads 1 --locks 8 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --init --no_flush_stats,0,10.500,"Initialized locks (lock=2 hosts=4 locks=8 channels=1)
+
+--- Lock Benchmark Results ---
+lock type:           2
+hosts/host_id:       4/0
+threads:             1
+locks:               8
+channels:            1
+seconds:             10.000
+total ops:           645198
+local counter:       645198
+total time:          10000.059 ms
+lock avg:            10852.52 ns
+lock p50/p95/p99:    10077 / 13699 / 15251 ns
+unlock avg:          2545.68 ns
+unlock p50/p95/p99:  2454 / 3106 / 3195 ns
+total retries:       0
+avg retries/op:      0.0000
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      2388916
+error count:         0
+----------------------------
+",
+2026-02-01T07:12:12Z,52,1,root@g2.dc,/root/cxl_profiler/benchmark/locks/lock_bench --lock bakery --hosts 4 --host_id 1 --threads 1 --locks 8 --hold_ns 0 --gap_ns 0 --seconds 10 --dax_dev /dev/dax0.0 --no_flush_stats,0,10.502,"
+--- Lock Benchmark Results ---
+lock type:           2
+hosts/host_id:       4/1
+threads:             1
+locks:               8
+channels:            1
+seconds:             10.000
+total ops:           643868
+local counter:       643868
+total time:          10000.070 ms
+lock avg:            11095.65 ns
+lock p50/p95/p99:    10112 / 14031 / 15149 ns
+unlock avg:          2396.05 ns
+unlock p50/p95/p99:  2372 / 2415 / 2950 ns
+total retries:       0
+avg retries/op:      0.0000
+total poll loops:    0
+avg poll loops/op:   0.0000
+global counter:      2388916
+error count:         0
+----------------------------
+",

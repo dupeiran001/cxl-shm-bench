@@ -1,0 +1,13 @@
+# Build output (`make lib` / `make verify` / `make test`)
+build/
+*.o
+*.a
+
+# Binaries
+test
+verify/verify_shm
+libglobal_allocator.a
+
+# clangd / local tooling (editor noise is covered by the root .gitignore)
+.cache/
+compile_commands.json
