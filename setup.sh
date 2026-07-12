@@ -48,12 +48,17 @@ fi
 
 # ---- 2. build everything on this controller ---------------------------------
 log "step 2/4: build all artifacts on this controller"
+if [[ ! -d "$KDIR" ]]; then
+  # Fresh clones ship no kernel tree; fetch + prepare the pinned AE commit
+  # (shallow, ~300 MB one-time) so the A1 module can be cross-built.
+  log "  no kernel tree at $KDIR — fetching the pinned AE kernel source"
+  "$REPO_ROOT/scripts/fetch_kernel.sh" "$KDIR" \
+    || log "  WARNING: kernel fetch failed — A1 module unavailable (set KDIR= to an existing tree)"
+fi
 if [[ -d "$KDIR" ]]; then
   make -C "$KDIR" M="$REPO_ROOT/interleave_dax" modules >/dev/null 2>&1 \
     && log "  A1 interleave_dax.ko built" \
     || log "  WARNING: kernel-module build failed — A1/insmod may fail (build it by hand)"
-else
-  log "  no kernel tree at $KDIR — skipping A1 module (set KDIR= to enable)"
 fi
 make -C "$REPO_ROOT" all || die "make all failed (A2 lib+verify, A3, A4, A5, A7)"
 make -C "$REPO_ROOT/gapbs" >/dev/null 2>&1 \
@@ -78,9 +83,10 @@ log "step 4/4: verify built binaries on ${HOSTS[*]}"
 miss=0
 for h in "${HOSTS[@]}"; do
   ssh -4 -o BatchMode=yes "root@$h.dc" "
-      for b in global_allocator/verify/verify_shm benchmark/bw_mem/bw_mem \
-               synchronization/lock_bench gapbs_mh/bfs_mh hashtable_mh/ht_bench; do
-        [ -x $REMOTE_ROOT/\$b ] || { echo MISSING \$b; }
+      for b in interleave_dax/interleave_dax.ko global_allocator/verify/verify_shm \
+               benchmark/bw_mem/bw_mem synchronization/lock_bench gapbs_mh/bfs_mh \
+               hashtable_mh/ht_bench; do
+        [ -e $REMOTE_ROOT/\$b ] || { echo MISSING \$b; }
       done" 2>/dev/null | grep -q MISSING \
     && { log "  $h: WARNING — some binaries missing (see: ssh root@$h.dc 'ls $REMOTE_ROOT/*/')"; miss=$((miss+1)); } \
     || log "  $h: all key binaries present"

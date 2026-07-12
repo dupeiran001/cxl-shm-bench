@@ -13,17 +13,18 @@ ILDAX_CFG="${ILDAX_CFG:-0-128:1,128-256:1,256-384:1,384-512:1}"
 REMOTE_ROOT=/tmp/cxl_shm_profiling
 
 REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-KDIR="$REPO_ROOT/linux-pxe/linux"
+KDIR="${KDIR:-$REPO_ROOT/linux-pxe/linux}"
 log() { printf '[%s] %s\n' "$(date +%H:%M:%S)" "$*"; }
 die() { log "FATAL: $*"; exit 1; }
 gssh() { ssh -4 -n -o BatchMode=yes -o StrictHostKeyChecking=no -o ConnectTimeout=8 -o ServerAliveInterval=15 -o ServerAliveCountMax=4 "root@$HOST.dc" "$@"; }
 
-if [[ -d "$KDIR" ]]; then
-  log "cross-building module against $KDIR (AE kernel tree)"
-  make -C "$KDIR" M="$REPO_ROOT/interleave_dax" modules >/dev/null || die "module build failed"
-else
-  log "no local kernel tree — using the .ko shipped with the deployed repo"
+if [[ ! -d "$KDIR" ]]; then
+  # Fresh clones ship no kernel tree; fetch + prepare the pinned AE commit.
+  log "no local kernel tree — fetching the pinned AE kernel source (one-time)"
+  "$REPO_ROOT/scripts/fetch_kernel.sh" "$KDIR" || die "kernel fetch failed — set KDIR= to an existing tree"
 fi
+log "cross-building module against $KDIR (AE kernel tree)"
+make -C "$KDIR" M="$REPO_ROOT/interleave_dax" modules >/dev/null || die "module build failed"
 
 log "deploying + loading on $HOST (base=$ILDAX_BASE cfg=$ILDAX_CFG)"
 scp -q -o BatchMode=yes "$REPO_ROOT/interleave_dax/interleave_dax.ko" "root@$HOST.dc:$REMOTE_ROOT/interleave_dax/" 2>/dev/null || true

@@ -3,6 +3,21 @@
 Operational tooling for the multi-host CXL testbed (four single-socket hosts
 behind an H3 Falcon / XConn CXL memory server, PXE/NFS-root booted).
 
+## fetch_kernel.sh — pinned kernel source for the A1 module build
+
+```sh
+scripts/fetch_kernel.sh [target-dir]     # default: <repo>/linux-pxe/linux
+```
+
+Shallow-fetches the exact mainline commit the AE hosts run
+(`0138af2472df`, ~300 MB one-time), applies the shipped
+`cfg/config-7.0.0-rc5-cxl`, and runs `make modules_prepare` so
+`interleave_dax` cross-builds against it. Called automatically by
+`./setup.sh` and `interleave_dax/reproduce.sh` when no tree exists at
+`KDIR`; an existing tree is never touched. Override the git source with
+`KERNEL_REMOTE=` (kernel.org URL in the script header) and the target
+with `KDIR=`.
+
 ## prepare.sh — per-boot host preparation
 
 The hosts boot an NFS rootfs with a tmpfs overlay: **nothing persists across

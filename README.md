@@ -113,8 +113,12 @@ experiments and regenerate the figures from `result/raw/` into
   `CONFIG_INFINIBAND*`/`CONFIG_MLX5_INFINIBAND` (for the RDMA comparison),
   with kernel debug and lock validation **off** (a debug kernel inflates the
   synchronization measurements the paper reports). A1 (the out-of-tree
-  kernel module) builds against this same tree with the same compiler
-  (`make -C <kdir> M=$PWD/interleave_dax modules`, GCC).
+  kernel module) builds against a source tree at this same commit:
+  `./setup.sh` (or `scripts/fetch_kernel.sh`) shallow-fetches the pinned
+  commit (~300 MB, one-time), applies the shipped `cfg/` config, and runs
+  `make modules_prepare` automatically when no tree is present at
+  `linux-pxe/linux` (override with `KDIR=<path>` to reuse an existing
+  tree).
 - **Toolchain.** `gcc 15` / `g++` with C++20 for A1–A5, `cmake ≥ 3.16`
   for A3's Abseil build, `bash ≥ 4` for the runner scripts, Python ≥ 3.9
   with `matplotlib`, `pandas`, `numpy` for plot regeneration.
@@ -126,8 +130,10 @@ experiments and regenerate the figures from `result/raw/` into
   SHA-256-verified) at first setup from their archival Zenodo mirror
   ([doi:10.5281/zenodo.21314344](https://doi.org/10.5281/zenodo.21314344));
   pre-place the tarball under `parsec/input-archive/` to run offline.
-  Mirror URLs can be overridden via env vars; see `benchmark/Makefile`
-  and `parsec/setup.sh`.
+  `./setup.sh` shallow-fetches the pinned kernel source (~300 MB) for the
+  A1 module build when no `KDIR` tree exists. Mirror URLs can be
+  overridden via env vars; see `benchmark/Makefile`, `parsec/setup.sh`,
+  and `scripts/fetch_kernel.sh`.
 
 
 ## CXL module configuration — full (8-module) vs. current testbed (4-module)
