@@ -25,6 +25,17 @@ The kernel `.config` of the paper's **production (debug-OFF)** kernel.
   RDMA-vs-CXL comparison (`benchmark/reproduce.sh rdma`, Table III)
 - `CONFIG_NUMA`, `CONFIG_TRANSPARENT_HUGEPAGE`
 
+## `Module.symvers-7.0.0-rc5-cxl`
+
+The exported-symbol table (`Module.symvers`) produced by the full build of
+the exact kernel above. `scripts/fetch_kernel.sh` installs it into the
+fetched source tree so the A1 module (`interleave_dax.ko`) can be built —
+with full `modpost` symbol checking — against a tree that is only
+`modules_prepare`d, without rebuilding the whole kernel.
+(`CONFIG_MODVERSIONS` is off in this config, so no per-symbol CRCs are
+involved; the module loads on the PXE kernel with matching vermagic
+`7.0.0-rc5+`.)
+
 ## Building the kernel
 
 ```sh
@@ -37,4 +48,6 @@ make -j"$(nproc)"        # GCC toolchain — do NOT pass CC=clang
 ```
 
 The out-of-tree interleaving kernel module (artifact A1, `interleave_dax/`)
-builds against this same tree.
+builds against this same tree. For the module alone, a full kernel build is
+unnecessary — `scripts/fetch_kernel.sh` automates the shallow fetch,
+config, `modules_prepare`, and `Module.symvers` installation.

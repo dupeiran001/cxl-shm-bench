@@ -8,9 +8,11 @@
 **/run/
 **/autom4te.cache/
 
-# Openssl Configure-generated Makefile (template at Makefile.org is tracked;
-# `./config` or `./Configure` regenerates Makefile with local build paths)
-pkgs/libs/ssl/src/Makefile
+# NOTE: pkgs/libs/ssl/src/Makefile is deliberately TRACKED (not ignored):
+# parsecmgmt cannot drive openssl's ./config, so the artifact ships the
+# pre-Configured Makefile; setup.sh rewrites its baked INSTALLTOP prefix to
+# the current tree at build time. Do not re-add it to this ignore list —
+# without it, parsec.ssl (a dedup dependency) cannot build from a fresh clone.
 
 # PARSEC input data: extracted per-package inputs are regenerated (not
 # tracked), and downloaded tarballs (incl. an optional offline copy under
