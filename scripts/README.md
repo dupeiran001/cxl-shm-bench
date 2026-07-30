@@ -11,7 +11,9 @@ scripts/fetch_kernel.sh [target-dir]     # default: <repo>/linux-pxe/linux
 
 Shallow-fetches the exact mainline commit the AE hosts run
 (`0138af2472df`, ~300 MB one-time), applies the shipped
-`cfg/config-7.0.0-rc5-cxl`, and runs `make modules_prepare` so
+`cfg/config-7.0.0-rc5-cxl`, installs the shipped
+`cfg/Module.symvers-7.0.0-rc5-cxl` (full modpost symbol checking without
+a kernel build), and runs `make modules_prepare` so
 `interleave_dax` cross-builds against it. Called automatically by
 `./setup.sh` and `interleave_dax/reproduce.sh` when no tree exists at
 `KDIR`; an existing tree is never touched. Override the git source with

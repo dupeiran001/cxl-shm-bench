@@ -1,7 +1,33 @@
-# Kernel configuration
+# Kernel + platform configuration
 
-This directory ships the exact Linux kernel configuration used for every
-measurement in the paper.
+This directory ships the exact kernel and BIOS configuration used for
+every measurement in the paper.
+
+## `bios-attributes.json`
+
+The full UEFI/BIOS setup of the testbed hosts (Supermicro
+`SSG-222B-NE3X24R`, BIOS `1.4b`, 2025-11-27) — the reference
+configuration for all four hosts, captured read-only from the BMC via
+Redfish:
+
+```sh
+curl -sk -u "$BMC_USER:$BMC_PASS" \
+  https://<bmc-address>/redfish/v1/Systems/1/Bios   # .Attributes
+```
+
+Notes:
+
+- Captured on host `g1`; ~1,340 attributes, key-sorted. Boot-entry
+  attributes (`UEFIBootOption_*`, `UEFINETWORKBootOption_*`) embed
+  per-host NIC MACs and PXE ordering and necessarily differ between
+  hosts; all password-type attributes are empty.
+- Known per-host deviations from this reference at measurement time
+  (documented for full transparency): `g2` had `XPTPrefetch`/
+  `KTIPrefetch` Disabled and `DCUStreamerPrefetcher`/`HomelessPrefetch`
+  on Auto; `g4` had `IIOLLCWaysMask=0xFFFF` and Resizable BAR enabled;
+  `g1` had PCIe Gen5 `EqualizationBypassToHighestRate` enabled. Host
+  roles are fixed by the reproduce scripts, so these settings are part
+  of the recorded environment.
 
 ## `config-7.0.0-rc5-cxl`
 

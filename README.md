@@ -31,7 +31,7 @@ and a `scripts/` folder with the runners and plotters.
 ├── README.md               This file.
 ├── setup.sh                One-time testbed setup (remap + build + deploy)
 ├── scripts/                Testbed automation: prepare.sh, cxl_remap.sh, poolmap/
-├── cfg/                    Kernel .config (production / debug-OFF) + build notes
+├── cfg/                    Kernel .config + Module.symvers + hosts' BIOS config
 ├── interleave_dax/         A1 — kernel module + validate.sh + reproduce.sh
 ├── global_allocator/       A2 — userspace library + cross-host verifier + reproduce.sh
 ├── benchmark/              A3 — bw_mem + tool_memory_latency + rtt (+ rdma) + reproduce.sh
@@ -108,14 +108,17 @@ experiments and regenerate the figures from `result/raw/` into
   [`0138af2472df`](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=0138af2472dfdef0d56fc4697416eaa0ff2589bd)
   (`v7.0-rc5`+79 ≈ 7.0-rc6, from `torvalds/linux`), built with GCC 15.2.1 —
   no local patches. The exact `.config` and build steps are in
-  [`cfg/`](cfg/README.md); it enables `CONFIG_DEV_DAX*`,
+  [`cfg/`](cfg/README.md), alongside the matching `Module.symvers` (for
+  out-of-tree module builds) and the hosts' full UEFI/BIOS configuration
+  (`cfg/bios-attributes.json`, Redfish dump); the config enables `CONFIG_DEV_DAX*`,
   `CONFIG_CXL_{BUS,MEM}`, `CONFIG_EFI_SOFT_RESERVE`, and
   `CONFIG_INFINIBAND*`/`CONFIG_MLX5_INFINIBAND` (for the RDMA comparison),
   with kernel debug and lock validation **off** (a debug kernel inflates the
   synchronization measurements the paper reports). A1 (the out-of-tree
   kernel module) builds against a source tree at this same commit:
   `./setup.sh` (or `scripts/fetch_kernel.sh`) shallow-fetches the pinned
-  commit (~300 MB, one-time), applies the shipped `cfg/` config, and runs
+  commit (~300 MB, one-time), applies the shipped `cfg/` config +
+  `Module.symvers`, and runs
   `make modules_prepare` automatically when no tree is present at
   `linux-pxe/linux` (override with `KDIR=<path>` to reuse an existing
   tree).
