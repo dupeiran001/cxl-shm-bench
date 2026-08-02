@@ -1,0 +1,69 @@
+cff-version: 1.2.0
+message: >-
+  If you use this artifact, please cite the SC'26 paper below
+  (preferred-citation). To cite the software/artifact itself, use this
+  repository's metadata.
+title: >-
+  cxl-shm-bench: artifacts for "Quantifying the Cost of Software-Managed
+  Synchronization on Multi-Host CXL Memory"
+type: software
+authors:
+  - family-names: Du
+    given-names: Peiran
+    affiliation: The University of Texas at Arlington
+  - family-names: Deng
+    given-names: Weishu
+    affiliation: The University of Texas at Arlington
+  - family-names: Song
+    given-names: Yang
+    affiliation: The University of Texas at Arlington
+  - family-names: Liao
+    given-names: Chenfei
+    affiliation: The University of Texas at Arlington
+  - family-names: Yang
+    given-names: Yujie
+    affiliation: The University of Texas at Arlington
+  - family-names: Wang
+    given-names: Ren
+    affiliation: Intel Labs
+  - family-names: Lu
+    given-names: Hui
+    affiliation: The University of Texas at Arlington
+  - family-names: Rao
+    given-names: Jia
+    affiliation: The University of Texas at Arlington
+license: BSD-3-Clause
+repository-code: "https://github.com/dupeiran001/cxl-shm-bench"
+keywords:
+  - CXL
+  - distributed shared memory
+  - synchronization
+  - memory disaggregation
+  - artifact
+doi: 10.5281/zenodo.21753320
+preferred-citation:
+  type: conference-paper
+  title: >-
+    Quantifying the Cost of Software-Managed Synchronization on Multi-Host
+    CXL Memory
+  authors:
+    - family-names: Du
+      given-names: Peiran
+    - family-names: Deng
+      given-names: Weishu
+    - family-names: Song
+      given-names: Yang
+    - family-names: Liao
+      given-names: Chenfei
+    - family-names: Yang
+      given-names: Yujie
+    - family-names: Wang
+      given-names: Ren
+    - family-names: Lu
+      given-names: Hui
+    - family-names: Rao
+      given-names: Jia
+  collection-title: >-
+    Proceedings of the International Conference for High Performance
+    Computing, Networking, Storage and Analysis (SC '26)
+  year: 2026

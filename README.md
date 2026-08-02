@@ -1,5 +1,7 @@
 # Quantifying the Cost of Software-Managed Synchronization on Multi-Host CXL Memory
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21753320.svg)](https://doi.org/10.5281/zenodo.21753320)
+
 Artifacts for the SC26 paper of the same title. This repository contains
 the source code, build scripts, measurement data, and reproduction
 instructions for every experiment reported in the paper.
