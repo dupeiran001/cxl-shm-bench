@@ -44,6 +44,7 @@ struct PrSpmvSharedState {
   uint64_t scores_id;
   uint64_t outgoing_id;
   gapbs_mh::HostSlot<double> errors[MAX_HOST_NUM]; // one line per host
+  gapbs_mh::HostSlot<uint64_t> trial_ready[MAX_HOST_NUM];
 };
 
 static void WaitForReady(const PrSpmvSharedState *st) {
@@ -76,10 +77,11 @@ static void RunPrOnce(const ShmGraph &g, PrSpmvSharedState *st, ScoreT *scores,
                       int max_iters, double epsilon, uint32_t sync_k,
                       bool logging_enabled) {
   const int64_t total_nodes = g.num_nodes();
-  const NodeID start = static_cast<NodeID>(
-      (static_cast<int64_t>(host_id) * total_nodes) / hosts);
-  const NodeID end = static_cast<NodeID>(
-      (static_cast<int64_t>(host_id + 1) * total_nodes) / hosts);
+  int64_t part_begin, part_end;
+  gapbs_mh::LinePartition<ScoreT>(total_nodes, host_id, hosts, &part_begin,
+                                  &part_end);
+  const NodeID start = static_cast<NodeID>(part_begin);
+  const NodeID end = static_cast<NodeID>(part_end);
 
   const ScoreT base_score = (1.0f - kDamp) / g.num_nodes();
   const size_t total_bytes = static_cast<size_t>(total_nodes) * sizeof(ScoreT);
@@ -257,6 +259,9 @@ int main(int argc, char *argv[]) {
       return 1;
     }
 
+    // Publish the CSR before advertising ready.
+    if (gapbs_mh::PublishSharedGraph(&state->graph) != 0)
+      return 1;
     flush_region(state, sizeof(*state));
     store_fence();
     CxlStore(&state->magic, kPrSpmvMagic);
@@ -295,7 +300,9 @@ int main(int argc, char *argv[]) {
   full_fence();
   if (gapbs_mh::AttachSharedGraph(&state->graph, &g) != 0)
     return 1;
-  g.FlushArrays();
+  // Host 0 published the CSR before ready; peers drop any stale copy.
+  if (host_id != 0)
+    g.FlushArrays();
 
   if (ShmBarrierInit(&state->barrier, hosts, host_id) != 0)
     return 1;
@@ -308,9 +315,20 @@ int main(int argc, char *argv[]) {
       ShmAttachRetry(state->outgoing_id, 0, "pr_spmv_outgoing"));
   if (!outgoing)
     return 1;
+  if (!gapbs_mh::LineAligned(scores) || !gapbs_mh::LineAligned(outgoing)) {
+    fprintf(stderr, "pr_spmv arrays are not cache-line aligned\n");
+    return 1;
+  }
+  int64_t own_begin, own_end;
+  gapbs_mh::LinePartition<ScoreT>(g.num_nodes(), host_id, hosts, &own_begin,
+                                  &own_end);
 
   Timer trial_timer;
   double total_seconds = 0.0;
+  // Set by host 0 if a host had not refreshed its scores before a trial
+  // timer start; reported at the end so that every host still takes part
+  // in all remaining barriers.
+  bool trial_check_failed = false;
 
   std::cout << "[Host " << host_id << "] Ready, waiting at initial barrier..."
             << std::endl;
@@ -331,6 +349,24 @@ int main(int argc, char *argv[]) {
         omp_set_num_threads(user_threads);
     }
     ShmBarrierWait(&state->barrier, hosts, host_id);
+
+    // Untimed: drop this host's cached copy of its own score range so the
+    // first reads of the trial see host 0's reset, and rendezvous so the
+    // timer starts only after every host has done so.
+    flush_region(scores + own_begin, (own_end - own_begin) * sizeof(ScoreT));
+    full_fence();
+    CxlStore(&state->trial_ready[host_id].v, static_cast<uint64_t>(iter + 1));
+    ShmBarrierWait(&state->barrier, hosts, host_id);
+    if (host_id == 0) {
+      for (uint32_t i = 0; i < hosts; ++i) {
+        if (CxlLoad(&state->trial_ready[i].v) !=
+            static_cast<uint64_t>(iter + 1)) {
+          fprintf(stderr, "trial %d: host %u had not invalidated its scores "
+                  "before the timer start\n", iter, i);
+          trial_check_failed = true;
+        }
+      }
+    }
 
     if (host_id == 0)
       trial_timer.Start();
@@ -364,5 +400,5 @@ int main(int argc, char *argv[]) {
     PrintTime("Average Time", total_seconds / cli.num_trials());
 
   sync_stats_dump("pr_spmv");
-  return 0;
+  return trial_check_failed ? 1 : 0;
 }

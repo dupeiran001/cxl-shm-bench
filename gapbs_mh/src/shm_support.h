@@ -195,6 +195,30 @@ static_assert(sizeof(HostSlot<double>) == CACHE_LINE_SIZE,
 static_assert(sizeof(HostSlot<uint64_t>) == CACHE_LINE_SIZE,
               "HostSlot must fill exactly one cache line");
 
+// Contiguous partition of [0, n) over hosts with every boundary on a cache
+// line multiple of T, so no line of a line-aligned T array is written by two
+// hosts. All hosts and all phases that write such an array (reset, compute,
+// publish) must use the same partition. Hosts can get an empty range when
+// n is small.
+template <typename T>
+inline void LinePartition(int64_t n, uint32_t host_id, uint32_t hosts,
+                          int64_t *begin, int64_t *end) {
+  static_assert(CACHE_LINE_SIZE % sizeof(T) == 0,
+                "element size must divide the cache line");
+  const int64_t per_line = CACHE_LINE_SIZE / sizeof(T);
+  const int64_t lines = (n + per_line - 1) / per_line;
+  auto at = [&](uint32_t h) {
+    int64_t v = lines * static_cast<int64_t>(h) / hosts * per_line;
+    return v < n ? v : n;
+  };
+  *begin = at(host_id);
+  *end = at(host_id + 1);
+}
+
+inline bool LineAligned(const void *p) {
+  return (reinterpret_cast<uintptr_t>(p) & (CACHE_LINE_SIZE - 1)) == 0;
+}
+
 // Wrapper for barrier - need to store parties inside the wrapper scope
 using ShmBarrier = shm_barrier_t;
 

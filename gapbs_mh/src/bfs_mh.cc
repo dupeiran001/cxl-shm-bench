@@ -937,6 +937,9 @@ int main(int argc, char *argv[]) {
       shm_mutex_init(&locks[i]);
     }
 
+    // Publish the CSR before advertising ready.
+    if (gapbs_mh::PublishSharedGraph(&state->graph) != 0)
+      return 1;
     state->source = cli.start_vertex();
     flush_region(state, sizeof(*state));
     store_fence();
@@ -978,8 +981,10 @@ int main(int argc, char *argv[]) {
   if (gapbs_mh::AttachSharedGraph(&state->graph, &g) != 0)
     return 1;
 
-  // Invalidate stale CPU cache for graph CSR arrays (critical for CXL!)
-  g.FlushArrays();
+  // Invalidate stale CPU cache for graph CSR arrays (critical for CXL!).
+  // Host 0 already wrote them back before ready; only peers need this.
+  if (host_id != 0)
+    g.FlushArrays();
 
   // All hosts call barrier_init: host 0 builds it, the others wait for it.
   if (ShmBarrierInit(&state->barrier, hosts, host_id) != 0)

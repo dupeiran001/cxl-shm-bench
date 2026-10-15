@@ -258,6 +258,9 @@ int main(int argc, char *argv[]) {
     std::cout << "Restored " << user_threads << " threads for TC execution."
               << std::endl;
 
+    // Publish the CSR before advertising ready.
+    if (gapbs_mh::PublishSharedGraph(&state->graph) != 0)
+      return 1;
     flush_region(state, sizeof(*state));
     store_fence();
     CxlStore(&state->magic, kTcMagic);
@@ -296,7 +299,9 @@ int main(int argc, char *argv[]) {
   full_fence();
   if (gapbs_mh::AttachSharedGraph(&state->graph, &g) != 0)
     return 1;
-  g.FlushArrays();
+  // Host 0 published the CSR before ready; peers drop any stale copy.
+  if (host_id != 0)
+    g.FlushArrays();
 
   if (ShmBarrierInit(&state->barrier, hosts, host_id) != 0)
     return 1;

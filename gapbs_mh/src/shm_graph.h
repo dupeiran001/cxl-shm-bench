@@ -218,6 +218,17 @@ inline int AttachSharedGraph(const ShmGraphInfo *info, ShmGraph *out_graph) {
   return 0;
 }
 
+// Host 0, after BuildSharedGraph() and before it advertises ready: write the
+// CSR arrays back to the shared media, so a peer that sees ready and then
+// invalidates its own cached copy reads this graph.
+inline int PublishSharedGraph(const ShmGraphInfo *info) {
+  ShmGraph g;
+  if (AttachSharedGraph(info, &g) != 0)
+    return -1;
+  g.FlushArrays();
+  return 0;
+}
+
 // ============================================================================
 // Weighted Graph Support (for SSSP)
 // ============================================================================

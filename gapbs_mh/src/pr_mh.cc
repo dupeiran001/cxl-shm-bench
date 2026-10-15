@@ -2,6 +2,7 @@
 // See LICENSE.txt for license details
 // Multi-Host CXL Version - PageRank
 
+#include <atomic>
 #include <cmath>
 #include <cstdio>
 #include <iostream>
@@ -34,6 +35,14 @@ static const uint32_t kPrMagic = 0x4D485052; // "MHPR"
 typedef float ScoreT;
 const float kDamp = 0.85f;
 
+// Within one host, threads read outgoing[v] while the thread that owns v
+// overwrites it (asynchronous, in-place update). Relaxed atomic_ref makes
+// those accesses defined; on x86 they stay plain loads and stores.
+using OutRef = std::atomic_ref<ScoreT>;
+static_assert(OutRef::is_always_lock_free, "atomic_ref<ScoreT> must be lock free");
+static_assert(OutRef::required_alignment == alignof(ScoreT),
+              "outgoing[] elements must satisfy atomic_ref alignment");
+
 struct PrSharedState {
   uint32_t magic;
   uint32_t hosts;
@@ -44,6 +53,7 @@ struct PrSharedState {
   uint64_t scores_id;
   uint64_t outgoing_id;
   gapbs_mh::HostSlot<double> errors[MAX_HOST_NUM]; // one line per host
+  gapbs_mh::HostSlot<uint64_t> trial_ready[MAX_HOST_NUM];
 };
 
 static void WaitForReady(const PrSharedState *st) {
@@ -76,10 +86,11 @@ static void RunPrOnce(const ShmGraph &g, PrSharedState *st, ScoreT *scores,
                       int max_iters, double epsilon, uint32_t sync_k,
                       bool logging_enabled) {
   const int64_t total_nodes = g.num_nodes();
-  const NodeID start = static_cast<NodeID>(
-      (static_cast<int64_t>(host_id) * total_nodes) / hosts);
-  const NodeID end = static_cast<NodeID>(
-      (static_cast<int64_t>(host_id + 1) * total_nodes) / hosts);
+  int64_t part_begin, part_end;
+  gapbs_mh::LinePartition<ScoreT>(total_nodes, host_id, hosts, &part_begin,
+                                  &part_end);
+  const NodeID start = static_cast<NodeID>(part_begin);
+  const NodeID end = static_cast<NodeID>(part_end);
 
   const ScoreT base_score = (1.0f - kDamp) / g.num_nodes();
   const size_t total_bytes = static_cast<size_t>(total_nodes) * sizeof(ScoreT);
@@ -97,12 +108,13 @@ static void RunPrOnce(const ShmGraph &g, PrSharedState *st, ScoreT *scores,
     for (NodeID u = start; u < end; u++) {
       ScoreT incoming_total = 0;
       for (NodeID v : g.in_neigh(u))
-        incoming_total += outgoing[v];
+        incoming_total += OutRef(outgoing[v]).load(std::memory_order_relaxed);
       ScoreT old_score = scores[u];
       ScoreT new_score = base_score + kDamp * incoming_total;
       scores[u] = new_score;
       local_error += fabs(new_score - old_score);
-      outgoing[u] = new_score / g.out_degree(u);
+      OutRef(outgoing[u]).store(new_score / g.out_degree(u),
+                                std::memory_order_relaxed);
     }
 
     // Publish this host's updated scores/outgoing.
@@ -257,6 +269,8 @@ int main(int argc, char *argv[]) {
     if (user_threads > 0)
       omp_set_num_threads(user_threads);
 
+    // Publish the CSR before advertising ready.
+    shm_graph.FlushArrays();
     CxlStore(&state->magic, kPrMagic);
     CxlStore(&state->ready, 1u);
     std::cout << "[Host 0] Initialization complete." << std::endl;
@@ -295,7 +309,9 @@ int main(int argc, char *argv[]) {
   full_fence();
   if (gapbs_mh::AttachSharedGraph(&state->graph, &g) != 0)
     return 1;
-  g.FlushArrays();
+  // Host 0 published the CSR before ready; peers drop any stale copy.
+  if (host_id != 0)
+    g.FlushArrays();
 
   if (ShmBarrierInit(&state->barrier, hosts, host_id) != 0)
     return 1;
@@ -306,9 +322,20 @@ int main(int argc, char *argv[]) {
       ShmAttachRetry(state->outgoing_id, 0, "pr_outgoing"));
   if (!scores || !outgoing)
     return 1;
+  if (!gapbs_mh::LineAligned(scores) || !gapbs_mh::LineAligned(outgoing)) {
+    fprintf(stderr, "pr arrays are not cache-line aligned\n");
+    return 1;
+  }
+  int64_t own_begin, own_end;
+  gapbs_mh::LinePartition<ScoreT>(g.num_nodes(), host_id, hosts, &own_begin,
+                                  &own_end);
 
   Timer trial_timer;
   double total_seconds = 0.0;
+  // Set by host 0 if a host had not refreshed its scores before a trial
+  // timer start; reported at the end so that every host still takes part
+  // in all remaining barriers.
+  bool trial_check_failed = false;
 
   std::cout << "[Host " << host_id << "] Ready, waiting at initial barrier..."
             << std::endl;
@@ -329,6 +356,24 @@ int main(int argc, char *argv[]) {
         omp_set_num_threads(user_threads);
     }
     ShmBarrierWait(&state->barrier, hosts, host_id);
+
+    // Untimed: drop this host's cached copy of its own score range so the
+    // first reads of the trial see host 0's reset, and rendezvous so the
+    // timer starts only after every host has done so.
+    flush_region(scores + own_begin, (own_end - own_begin) * sizeof(ScoreT));
+    full_fence();
+    CxlStore(&state->trial_ready[host_id].v, static_cast<uint64_t>(iter + 1));
+    ShmBarrierWait(&state->barrier, hosts, host_id);
+    if (host_id == 0) {
+      for (uint32_t i = 0; i < hosts; ++i) {
+        if (CxlLoad(&state->trial_ready[i].v) !=
+            static_cast<uint64_t>(iter + 1)) {
+          fprintf(stderr, "trial %d: host %u had not invalidated its scores "
+                  "before the timer start\n", iter, i);
+          trial_check_failed = true;
+        }
+      }
+    }
 
     if (host_id == 0)
       trial_timer.Start();
@@ -362,5 +407,5 @@ int main(int argc, char *argv[]) {
     PrintTime("Average Time", total_seconds / cli.num_trials());
 
   sync_stats_dump("pr");
-  return 0;
+  return trial_check_failed ? 1 : 0;
 }

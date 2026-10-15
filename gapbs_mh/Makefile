@@ -20,6 +20,8 @@ all: bfs_mh pr_mh pr_spmv_mh tc_mh
 bfs_mh: src/bfs_mh.cc $(COMMON_DEPS)
 	$(CXX) $(CXX_FLAGS) src/bfs_mh.cc -o $@ $(LDFLAGS)
 
+# pr_mh uses std::atomic_ref (C++20); the other kernels keep -std=c++11.
+pr_mh: CXX_FLAGS += -std=c++20
 pr_mh: src/pr_mh.cc $(COMMON_DEPS)
 	$(CXX) $(CXX_FLAGS) src/pr_mh.cc -o $@ $(LDFLAGS)
 
