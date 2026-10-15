@@ -38,7 +38,7 @@ struct TcSharedState {
   uint64_t total_degree;
   int64_t part_offsets[MAX_HOST_NUM + 1];
   uint64_t part_degrees[MAX_HOST_NUM];
-  uint64_t counts[MAX_HOST_NUM];
+  gapbs_mh::HostSlot<uint64_t> counts[MAX_HOST_NUM]; // one line per host
 };
 
 static void WaitForReady(const TcSharedState *st) {
@@ -145,8 +145,8 @@ static void RunTcOnce(const ShmGraph &g, TcSharedState *st, uint32_t host_id,
   const NodeID end = static_cast<NodeID>(st->part_offsets[host_id + 1]);
 
   size_t local_count = OrderedCountRange(g, start, end);
-  st->counts[host_id] = local_count;
-  flush_region(&st->counts[host_id], sizeof(uint64_t));
+  st->counts[host_id].v = local_count;
+  flush_region(&st->counts[host_id], sizeof(st->counts[host_id]));
   store_fence();
 
   ShmBarrierWait(&st->barrier, hosts, host_id);
@@ -298,7 +298,8 @@ int main(int argc, char *argv[]) {
     return 1;
   g.FlushArrays();
 
-  ShmBarrierInit(&state->barrier, hosts, host_id);
+  if (ShmBarrierInit(&state->barrier, hosts, host_id) != 0)
+    return 1;
 
   Timer trial_timer;
   double total_seconds = 0.0;
@@ -316,7 +317,7 @@ int main(int argc, char *argv[]) {
     // Reset counts
     if (host_id == 0) {
       for (uint32_t i = 0; i < hosts; ++i)
-        state->counts[i] = 0;
+        state->counts[i].v = 0;
       flush_region(state->counts, sizeof(state->counts));
       store_fence();
     }
@@ -333,9 +334,9 @@ int main(int argc, char *argv[]) {
       trial_timer.Stop();
       size_t total_triangles = 0;
       for (uint32_t i = 0; i < hosts; ++i) {
-        flush_region(&state->counts[i], sizeof(uint64_t));
+        flush_region(&state->counts[i], sizeof(state->counts[i]));
         full_fence();
-        total_triangles += state->counts[i];
+        total_triangles += state->counts[i].v;
       }
 
       PrintTime("Trial Time", trial_timer.Seconds());

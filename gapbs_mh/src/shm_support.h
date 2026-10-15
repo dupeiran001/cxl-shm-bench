@@ -184,12 +184,29 @@ inline void *ShmAttachRetry(uint64_t id, size_t size, const char *label) {
   return nullptr;
 }
 
+// One per-host value on its own cache line. Hosts are not coherent with each
+// other, so two hosts must never write different words of one line: whichever
+// write-back lands last also carries its stale copy of the other host's word.
+template <typename T> struct alignas(CACHE_LINE_SIZE) HostSlot {
+  T v;
+};
+static_assert(sizeof(HostSlot<double>) == CACHE_LINE_SIZE,
+              "HostSlot must fill exactly one cache line");
+static_assert(sizeof(HostSlot<uint64_t>) == CACHE_LINE_SIZE,
+              "HostSlot must fill exactly one cache line");
+
 // Wrapper for barrier - need to store parties inside the wrapper scope
 using ShmBarrier = shm_barrier_t;
 
-// NOTE: ShmBarrierInit is called once by each participant, passing their my_id
-inline void ShmBarrierInit(ShmBarrier *b, uint32_t total, uint32_t my_id) {
-  barrier_init(b, total, my_id);
+// NOTE: ShmBarrierInit is called once by each participant, passing their my_id.
+// Host 0 builds the barrier; the others wait (bounded) for it. Returns 0 or
+// the negative errno from barrier_init(), which callers must treat as fatal.
+inline int ShmBarrierInit(ShmBarrier *b, uint32_t total, uint32_t my_id) {
+  int rc = barrier_init(b, total, my_id);
+  if (rc != 0)
+    fprintf(stderr, "[Host %u] barrier_init failed: %s\n", my_id,
+            strerror(-rc));
+  return rc;
 }
 
 inline void ShmBarrierWait(ShmBarrier *b, uint32_t parties, uint32_t host_id) {

@@ -43,7 +43,7 @@ struct PrSharedState {
   ShmGraphInfo graph;
   uint64_t scores_id;
   uint64_t outgoing_id;
-  double errors[MAX_HOST_NUM];
+  gapbs_mh::HostSlot<double> errors[MAX_HOST_NUM]; // one line per host
 };
 
 static void WaitForReady(const PrSharedState *st) {
@@ -114,8 +114,8 @@ static void RunPrOnce(const ShmGraph &g, PrSharedState *st, ScoreT *scores,
     double total_error = -1.0;
     if (do_sync) {
       // Store local error and sync
-      st->errors[host_id] = local_error;
-      flush_region(&st->errors[host_id], sizeof(double));
+      st->errors[host_id].v = local_error;
+      flush_region(&st->errors[host_id], sizeof(st->errors[host_id]));
       store_fence();
       ShmBarrierWait(&st->barrier, hosts, host_id);
 
@@ -123,9 +123,9 @@ static void RunPrOnce(const ShmGraph &g, PrSharedState *st, ScoreT *scores,
       if (host_id == 0) {
         total_error = 0.0;
         for (uint32_t i = 0; i < hosts; ++i) {
-          flush_region(&st->errors[i], sizeof(double));
+          flush_region(&st->errors[i], sizeof(st->errors[i]));
           full_fence();
-          total_error += st->errors[i];
+          total_error += st->errors[i].v;
         }
         CxlStore(&st->done, total_error < epsilon ? 1u : 0u);
       }
@@ -297,7 +297,8 @@ int main(int argc, char *argv[]) {
     return 1;
   g.FlushArrays();
 
-  ShmBarrierInit(&state->barrier, hosts, host_id);
+  if (ShmBarrierInit(&state->barrier, hosts, host_id) != 0)
+    return 1;
 
   scores =
       static_cast<ScoreT *>(ShmAttachRetry(state->scores_id, 0, "pr_scores"));

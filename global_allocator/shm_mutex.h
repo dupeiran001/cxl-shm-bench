@@ -23,7 +23,9 @@
  *   typedef struct { ... } shm_mutex_t;
  *
  *   void shm_mutex_init(shm_mutex_t *m);
- *     Initialize mutex. Must be called before use. Safe for multiple callers.
+ *     Initialize mutex. Must be called before use, by exactly one party, before
+ *     the mutex is published to others: it zeroes the whole lock, so a call
+ *     while another host holds or is acquiring the lock breaks exclusion.
  *
  *   uint64_t shm_mutex_lock(shm_mutex_t *m, int id, int num_hosts);
  *     Acquire lock. id = caller's host ID [0, num_hosts).

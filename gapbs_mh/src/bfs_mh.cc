@@ -981,8 +981,9 @@ int main(int argc, char *argv[]) {
   // Invalidate stale CPU cache for graph CSR arrays (critical for CXL!)
   g.FlushArrays();
 
-  // All hosts must call barrier_init (idempotent, per barrier_test.c pattern)
-  ShmBarrierInit(&state->barrier, hosts, host_id);
+  // All hosts call barrier_init: host 0 builds it, the others wait for it.
+  if (ShmBarrierInit(&state->barrier, hosts, host_id) != 0)
+    return 1;
 
   SourcePicker<ShmGraph> sp(g, cli.start_vertex());
 
