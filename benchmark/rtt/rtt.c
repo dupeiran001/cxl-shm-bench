@@ -23,6 +23,11 @@
 
 #define DAX_MAP_SIZE (2 * 1024 * 1024)
 
+// Client start signal. It must differ from every sequence number the client
+// later acknowledges, or the server can take it for ack 1, publish 2 before
+// the client has seen 1, and both sides wait forever.
+#define CLIENT_HELLO UINT64_MAX
+
 // --- Shared Memory Structures ---
 
 typedef struct {
@@ -67,6 +72,15 @@ inline void flush_line_for_write(volatile void *p, const config_t *config) {
   }
 }
 
+// Reader side of every flag poll: drop the local copy of the line, wait for
+// the flush to complete (mfence; lfence does not order a later load after
+// clflushopt), then load.
+static inline uint64_t observe_flag(volatile uint64_t *flag) {
+  _mm_clflushopt((void *)flag);
+  _mm_mfence();
+  return *flag;
+}
+
 static inline uint64_t now_ns(void) {
   struct timespec ts;
   clock_gettime(CLOCK_MONOTONIC, &ts);
@@ -85,8 +99,7 @@ void run_latency_test(config_t *config) {
     flush_line_for_write((void *)&layout->to_server_flag, config);
     _mm_sfence();
     printf("Latency Server (Core 0): Waiting for client to start...\n");
-    while (layout->to_server_flag == 0) {
-      _mm_clflushopt((void *)&layout->to_server_flag);
+    while (observe_flag(&layout->to_server_flag) != CLIENT_HELLO) {
       if (config->use_pause) {
         _mm_pause();
       }
@@ -107,8 +120,7 @@ void run_latency_test(config_t *config) {
       publish_ns_total += (pub_end - pub_start);
       uint64_t loops = 0;
       uint64_t vis_start = now_ns();
-      while (layout->to_server_flag != i) {
-        _mm_clflushopt((void *)&layout->to_server_flag);
+      while (observe_flag(&layout->to_server_flag) != i) {
         if (config->use_pause) {
           _mm_pause();
         }
@@ -140,7 +152,7 @@ void run_latency_test(config_t *config) {
   } else { // MODE_CLIENT
     pin_to_core(1);
     printf("Latency Client (Core 1): Starting test...\n");
-    layout->to_server_flag = 1;
+    layout->to_server_flag = CLIENT_HELLO;
     flush_line_for_write((void *)&layout->to_server_flag, config);
     _mm_sfence();
     uint64_t publish_ns_total = 0;
@@ -149,8 +161,7 @@ void run_latency_test(config_t *config) {
     for (uint64_t i = 1; i <= config->iterations; ++i) {
       uint64_t loops = 0;
       uint64_t vis_start = now_ns();
-      while (layout->to_client_flag != i) {
-        _mm_clflushopt((void *)&layout->to_client_flag);
+      while (observe_flag(&layout->to_client_flag) != i) {
         if (config->use_pause) {
           _mm_pause();
         }
