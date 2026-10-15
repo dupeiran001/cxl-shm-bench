@@ -17,7 +17,7 @@
 //                      reserved so offset 0 is never a valid node).
 //
 // Visibility protocol on non-coherent memory (all under the bucket lock):
-//   LOOKUP  clflushopt+lfence the bucket head line and each chain node line
+//   LOOKUP  clflushopt+mfence the bucket head line and each chain node line
 //           as it is traversed (and the value line on a key match), then
 //           read.
 //   INSERT  write the node, clwb+sfence it, THEN publish the new head

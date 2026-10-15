@@ -23,7 +23,7 @@ cachelines, and every bucket is guarded by a cross-host software lock.
   node references are offsets, valid on every host regardless of mapping
   address.
 - **Visibility protocol** (memory is non-coherent between hosts):
-  - LOOKUP: acquire bucket lock → `clflushopt`+`lfence` the bucket head and
+  - LOOKUP: acquire bucket lock → `clflushopt`+`mfence` the bucket head and
     each chain node as traversed → read → release.
   - INSERT: write the node, `clwb`+`sfence`, **then** publish the new chain
     head, `clwb`+`sfence` (node is fully visible before it is reachable).

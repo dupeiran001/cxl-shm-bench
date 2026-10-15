@@ -12,10 +12,12 @@
 
 /* ---- flush helpers (visibility protocol) ---------------------------------
  *
- * ht_inval(): clflushopt every line of [p, p+len) then lfence, so the next
+ * ht_inval(): clflushopt every line of [p, p+len) then mfence, so the next
  * reads miss the local cache and fetch whatever the last writer pushed to
  * the (non-coherent) shared media. Used on the LOOKUP path and before
- * reading chain metadata on the PUT path.
+ * reading chain metadata on the PUT path. lfence is not enough: it does not
+ * wait for the flushes to complete, so a later load can still be served from
+ * the line being flushed.
  *
  * ht_wb(): clwb (fallback clflushopt/clflush) every line then sfence, so
  * prior stores reach the media before anything published after them.
@@ -40,7 +42,7 @@ static inline void ht_inval(const void *p, size_t len) {
   for (uintptr_t a = start; a < end; a += CACHE_LINE_SIZE) {
     flush_line((void *)a); /* clflushopt (clflush fallback) */
   }
-  _mm_lfence();
+  _mm_mfence();
   compiler_barrier();
 }
 
